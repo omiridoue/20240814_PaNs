@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "EBBRMS_02_normal_distributions"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
