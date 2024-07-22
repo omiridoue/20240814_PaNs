@@ -526,7 +526,7 @@ for (i in seq_along(p))  {
   g <- g + geom_density(alpha = .05) +
     stat_function(data = df,
                   fun = dnorm,
-                  args = list(mean = mean(df$Weight), sd = sd(df$Weight), size = 2))
+                  args = list(mean = mean(df$Weight), sd = sd(df$Weight)))
 }
 g
 
