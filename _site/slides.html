@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="slides_files/libs/clipboard/clipboard.min.js"></script>
-<script src="slides_files/libs/quarto-html/tabby.min.js"></script>
-<script src="slides_files/libs/quarto-html/popper.min.js"></script>
-<script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Eleni Omiridou (PGR)">
   <meta name="dcterms.date" content="2024-07-26">
-  <title>Week 2: The Normal Distribution and Estimation</title>
+  <title>EBBRMS_02_normal_distributions - Week 2: The Normal Distribution and Estimation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -96,14 +96,14 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -510,7 +510,7 @@ Eleni Omiridou (PGR)
 <h2>R Integration for SPSSS</h2>
 <p>To tap into the SPSSS extension for R we will load the following library, essentially this is a collection of code that will allow us to integrate R and SPSS syntax to make our working reproducible:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(spssstatistics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(spssstatistics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-1-random-samples" class="slide level2">
@@ -520,10 +520,10 @@ Eleni Omiridou (PGR)
 <p>Replace the number or seed, with your Student ID.</p>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># Run the following command after removing the hash key this will launch a</span></span>
-<span id="cb2-2"><a href=""></a><span class="co"># Help page with documentation.</span></span>
-<span id="cb2-3"><a href=""></a><span class="co"># ?set.seed() </span></span>
-<span id="cb2-4"><a href=""></a><span class="fu">set.seed</span>(<span class="dv">123456</span>, <span class="at">kind=</span><span class="st">"Mersenne-Twister"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Run the following command after removing the hash key this will launch a</span></span>
+<span id="cb2-2"><a></a><span class="co"># Help page with documentation.</span></span>
+<span id="cb2-3"><a></a><span class="co"># ?set.seed() </span></span>
+<span id="cb2-4"><a></a><span class="fu">set.seed</span>(<span class="dv">123456</span>, <span class="at">kind=</span><span class="st">"Mersenne-Twister"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-1-i-generate-random-samples" class="slide level2">
@@ -533,12 +533,12 @@ Eleni Omiridou (PGR)
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>small_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">36</span>, <span class="at">mean=</span><span class="dv">110</span>, <span class="at">sd=</span><span class="dv">6</span>)    <span class="co"># provide our own mean and standard deviation</span></span>
-<span id="cb3-2"><a href=""></a><span class="fu">length</span>(small_sample) <span class="co"># check that that we have generated 36 values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>small_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">36</span>, <span class="at">mean=</span><span class="dv">110</span>, <span class="at">sd=</span><span class="dv">6</span>)    <span class="co"># provide our own mean and standard deviation</span></span>
+<span id="cb3-2"><a></a><span class="fu">length</span>(small_sample) <span class="co"># check that that we have generated 36 values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 36</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">head</span>(small_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">head</span>(small_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 115.0024 108.3437 107.8700 110.5249 123.5135 115.0068</code></pre>
 </div>
@@ -546,12 +546,12 @@ Eleni Omiridou (PGR)
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>moderate_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean=</span><span class="dv">110</span>, <span class="at">sd=</span><span class="dv">6</span>)    <span class="co"># provide our own mean and standard deviation</span></span>
-<span id="cb7-2"><a href=""></a><span class="fu">length</span>(moderate_sample) <span class="co"># check that that we have generated 100 values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>moderate_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean=</span><span class="dv">110</span>, <span class="at">sd=</span><span class="dv">6</span>)    <span class="co"># provide our own mean and standard deviation</span></span>
+<span id="cb7-2"><a></a><span class="fu">length</span>(moderate_sample) <span class="co"># check that that we have generated 100 values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 100</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">head</span>(moderate_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">head</span>(moderate_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 119.3604 116.0905 116.2640 103.3046 103.5722 115.8069</code></pre>
 </div>
@@ -559,12 +559,12 @@ Eleni Omiridou (PGR)
 </div>
 <div id="tabset-1-3">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>large_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, <span class="at">mean=</span><span class="dv">110</span>, <span class="at">sd=</span><span class="dv">6</span>)    <span class="co"># provide our own mean and standard deviation</span></span>
-<span id="cb11-2"><a href=""></a><span class="fu">length</span>(large_sample) <span class="co"># check that that we have generated 10000 values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>large_sample <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, <span class="at">mean=</span><span class="dv">110</span>, <span class="at">sd=</span><span class="dv">6</span>)    <span class="co"># provide our own mean and standard deviation</span></span>
+<span id="cb11-2"><a></a><span class="fu">length</span>(large_sample) <span class="co"># check that that we have generated 10000 values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10000</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">head</span>(large_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">head</span>(large_sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 108.7534 120.9882 111.0636 105.1650 121.6876 110.7272</code></pre>
 </div>
@@ -576,16 +576,16 @@ Eleni Omiridou (PGR)
 <section id="question-1-ii-summary-of-samples" class="slide level2">
 <h2>Question 1 (ii) Summary of Samples</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">library</span>(psych)</span>
-<span id="cb15-2"><a href=""></a><span class="fu">library</span>(knitr)</span>
-<span id="cb15-3"><a href=""></a></span>
-<span id="cb15-4"><a href=""></a>summary_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">SmallSample1 =</span> <span class="fu">describe</span>(small_sample,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb15-5"><a href=""></a>                         <span class="at">ModerateSample2 =</span> <span class="fu">describe</span>(moderate_sample,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb15-6"><a href=""></a>                         <span class="at">LargeSample3 =</span> <span class="fu">describe</span>(large_sample,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
-<span id="cb15-7"><a href=""></a></span>
-<span id="cb15-8"><a href=""></a>summary_samples <span class="ot">&lt;-</span> summary_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
-<span id="cb15-9"><a href=""></a></span>
-<span id="cb15-10"><a href=""></a><span class="fu">kable</span>(summary_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">library</span>(psych)</span>
+<span id="cb15-2"><a></a><span class="fu">library</span>(knitr)</span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a>summary_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">SmallSample1 =</span> <span class="fu">describe</span>(small_sample,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb15-5"><a></a>                         <span class="at">ModerateSample2 =</span> <span class="fu">describe</span>(moderate_sample,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb15-6"><a></a>                         <span class="at">LargeSample3 =</span> <span class="fu">describe</span>(large_sample,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
+<span id="cb15-7"><a></a></span>
+<span id="cb15-8"><a></a>summary_samples <span class="ot">&lt;-</span> summary_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
+<span id="cb15-9"><a></a></span>
+<span id="cb15-10"><a></a><span class="fu">kable</span>(summary_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <colgroup>
@@ -655,13 +655,13 @@ Eleni Omiridou (PGR)
 <section id="question-1-ii-summary-of-samples-1" class="slide level2">
 <h2>Question 1 (ii) Summary of Samples</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">library</span>(readxl)</span>
-<span id="cb16-2"><a href=""></a></span>
-<span id="cb16-3"><a href=""></a>student_samples <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/MED4048_2023-24_SampleSummaries.xlsx"</span>)</span>
-<span id="cb16-4"><a href=""></a></span>
-<span id="cb16-5"><a href=""></a><span class="fu">require</span>(reshape2)</span>
-<span id="cb16-6"><a href=""></a><span class="fu">require</span>(ggplot2)</span>
-<span id="cb16-7"><a href=""></a><span class="fu">require</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">library</span>(readxl)</span>
+<span id="cb16-2"><a></a></span>
+<span id="cb16-3"><a></a>student_samples <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/MED4048_2023-24_SampleSummaries.xlsx"</span>)</span>
+<span id="cb16-4"><a></a></span>
+<span id="cb16-5"><a></a><span class="fu">require</span>(reshape2)</span>
+<span id="cb16-6"><a></a><span class="fu">require</span>(ggplot2)</span>
+<span id="cb16-7"><a></a><span class="fu">require</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Note how much easier it is to see what’s going on when looking at all the students’ samples. Mean: (over all the students’ samples) less variability as n increases. All boxplots centred on population mean of 110 (as samples are unbiased random samples from population). Clear that distribution of means for each sample size is normally distributed (though it’s hard to see for samples of size 10,000 as that boxplot looks so small at this scale).</p>
 </section>
@@ -672,11 +672,11 @@ Eleni Omiridou (PGR)
 <div class="tab-content">
 <div id="tabset-2-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">melt</span>(student_samples[,<span class="fu">c</span>(<span class="st">"mean36"</span>,</span>
-<span id="cb17-2"><a href=""></a>                                      <span class="st">"mean100"</span>,</span>
-<span id="cb17-3"><a href=""></a>                                      <span class="st">"mean10000"</span>)]), <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span>  </span>
-<span id="cb17-4"><a href=""></a>      <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb17-5"><a href=""></a>      <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">110</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"darkred"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">melt</span>(student_samples[,<span class="fu">c</span>(<span class="st">"mean36"</span>,</span>
+<span id="cb17-2"><a></a>                                      <span class="st">"mean100"</span>,</span>
+<span id="cb17-3"><a></a>                                      <span class="st">"mean10000"</span>)]), <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span>  </span>
+<span id="cb17-4"><a></a>      <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb17-5"><a></a>      <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">110</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"darkred"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -688,11 +688,11 @@ Eleni Omiridou (PGR)
 </div>
 <div id="tabset-2-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">melt</span>(student_samples[,<span class="fu">c</span>(<span class="st">"SD36"</span>,</span>
-<span id="cb18-2"><a href=""></a>                                      <span class="st">"SD100"</span>,</span>
-<span id="cb18-3"><a href=""></a>                                      <span class="st">"SD10000"</span>)]), <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span>   </span>
-<span id="cb18-4"><a href=""></a>      <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb18-5"><a href=""></a>      <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">6</span>, <span class="at">linetype =</span> <span class="dv">2</span>,  <span class="at">colour =</span> <span class="st">"darkred"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">melt</span>(student_samples[,<span class="fu">c</span>(<span class="st">"SD36"</span>,</span>
+<span id="cb18-2"><a></a>                                      <span class="st">"SD100"</span>,</span>
+<span id="cb18-3"><a></a>                                      <span class="st">"SD10000"</span>)]), <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span>   </span>
+<span id="cb18-4"><a></a>      <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb18-5"><a></a>      <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">6</span>, <span class="at">linetype =</span> <span class="dv">2</span>,  <span class="at">colour =</span> <span class="st">"darkred"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -704,9 +704,9 @@ Eleni Omiridou (PGR)
 </div>
 <div id="tabset-2-3">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">melt</span>(student_samples[,<span class="fu">c</span>(<span class="st">"SE36"</span>,</span>
-<span id="cb19-2"><a href=""></a>                                      <span class="st">"SE100"</span>,</span>
-<span id="cb19-3"><a href=""></a>                                      <span class="st">"SE10000"</span>)]), <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>variable))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">melt</span>(student_samples[,<span class="fu">c</span>(<span class="st">"SE36"</span>,</span>
+<span id="cb19-2"><a></a>                                      <span class="st">"SE100"</span>,</span>
+<span id="cb19-3"><a></a>                                      <span class="st">"SE10000"</span>)]), <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>variable))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -726,13 +726,13 @@ Eleni Omiridou (PGR)
 <div class="tab-content">
 <div id="tabset-3-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a>mean_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">mean36 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>mean36,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb20-2"><a href=""></a>                         <span class="at">mean100 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>mean100,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb20-3"><a href=""></a>                         <span class="at">mean10000 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>mean10000,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
-<span id="cb20-4"><a href=""></a></span>
-<span id="cb20-5"><a href=""></a>mean_samples <span class="ot">&lt;-</span> mean_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
-<span id="cb20-6"><a href=""></a></span>
-<span id="cb20-7"><a href=""></a><span class="fu">kable</span>(mean_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>mean_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">mean36 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>mean36,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb20-2"><a></a>                         <span class="at">mean100 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>mean100,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb20-3"><a></a>                         <span class="at">mean10000 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>mean10000,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
+<span id="cb20-4"><a></a></span>
+<span id="cb20-5"><a></a>mean_samples <span class="ot">&lt;-</span> mean_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
+<span id="cb20-6"><a></a></span>
+<span id="cb20-7"><a></a><span class="fu">kable</span>(mean_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top" style="width:100%;">
 <colgroup>
@@ -801,13 +801,13 @@ Eleni Omiridou (PGR)
 </div>
 <div id="tabset-3-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>SD_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">SD36 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SD36,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb21-2"><a href=""></a>                         <span class="at">SD100 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SD100,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb21-3"><a href=""></a>                         <span class="at">SD10000 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SD10000,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
-<span id="cb21-4"><a href=""></a></span>
-<span id="cb21-5"><a href=""></a>SD_samples <span class="ot">&lt;-</span> SD_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
-<span id="cb21-6"><a href=""></a></span>
-<span id="cb21-7"><a href=""></a><span class="fu">kable</span>(SD_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>SD_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">SD36 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SD36,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb21-2"><a></a>                         <span class="at">SD100 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SD100,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb21-3"><a></a>                         <span class="at">SD10000 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SD10000,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
+<span id="cb21-4"><a></a></span>
+<span id="cb21-5"><a></a>SD_samples <span class="ot">&lt;-</span> SD_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
+<span id="cb21-6"><a></a></span>
+<span id="cb21-7"><a></a><span class="fu">kable</span>(SD_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <colgroup>
@@ -876,13 +876,13 @@ Eleni Omiridou (PGR)
 </div>
 <div id="tabset-3-3">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a>SE_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">SE36 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SE36,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb22-2"><a href=""></a>                         <span class="at">SE100 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SE100,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
-<span id="cb22-3"><a href=""></a>                         <span class="at">SE10000 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SE10000,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
-<span id="cb22-4"><a href=""></a></span>
-<span id="cb22-5"><a href=""></a>SE_samples <span class="ot">&lt;-</span> SE_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
-<span id="cb22-6"><a href=""></a></span>
-<span id="cb22-7"><a href=""></a><span class="fu">kable</span>(SE_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>SE_samples <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="at">SE36 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SE36,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb22-2"><a></a>                         <span class="at">SE100 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SE100,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) ), </span>
+<span id="cb22-3"><a></a>                         <span class="at">SE10000 =</span> <span class="fu">describe</span>(student_samples<span class="sc">$</span>SE10000,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>)) )</span>
+<span id="cb22-4"><a></a></span>
+<span id="cb22-5"><a></a>SE_samples <span class="ot">&lt;-</span> SE_samples[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
+<span id="cb22-6"><a></a></span>
+<span id="cb22-7"><a></a><span class="fu">kable</span>(SE_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <colgroup>
@@ -1070,13 +1070,13 @@ Eleni Omiridou (PGR)
 <section id="question-3---ldl-at-baseline-of-alert-rct" class="slide level2">
 <h2>Question 3 - LDL at Baseline of ALERT RCT</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a>alert_sample <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/alert_rct.xlsx"</span>)</span>
-<span id="cb23-2"><a href=""></a></span>
-<span id="cb23-3"><a href=""></a>alert_sample_b <span class="ot">&lt;-</span>  <span class="fu">describe</span>(alert_sample<span class="sc">$</span>ldl_b,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) )</span>
-<span id="cb23-4"><a href=""></a></span>
-<span id="cb23-5"><a href=""></a>alert_sample_b <span class="ot">&lt;-</span> alert_sample_b[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
-<span id="cb23-6"><a href=""></a></span>
-<span id="cb23-7"><a href=""></a><span class="fu">kable</span>(alert_sample_b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>alert_sample <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/alert_rct.xlsx"</span>)</span>
+<span id="cb23-2"><a></a></span>
+<span id="cb23-3"><a></a>alert_sample_b <span class="ot">&lt;-</span>  <span class="fu">describe</span>(alert_sample<span class="sc">$</span>ldl_b,<span class="at">quant=</span><span class="fu">c</span>(.<span class="dv">25</span>,.<span class="dv">75</span>) )</span>
+<span id="cb23-4"><a></a></span>
+<span id="cb23-5"><a></a>alert_sample_b <span class="ot">&lt;-</span> alert_sample_b[,<span class="fu">c</span>(<span class="st">"mean"</span>,<span class="st">"se"</span>, <span class="st">"sd"</span>, <span class="st">"min"</span>, <span class="st">"Q0.25"</span>, <span class="st">"median"</span>, <span class="st">"Q0.75"</span>, <span class="st">"max"</span>)]</span>
+<span id="cb23-6"><a></a></span>
+<span id="cb23-7"><a></a><span class="fu">kable</span>(alert_sample_b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <thead>
@@ -1107,7 +1107,7 @@ Eleni Omiridou (PGR)
 </tbody>
 </table>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a>alert_sample<span class="sc">$</span>ldl_b[alert_sample<span class="sc">$</span>ldl_b <span class="sc">==</span> <span class="st">""</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>alert_sample<span class="sc">$</span>ldl_b[alert_sample<span class="sc">$</span>ldl_b <span class="sc">==</span> <span class="st">""</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Number of missing observations is 22</p>
 </section>
@@ -1126,11 +1126,11 @@ Eleni Omiridou (PGR)
 <section id="question-4---normal-distribution-plot-height" class="slide level2">
 <h2>Question 4 - Normal Distribution Plot Height</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a>studenti <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/Studenti.xlsx"</span>)</span>
-<span id="cb25-2"><a href=""></a></span>
-<span id="cb25-3"><a href=""></a></span>
-<span id="cb25-4"><a href=""></a><span class="fu">hist</span>(studenti<span class="sc">$</span>Height, <span class="at">freq=</span><span class="cn">FALSE</span>)</span>
-<span id="cb25-5"><a href=""></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="fu">mean</span>(studenti<span class="sc">$</span>Height), <span class="at">sd =</span> <span class="fu">sd</span>(studenti<span class="sc">$</span>Height)), <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">xlab =</span> <span class="st">"Height (in cm)"</span>, <span class="at">ylab =</span> <span class="st">"Density"</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>studenti <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/Studenti.xlsx"</span>)</span>
+<span id="cb25-2"><a></a></span>
+<span id="cb25-3"><a></a></span>
+<span id="cb25-4"><a></a><span class="fu">hist</span>(studenti<span class="sc">$</span>Height, <span class="at">freq=</span><span class="cn">FALSE</span>)</span>
+<span id="cb25-5"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="fu">mean</span>(studenti<span class="sc">$</span>Height), <span class="at">sd =</span> <span class="fu">sd</span>(studenti<span class="sc">$</span>Height)), <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">xlab =</span> <span class="st">"Height (in cm)"</span>, <span class="at">ylab =</span> <span class="st">"Density"</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1143,8 +1143,8 @@ Eleni Omiridou (PGR)
 <section id="question-4---normal-distribution-plot-weight" class="slide level2">
 <h2>Question 4 - Normal Distribution Plot Weight</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a><span class="fu">hist</span>(studenti<span class="sc">$</span>Weight, <span class="at">freq=</span><span class="cn">FALSE</span>)</span>
-<span id="cb26-2"><a href=""></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="fu">mean</span>(studenti<span class="sc">$</span>Weight), <span class="at">sd =</span> <span class="fu">sd</span>(studenti<span class="sc">$</span>Weight)), <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">xlab =</span> <span class="st">"Weight (in lbs)"</span>, <span class="at">ylab =</span> <span class="st">"Density"</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">hist</span>(studenti<span class="sc">$</span>Weight, <span class="at">freq=</span><span class="cn">FALSE</span>)</span>
+<span id="cb26-2"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="fu">mean</span>(studenti<span class="sc">$</span>Weight), <span class="at">sd =</span> <span class="fu">sd</span>(studenti<span class="sc">$</span>Weight)), <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">xlab =</span> <span class="st">"Weight (in lbs)"</span>, <span class="at">ylab =</span> <span class="st">"Density"</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1215,6 +1215,7 @@ Eleni Omiridou (PGR)
 <p>population</p>
 </div>
 </div>
+
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -1225,22 +1226,22 @@ Eleni Omiridou (PGR)
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="slides_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/reveal-spotlight/spotlight.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-spotlight/spotlight.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="slides_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

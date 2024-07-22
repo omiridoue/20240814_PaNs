@@ -1,0 +1,240 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Week 2: The Normal Distribution",
+    "section": "",
+    "text": "Full Screen"
+  },
+  {
+    "objectID": "slides.html#aim",
+    "href": "slides.html#aim",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Aim",
+    "text": "Aim\n\nIntroduce the concepts of sampling, the Normal distribution, standard errors and confidence intervals.\n\n\nMaterial for this week is available under\n\n\n\nWeek 2 - Normal Distribution and Estimation:\n\n\nhttps://moodle.gla.ac.uk/course/view.php?id=40955"
+  },
+  {
+    "objectID": "slides.html#learning-outcomes",
+    "href": "slides.html#learning-outcomes",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nUnderstand the difference between a sample and the population it is drawn from\nUnderstand what a random sample is and how it is generated;\nUnderstand what a research hypothesis is and how we can investigate it;\nUnderstand what the standard error is and how it is related to the standard deviation;\nUnderstand and explain what a Confidence Interval is;\nCalculate a confidence interval for a mean in large (&gt;30) samples."
+  },
+  {
+    "objectID": "slides.html#recap---what-is-meant-by-se",
+    "href": "slides.html#recap---what-is-meant-by-se",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Recap - What is meant by SE?",
+    "text": "Recap - What is meant by SE?\n\nError in clinical trial measures\nA standardised measure of validity for evidence in medicine\nStandard deviation of the sample means\nStandard deviation of the population means"
+  },
+  {
+    "objectID": "slides.html#recap---what-is-meant-by-a-95-confidence-interval",
+    "href": "slides.html#recap---what-is-meant-by-a-95-confidence-interval",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Recap - What is meant by a 95% confidence interval?",
+    "text": "Recap - What is meant by a 95% confidence interval?\n\nAn interval that contains true value of the population parameter with 95% confidence.\nAn interval that contains true value of the population parameter with 5% confidence.\nAn interval that contains true value of the sample parameter with 95% confidence.\nHelps us avoid running a signficance test."
+  },
+  {
+    "objectID": "slides.html#recap---how-would-the-confidence-interval-change-if-90-limits-were-used",
+    "href": "slides.html#recap---how-would-the-confidence-interval-change-if-90-limits-were-used",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Recap - How would the confidence interval change if 90% limits were used?",
+    "text": "Recap - How would the confidence interval change if 90% limits were used?\n\nNarrower\nWider\nNo Change\nMake us certain in our claim"
+  },
+  {
+    "objectID": "slides.html#recap---how-would-the-confidence-interval-change-if-99-limits-were-used",
+    "href": "slides.html#recap---how-would-the-confidence-interval-change-if-99-limits-were-used",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Recap - How would the confidence interval change if 99% limits were used?",
+    "text": "Recap - How would the confidence interval change if 99% limits were used?\n\nNarrower\nNo Change\nWider\nMake us doubt our claim"
+  },
+  {
+    "objectID": "slides.html#setting-up",
+    "href": "slides.html#setting-up",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Setting-up",
+    "text": "Setting-up\n\nStart &gt; IBM SPSS Statistics &gt; Right-Click &gt; Open File Location\n\n\nTo follow along for this week you will need to launch the R for SPSS Graphical User Interface (GUI)."
+  },
+  {
+    "objectID": "slides.html#r-graphical-user-interface",
+    "href": "slides.html#r-graphical-user-interface",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "R Graphical User Interface",
+    "text": "R Graphical User Interface\n\n\nLeft you see the console with output and Right is your Script with R syntax using SPSSS."
+  },
+  {
+    "objectID": "slides.html#making-your-analysis-reproducible",
+    "href": "slides.html#making-your-analysis-reproducible",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Making your Analysis Reproducible",
+    "text": "Making your Analysis Reproducible\n\nFile &gt; New Script/Open Script &gt; 02_normal_distributions.R\n\n\nType your syntax in the console and press Enter to run.\nTo revisit this work we will need to save our working in a file called a script.\nFollow this presentation by creating a new script named 02_normal_distributions.R\nSave your work.\nRun individual lines of code by highlighting these.\nRight click&gt; Run line or selection or use the short-cut Ctrl+R."
+  },
+  {
+    "objectID": "slides.html#r-integration-for-spsss",
+    "href": "slides.html#r-integration-for-spsss",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "R Integration for SPSSS",
+    "text": "R Integration for SPSSS\nTo tap into the SPSSS extension for R we will load the following library, essentially this is a collection of code that will allow us to integrate R and SPSS syntax to make our working reproducible:\n\nlibrary(spssstatistics)"
+  },
+  {
+    "objectID": "slides.html#question-1-random-samples",
+    "href": "slides.html#question-1-random-samples",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1: Random Samples",
+    "text": "Question 1: Random Samples\nThe goal is to generate an artificial sample of numbers, draws, from a normal distribution. This is a pseudo-random draw, it depends on an underlying algorithm your computer uses based on its internal clock, so there is some level of predictability. It is important to fix, seed, the starting point of this process so that we can replicate the same values every time we return to our work.\n\nReplace the number or seed, with your Student ID.\n\n\n# Run the following command after removing the hash key this will launch a\n# Help page with documentation.\n# ?set.seed() \nset.seed(123456, kind=\"Mersenne-Twister\")"
+  },
+  {
+    "objectID": "slides.html#question-1-i-generate-random-samples",
+    "href": "slides.html#question-1-i-generate-random-samples",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1 (i) Generate Random Samples",
+    "text": "Question 1 (i) Generate Random Samples\n\n(a) n=36(b) n= 100(c) n=10,000\n\n\n\nsmall_sample &lt;- rnorm(36, mean=110, sd=6)    # provide our own mean and standard deviation\nlength(small_sample) # check that that we have generated 36 values\n\n[1] 36\n\nhead(small_sample)\n\n[1] 115.0024 108.3437 107.8700 110.5249 123.5135 115.0068\n\n\n\n\n\nmoderate_sample &lt;- rnorm(100, mean=110, sd=6)    # provide our own mean and standard deviation\nlength(moderate_sample) # check that that we have generated 100 values\n\n[1] 100\n\nhead(moderate_sample)\n\n[1] 119.3604 116.0905 116.2640 103.3046 103.5722 115.8069\n\n\n\n\n\nlarge_sample &lt;- rnorm(10000, mean=110, sd=6)    # provide our own mean and standard deviation\nlength(large_sample) # check that that we have generated 10000 values\n\n[1] 10000\n\nhead(large_sample)\n\n[1] 108.7534 120.9882 111.0636 105.1650 121.6876 110.7272"
+  },
+  {
+    "objectID": "slides.html#question-1-ii-summary-of-samples",
+    "href": "slides.html#question-1-ii-summary-of-samples",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1 (ii) Summary of Samples",
+    "text": "Question 1 (ii) Summary of Samples\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(SmallSample1 = describe(small_sample,quant=c(.25,.75) ), \n                         ModerateSample2 = describe(moderate_sample,quant=c(.25,.75) ), \n                         LargeSample3 = describe(large_sample,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nSmallSample1\n110.9571\n1.0735229\n6.441137\n93.50679\n106.1052\n110.3815\n115.6452\n125.0159\n\n\nModerateSample2\n109.3169\n0.5680517\n5.680517\n96.18580\n104.8715\n109.4313\n113.5190\n119.5016\n\n\nLargeSample3\n110.1009\n0.0599389\n5.993886\n84.52663\n105.9707\n110.1073\n114.0598\n131.7264\n\n\n\n\n\nHard to see any pattern, other than SE getting smaller proportional to √n."
+  },
+  {
+    "objectID": "slides.html#question-1-ii-summary-of-samples-1",
+    "href": "slides.html#question-1-ii-summary-of-samples-1",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1 (ii) Summary of Samples",
+    "text": "Question 1 (ii) Summary of Samples\n\nlibrary(readxl)\n\nstudent_samples &lt;- read_excel(\"data/MED4048_2023-24_SampleSummaries.xlsx\")\n\nrequire(reshape2)\nrequire(ggplot2)\nrequire(dplyr)\n\nNote how much easier it is to see what’s going on when looking at all the students’ samples. Mean: (over all the students’ samples) less variability as n increases. All boxplots centred on population mean of 110 (as samples are unbiased random samples from population). Clear that distribution of means for each sample size is normally distributed (though it’s hard to see for samples of size 10,000 as that boxplot looks so small at this scale)."
+  },
+  {
+    "objectID": "slides.html#question-1-ii-summary-of-samples---boxplots",
+    "href": "slides.html#question-1-ii-summary-of-samples---boxplots",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1 (ii) Summary of Samples - Boxplots",
+    "text": "Question 1 (ii) Summary of Samples - Boxplots\n\nMeanSDSE\n\n\n\nggplot(data = melt(student_samples[,c(\"mean36\",\n                                      \"mean100\",\n                                      \"mean10000\")]), aes(x=variable, y=value)) +  \n      geom_boxplot(aes(fill=variable)) + \n      geom_hline(yintercept = 110, linetype = 2, colour = \"darkred\")\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = melt(student_samples[,c(\"SD36\",\n                                      \"SD100\",\n                                      \"SD10000\")]), aes(x=variable, y=value)) +   \n      geom_boxplot(aes(fill=variable)) + \n      geom_hline(yintercept = 6, linetype = 2,  colour = \"darkred\")\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = melt(student_samples[,c(\"SE36\",\n                                      \"SE100\",\n                                      \"SE10000\")]), aes(x=variable, y=value)) + geom_boxplot(aes(fill=variable))"
+  },
+  {
+    "objectID": "slides.html#question-1-ii-summary-of-samples-2",
+    "href": "slides.html#question-1-ii-summary-of-samples-2",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1 (ii) Summary of Samples",
+    "text": "Question 1 (ii) Summary of Samples\n\nMeanSDSE\n\n\n\nmean_samples &lt;- rbind(mean36 = describe(student_samples$mean36,quant=c(.25,.75) ), \n                         mean100 = describe(student_samples$mean100,quant=c(.25,.75) ), \n                         mean10000 = describe(student_samples$mean10000,quant=c(.25,.75)) )\n\nmean_samples &lt;- mean_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(mean_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nmean36\n110.0111\n0.1087047\n0.9351131\n107.5459\n109.4985\n109.9518\n110.5132\n112.9679\n\n\nmean100\n110.0289\n0.0670192\n0.5765207\n108.9444\n109.5756\n110.0343\n110.5386\n111.1858\n\n\nmean10000\n110.0038\n0.0078261\n0.0673228\n109.8664\n109.9641\n109.9961\n110.0521\n110.1777\n\n\n\n\n\nNote that the SD of the sample means (0.935 for the samples of size 36 (mean36), 0.577 for mean100 and 0.0673 for mean10000 in the table above) are all approximately equal to what the true value of the SE is for samples of this size (1 for n=36, 0.6 for n=100 and 0.06 for n=10000). This is as the SE is the SD of the means of a particular sample size.\n\n\n\nSD_samples &lt;- rbind(SD36 = describe(student_samples$SD36,quant=c(.25,.75) ), \n                         SD100 = describe(student_samples$SD100,quant=c(.25,.75) ), \n                         SD10000 = describe(student_samples$SD10000,quant=c(.25,.75)) )\n\nSD_samples &lt;- SD_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(SD_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nSD36\n6.034012\n0.0801203\n0.6892206\n4.250833\n5.647067\n6.091607\n6.481475\n7.347794\n\n\nSD100\n5.953934\n0.0503051\n0.4327407\n5.215649\n5.674223\n5.940636\n6.144307\n7.680219\n\n\nSD10000\n6.005421\n0.0054227\n0.0466478\n5.889353\n5.976222\n6.002927\n6.042780\n6.101471\n\n\n\n\n\nSD: (over all students’ samples) are like the mean – less variability as n increases; all centred on population SD of 6. You only need the data from a single sample to get what you need to create a confidence interval.in\n\n\n\nSE_samples &lt;- rbind(SE36 = describe(student_samples$SE36,quant=c(.25,.75) ), \n                         SE100 = describe(student_samples$SE100,quant=c(.25,.75) ), \n                         SE10000 = describe(student_samples$SE10000,quant=c(.25,.75)) )\n\nSE_samples &lt;- SE_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(SE_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nSE36\n1.0056687\n0.0133534\n0.1148701\n0.7084721\n0.9411778\n1.0152679\n1.0802459\n1.2246324\n\n\nSE100\n0.5953934\n0.0050305\n0.0432741\n0.5215649\n0.5674223\n0.5940636\n0.6144307\n0.7680219\n\n\nSE10000\n0.0600542\n0.0000542\n0.0004665\n0.0588935\n0.0597622\n0.0600293\n0.0604278\n0.0610147\n\n\n\n\n\nSE: Gets smaller as n increases; specifically by factor of √n. Also estimates become less variable as n increases. Rather than having to create many samples to estimate these we can just use the estimates of the SE from our single samples (in my case SE=0.910 for my n=36 sample (C1), 0.569 for my n=100 sample (C2) and 0.0609 for my n=10000 sample (C3) from the first table above)."
+  },
+  {
+    "objectID": "slides.html#question-1-iii-further-plots",
+    "href": "slides.html#question-1-iii-further-plots",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1 (iii) Further Plots",
+    "text": "Question 1 (iii) Further Plots\n\nSmall sample (n=36)\n\nDotplot\nIndividual value plot\nBoxplot\nHistogram\n\nModerate sample (n=100)\n\nBoxplot\nHistogram\n\nLarge sample (n=10,000)\n\nBoxplot\nHistogram\n(Dotplot and individual value plot less useful, though dotplot could work if each dot represents several data points)"
+  },
+  {
+    "objectID": "slides.html#question-1-iii-further-plots-1",
+    "href": "slides.html#question-1-iii-further-plots-1",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 1 (iii) Further Plots",
+    "text": "Question 1 (iii) Further Plots\n\nn=36n=100n=10,000"
+  },
+  {
+    "objectID": "slides.html#q1-v-calculating-confidence-intervals",
+    "href": "slides.html#q1-v-calculating-confidence-intervals",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Q1 (v) Calculating Confidence Intervals",
+    "text": "Q1 (v) Calculating Confidence Intervals\n\nn=36n=100n=10,000\n\n\nFor n=36 sample, mean = 110.96, SE = 6.4411371 / √36 = 1.0735229\nStep 1:\n95% CI lower limit is 110.96-1.96*1.074 = 108.85496\nStep 2:\n95% CI lower limit is 110.96+1.96*1.074 = 113.06504\nStep 3:\nSo 95% CI for population mean from my n=36 sample is ( 108.85496 , 113.06504 )\n\n\nFor n=100 sample, mean = 109.32, SE = 5.6805167 / √100 = 0.5680517\n95% CI lower limit is 109.32-1.96*0.568 = 108.20672\n95% CI lower limit is 109.32+1.96*0.568 = 110.43328\nSo 95% CI for population mean from my n=100 sample is ( 108.20672 , 110.43328 )\n\n\nFor n=10000 sample, mean = 110.1, SE = 5.9938857 / √100 = 0.0599389\n95% CI lower limit is 110.1-1.96*0.06 = 109.9824\n95% CI lower limit is 110.1+1.96*0.06 = 110.2176\nSo 95% CI for population mean from my n=10000 sample is (109.9824 , 110.2176)"
+  },
+  {
+    "objectID": "slides.html#question-2",
+    "href": "slides.html#question-2",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 2",
+    "text": "Question 2\nProfessor Whimsy has taken the heights of 100 randomly sampled 5-year-old boys from Glasgow as he is interested in whether boys in Glasgow are on average shorter than the UK as a whole, where the average height of 5-year-old boys is known to be 110cm. He has told you that the mean height in the sample is 108.92cm and the standard deviation of the heights is 5.77cm and has asked you to analyse the data"
+  },
+  {
+    "objectID": "slides.html#question-2-i",
+    "href": "slides.html#question-2-i",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 2 (i)",
+    "text": "Question 2 (i)\nCalculate the 95% confidence interval by hand. Interpret the result. Is there evidence that 5-year old boys from Glasgow are shorter than those in the rest of the UK.\n108.92 +/- 1.96 * 5.77/√100 (107.78908, 110.05092) \nThe sample estimate of the mean is 108.92 cm, just over 1 cm lower than 110 cm. We have 95% confidence that the population mean height of 5-year old boys in Glasgow is between 107.79 and 110.05cm, with our best estimate being 108.92cm. Since this CI contains 110cm, there is no significant evidence (at the 5% significance level) that Glaswegian 5-year old boys are shorter than UK average. However, the upper CI is borderline. Overall from these data we can say that whilst Glaswegian children may be the same height on average as children in the rest of the UK, they may be up to 2cm shorter. Remember that we are assuming that the data are an independent representative (or better still random) sample (see next week’s workbook for more about this)!"
+  },
+  {
+    "objectID": "slides.html#question-2-ii",
+    "href": "slides.html#question-2-ii",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 2 (ii)",
+    "text": "Question 2 (ii)\nProfessor Whimsy has somewhat eccentric ideas on statistics and says he much prefers the 93% confidence interval. Calculate this interval by hand and interpret the result.\nThe critical value is 1.81 instead of 1.96 for a 93% CI.\n108.92 +/- 1.81 * 5.77/√100 (107.78908, 109.96437) \nThe population mean height of 5-year old boys in Glasgow is between 107.88 and 109.96cm with 93% confidence, with our best estimate being 108.92cm. This CI does not contain 110cm, so there is some evidence (at the 7% significance level) that Glaswegian 5-year-old boys are shorter than UK average. However, the upper CI is very close to 110cm, so any height reduction may be very small."
+  },
+  {
+    "objectID": "slides.html#question-2-iii",
+    "href": "slides.html#question-2-iii",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 2 (iii)",
+    "text": "Question 2 (iii)\nExplain the difference between them. Why might a 93% confidence interval not be as useful as a 95% one?\n93% CI is narrower than 95% CI as it has a lower confidence of containing the population mean. Whilst 95% is an arbitrary choice, its use helps to ensure consistency across research, so care must be taken using any alternative, especially if it changes the interpretation of the results."
+  },
+  {
+    "objectID": "slides.html#question-3---ldl-at-baseline-of-alert-rct",
+    "href": "slides.html#question-3---ldl-at-baseline-of-alert-rct",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 3 - LDL at Baseline of ALERT RCT",
+    "text": "Question 3 - LDL at Baseline of ALERT RCT\n\nalert_sample &lt;- read_excel(\"data/alert_rct.xlsx\")\n\nalert_sample_b &lt;-  describe(alert_sample$ldl_b,quant=c(.25,.75) )\n\nalert_sample_b &lt;- alert_sample_b[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(alert_sample_b)\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nX1\n4.113497\n0.0318585\n0.9963094\n1.3\n3.4\n4.1\n4.7\n8.2\n\n\n\n\nalert_sample$ldl_b[alert_sample$ldl_b == \"\"] &lt;- NA\n\nNumber of missing observations is 22"
+  },
+  {
+    "objectID": "slides.html#question-3---ldl-at-baseline-of-alert-rct-1",
+    "href": "slides.html#question-3---ldl-at-baseline-of-alert-rct-1",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 3 - LDL at Baseline of ALERT RCT",
+    "text": "Question 3 - LDL at Baseline of ALERT RCT\nFor n=978 sample, mean = 4.11, SE = 0.9963094 / √100 = 0.0318585\n95% CI lower limit is 4.11-1.96*0.0996309 = 4.04728\n95% CI lower limit is 4.11+1.96*0.0996309 = 4.17272\nSo 95% CI for population mean from my n=10000 sample is (4.04728 , 4.17272)"
+  },
+  {
+    "objectID": "slides.html#question-3---ldl-at-baseline",
+    "href": "slides.html#question-3---ldl-at-baseline",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 3 - LDL at Baseline",
+    "text": "Question 3 - LDL at Baseline\nThe sample estimate of baseline, 4.11 mmol/L, is just over 1 mmol/L greater than the upper limit of the normal upper limit of 3 mmol/L. We can say with 95% confidence that baseline LDL in population of renal transplant patients is between 4.05 and 4.18 mmol/L.\nThus renal transplant patients have LDL cholesterol that is on average at least 1 mmol/L higher than the upper limit of the normal range. Due to the large sample size we have a very precise estimate of the population average. These patients are therefore obvious candidates in which to test the effectiveness of statins at reducing LDL and more importantly whether they reduce the rate at which major adverse cardiac events (e.g. stroke or MI) happen. We obviously need to assume that the data are an independent representative sample (the sample can’t be perfectly random)."
+  },
+  {
+    "objectID": "slides.html#question-4---normal-distribution-plot-height",
+    "href": "slides.html#question-4---normal-distribution-plot-height",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 4 - Normal Distribution Plot Height",
+    "text": "Question 4 - Normal Distribution Plot Height\n\nstudenti &lt;- read_excel(\"data/Studenti.xlsx\")\n\n\nhist(studenti$Height, freq=FALSE)\ncurve(dnorm(x, mean = mean(studenti$Height), sd = sd(studenti$Height)), add = TRUE, col = \"blue\", xlab = \"Height (in cm)\", ylab = \"Density\",)"
+  },
+  {
+    "objectID": "slides.html#question-4---normal-distribution-plot-weight",
+    "href": "slides.html#question-4---normal-distribution-plot-weight",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 4 - Normal Distribution Plot Weight",
+    "text": "Question 4 - Normal Distribution Plot Weight\n\nhist(studenti$Weight, freq=FALSE)\ncurve(dnorm(x, mean = mean(studenti$Weight), sd = sd(studenti$Weight)), add = TRUE, col = \"blue\", xlab = \"Weight (in lbs)\", ylab = \"Density\",)"
+  },
+  {
+    "objectID": "slides.html#question-4---normal-distribution-plot-weight-1",
+    "href": "slides.html#question-4---normal-distribution-plot-weight-1",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 4 - Normal Distribution Plot Weight",
+    "text": "Question 4 - Normal Distribution Plot Weight\nHeight: p = 0.39 (&gt;0.05) – no evidence to reject null hypothesis of Normality (at 5% significance level) [Anderson-Darling method] Weight: p = 0.04 (&lt;0.05) – evidence to reject null hypothesis of Normality (at 5% significance level) [Anderson-Darling method]\nBoth height and weight are in general Normally distributed. However, this is only likely to be true for young adults within each sex. What we have is a mixture of 2 Normal distributions for weight (and height). If we consider males and females separately, they should both look normal. Also note that tests for normality should be treated with caution, as in small samples they lack power to detect data from non-normal distributions and in large samples they can give significant results when the deviations are irrelevantly small."
+  },
+  {
+    "objectID": "slides.html#question-4---normal-distribution-plot-weight-2",
+    "href": "slides.html#question-4---normal-distribution-plot-weight-2",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Question 4 - Normal Distribution Plot Weight",
+    "text": "Question 4 - Normal Distribution Plot Weight"
+  },
+  {
+    "objectID": "slides.html#final-question",
+    "href": "slides.html#final-question",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Final Question !",
+    "text": "Final Question !\nWhat is the probability that the 5 year old schoolboys have height (height ~ N(110,62))\n\n(i) x &lt; 98 cm(ii) x &gt; 119 cm(iii) 105 &lt; x &gt; 120 cm(iv) 25th-75th percentile"
+  },
+  {
+    "objectID": "slides.html#next-week---remember-the-big-picture",
+    "href": "slides.html#next-week---remember-the-big-picture",
+    "title": "Week 2: The Normal Distribution and Estimation",
+    "section": "Next Week - Remember the Big Picture!",
+    "text": "Next Week - Remember the Big Picture!\n\nWeek 3 - Confidence Intervals and Hypothesis Tests \n\n\n\nQuestion of interest (Research Hypothesis)\nExperiment on sample\nGraphs and summary statistics\nSubjective answer to question\nFormal Analysis/Statistical Inference\n(Evidence, Relevance)\n\n\n\npopulation\nsample\nsample\nsample\npopulation"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]

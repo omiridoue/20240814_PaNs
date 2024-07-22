@@ -3,11 +3,6 @@ project:
 
 website:
   title: "EBBRMS_02_normal_distributions"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
 
 format:
   html:

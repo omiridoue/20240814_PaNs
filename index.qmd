@@ -1,8 +1,8 @@
 ---
-title: "02_normal_distributions"
+title: "Week 2: The Normal Distribution"
 ---
 
-[Full Screen](slides.qmd)
+[Full Screen](slides.html)
 
 ```{=html}
 <iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
