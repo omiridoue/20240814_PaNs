@@ -1,12 +1,14 @@
 ---
-title: "Week 2: The Normal Distribution and Estimation"
-subtitle: "EBBRMS Mock Tutorial"
+title: "Your Presentation Title Here"
+subtitle: "Peers and Networks"
 author:
-  - name: Eleni Omiridou (PGR)
-    email: 2333157O@student.gla.ac.uk
+  - name: Name Here
+    orcid: 0000-0000-0000-0000
+    email: FirstName.LastName@gla.ac.uk
     affiliation: 
       - name: School of Health & Wellbeing 
-date: 2024-07-26
+date: 2024-08-14
+date-format: long
 toc: false
 fontsize: 22pt
 format: 
@@ -14,10 +16,22 @@ format:
   #   css: include/webex.css
   #   include-after-body: include/webex.js
   revealjs: 
+    theme: simple #serif #beige #blood #dark #default #league #moon #night  #simple #sky #solarized
     auto-stretch: false
     slide-number: true 
     chalkboard: 
-      buttons: true
+      buttons: false
+    spotlight: 
+      toggleSpotlightOnMouseDown: true
+      size: 90
+    preview-links: true
+    logo: images/MRC_CSO_SPHSU_Glasgow_RGB_0.png
+    footer: "MRC/CSO Social and Public Health Sciences Unit"
+    center-title-slide: true
+    #code-fold: false
+    progress: true
+    code-overflow: wrap
+    css: styles.css
 revealjs-plugins:
     - spotlight
     - quiz
@@ -25,144 +39,104 @@ revealjs-plugins:
 
 ## Aim
 
--   Introduce the concepts of sampling, the Normal distribution, standard errors and confidence intervals.
+-   Introduce features of a Quarto presentation and demonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.
 
->   Material for this week is available under \
+>   Adding a right pointing arrow allows you to indent text \
 
->    **Week 2 - Normal Distribution and Estimation:**
+>   If you want to start a new line of text add a backward slash at the end of a line \
+
+>    **You can make text bold by adding two asterisks on either end of a phrase**
     
->    <https://moodle.gla.ac.uk/course/view.php?id=40955>
+>    [Add Hyperlink Text](https://quarto.org/docs/presentations/revealjs)
 
 ## Learning Outcomes
 
--   Understand the difference between a sample and the population it is drawn from
--   Understand what a random sample is and how it is generated;
--   Understand what a research hypothesis is and how we can investigate it;
--   Understand what the standard error is and how it is related to the standard deviation;
--   Understand and explain what a Confidence Interval is;
--   Calculate a confidence interval for a mean in large (\>30) samples.
+-   To make a list start the code line with a dash then TAB and end line;
+-   Perhaps you would like to take stock of your previous talks/workshops in one place;
 
-## Recap - What is meant by SE? {.quiz-question}
+## Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)
 
-- Error in clinical trial measures
-- A standardised measure of validity for evidence in medicine
-- [Standard deviation of the sample means]{.correct}
-- Standard deviation of the population means
+-   To do this navigate to your GitHub page and create your first repository;
+    - Name this yourGitHubusername.github.io;
+-   There are many ways to host your render Quarto into html, we will do this locally and deploy our page to GitHub through the \docs branch option.
+-   
+-   Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository
+-   Note if you have a GitHub education page you don't need to make the repo
 
-## Recap - What is meant by a 95% confidence interval? {.quiz-question}
+## There are different extensions this one is called quiz-question {.quiz-question}
 
-- [An interval that contains true value of the population parameter with 95% confidence.]{.correct}
-- An interval that contains true value of the population parameter with 5% confidence.
-- An interval that contains true value of the sample parameter with 95% confidence.
-- Helps us avoid running a signficance test.
+- Write Option here
+- Write Option here
+- [THIS WILL BE YOUR CORRECT ANSWER]{.correct}
+- WRITE Option here
 
-## Recap - How would the confidence interval change if 90% limits were used? {.quiz-question}
+## Save all your images in your images folder. 
 
-- [Narrower]{.correct}
-- Wider 
-- No Change
-- Make us certain in our claim
+Once you open your R project you will be able to load images through the relative
+path images/
 
-## Recap - How would the confidence interval change if 99% limits were used? {.quiz-question}
+![Add an image caption here](images/MRC_CSO_SPHSU_Glasgow_RGB_0.png)
 
-- Narrower
-- No Change
-- [Wider]{.correct}
-- Make us doubt our claim
-
-## Setting-up 
-
-> Start > IBM SPSS Statistics > Right-Click > Open File Location
-
-![](images/00_setting_up_RGUI.png)
-
-To follow along for this week you will need to launch the R for SPSS Graphical User Interface (GUI).
-
-
-## R Graphical User Interface
-
-![](images/01_Console_and_Script.png)
-
-> Left you see the console with output and Right is your Script with R syntax using SPSSS.
 
 ## Making your Analysis Reproducible
 
 
-> `File > New Script/Open Script > 02_normal_distributions.R`
+> `Anything you wrap inside these back ticks will appear like so normally you can do this for technical parts`
 
-- Type your syntax in the console and press Enter to run. 
-- To revisit this work we will need to save our working in a file called a script.
+- `You can input highlighted text in line` for example `Ctrl+R`.
 
-- Follow this presentation by creating a new script named 02_normal_distributions.R
-- Save your work. 
-- Run individual lines of code by highlighting these.
-- `Right click> Run line or selection` or use the short-cut `Ctrl+R`.
+##  Code Chunk Explained a Bit More
 
-## R Integration for SPSSS
-
-To tap into the SPSSS extension for R we will load the following library, essentially
-this is a collection of code that will allow us to integrate R and SPSS syntax to
-make our working reproducible: 
+The code chunks will include all your code, you can click Insert a new code chunk to your top right.
+Each chunk should have its own name. You can add a name after the first reserved word which
+refers to the language your code is in, this will be lowercase r for any R code. Follow the chunk name by
+a comma, for names try avoiding dashes, if there is an error with your code the error message will
+let you know which chunk has an issue. To evaluate, run the code, you will need to type `eval = TRUE`,
+if you do not want to run this code when you render the document change to `FALSE`. If you want to 
+print your code in the slides add `echo = TRUE`.
 
 ```{r, eval = FALSE, echo=TRUE}     
 
-library(spssstatistics)
+library(network)
 ```
 
-## Question 1: Random Samples
 
-The goal is to generate an artificial sample of numbers, draws, from a normal distribution.
-This is a pseudo-random draw, it depends on an underlying algorithm your computer
-uses based on its internal clock, so there is some level of predictability.
-It is important to fix, seed, the starting point of this process so that we can
-replicate the same values every time we return to our work. 
-
-> Replace the number or seed, with your Student ID.
-
-```{r echo=TRUE}
-# Run the following command after removing the hash key this will launch a
-# Help page with documentation.
-# ?set.seed() 
-set.seed(123456, kind="Mersenne-Twister") 
-
-```
-
-## Question 1 (i) Generate Random Samples
+## Quarto allows you to have different tabs
 
 ::: {.panel-tabset}
 
-#### (a) n=36 
+#### (a) Low 
 ```{r echo=TRUE}
-small_sample <- rnorm(36, mean=110, sd=6)    # provide our own mean and standard deviation
-length(small_sample) # check that that we have generated 36 values
-head(small_sample)
+low_prevalence <- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters
+length(low_prevalence) 
+head(low_prevalence)
 ```
 
-#### (b) n= 100 
+#### (b) Moderate
 ```{r echo=TRUE}
-moderate_sample <- rnorm(100, mean=110, sd=6)    # provide our own mean and standard deviation
-length(moderate_sample) # check that that we have generated 100 values
-head(moderate_sample)
+moderate_prevalence <- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters
+length(moderate_prevalence) 
+head(moderate_prevalence)
 ```
 
-#### (c) n=10,000 
+#### (c) High
 ```{r echo=TRUE}
-large_sample <- rnorm(10000, mean=110, sd=6)    # provide our own mean and standard deviation
-length(large_sample) # check that that we have generated 10000 values
-head(large_sample)
+high_prevalence <- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters
+length(high_prevalence) 
+head(high_prevalence)
 ```
 ::: 
 
-## Question 1 (ii) Summary of Samples 
+## Summary for Results
 
 ```{r echo=TRUE}
 
 library(psych)
 library(knitr)
 
-summary_samples <- rbind(SmallSample1 = describe(small_sample,quant=c(.25,.75) ), 
-                         ModerateSample2 = describe(moderate_sample,quant=c(.25,.75) ), 
-                         LargeSample3 = describe(large_sample,quant=c(.25,.75)) )
+summary_samples <- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), 
+                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), 
+                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )
 
 summary_samples <- summary_samples[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
 
@@ -170,414 +144,20 @@ kable(summary_samples)
 
 ```
 
-Hard to see any pattern, other than SE getting smaller proportional to √n.
+You can wrap LaTeX code in $x$, for any symbols.
+You can dynamically refer to a variable output in line, like the standard deviation `{r} round(sd(low_prevalence),2)`
 
-## Question 1 (ii) Summary of Samples
+Or the value of the median to describe your data  `{r} median(low_prevalence)`
 
-```{r echo=TRUE}
 
-library(readxl)
+## You can Section a Slide into Different Columns
 
-student_samples <- read_excel("data/MED4048_2023-24_SampleSummaries.xlsx")
-
-require(reshape2)
-require(ggplot2)
-require(dplyr)
-```
-
-Note how much easier it is to see what’s going on when looking at all the students’ samples. Mean: (over all the students’ samples) less variability as n increases. All boxplots centred on population mean of 110 (as samples are unbiased random samples from population). Clear that distribution of means for each sample size is normally distributed (though it’s hard to see for samples of size 10,000 as that boxplot looks so small at this scale).
-
-## Question 1 (ii) Summary of Samples - Boxplots
-
-::: {.panel-tabset}
-
-### Mean
-
-```{r echo=TRUE}
-
-ggplot(data = melt(student_samples[,c("mean36",
-                                      "mean100",
-                                      "mean10000")]), aes(x=variable, y=value)) +  
-      geom_boxplot(aes(fill=variable)) + 
-      geom_hline(yintercept = 110, linetype = 2, colour = "darkred")
-
-```
-
-### SD
-
-```{r echo=TRUE}
-
-ggplot(data = melt(student_samples[,c("SD36",
-                                      "SD100",
-                                      "SD10000")]), aes(x=variable, y=value)) +   
-      geom_boxplot(aes(fill=variable)) + 
-      geom_hline(yintercept = 6, linetype = 2,  colour = "darkred")
-
-```
-
-### SE
-
-```{r echo=TRUE}
-
-ggplot(data = melt(student_samples[,c("SE36",
-                                      "SE100",
-                                      "SE10000")]), aes(x=variable, y=value)) + geom_boxplot(aes(fill=variable))
-
-```
-::: 
-
-
-## Question 1 (ii) Summary of Samples
-
-::: {.panel-tabset}
-
-### Mean 
-
-```{r echo=TRUE}
-mean_samples <- rbind(mean36 = describe(student_samples$mean36,quant=c(.25,.75) ), 
-                         mean100 = describe(student_samples$mean100,quant=c(.25,.75) ), 
-                         mean10000 = describe(student_samples$mean10000,quant=c(.25,.75)) )
-
-mean_samples <- mean_samples[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
-
-kable(mean_samples)
-
-``` 
-
-Note that the SD of the sample means (0.935 for the samples of size 36 (mean36), 0.577 for mean100 and 0.0673 for mean10000 in the table above) are all approximately equal to what the true value of the SE is for samples of this size (1 for n=36, 0.6 for n=100 and 0.06 for n=10000). This is as the **SE is the SD of the means** of a particular sample size. 
-
-
-### SD
-```{r echo=TRUE}
-SD_samples <- rbind(SD36 = describe(student_samples$SD36,quant=c(.25,.75) ), 
-                         SD100 = describe(student_samples$SD100,quant=c(.25,.75) ), 
-                         SD10000 = describe(student_samples$SD10000,quant=c(.25,.75)) )
-
-SD_samples <- SD_samples[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
-
-kable(SD_samples)
-
-``` 
-
-SD: (over all students’ samples) are like the mean – less variability as n increases; all centred on population SD of 6. You only need the data from a single sample to get what you need to create a confidence interval.in
-
-### SE
-
-```{r echo=TRUE}
-SE_samples <- rbind(SE36 = describe(student_samples$SE36,quant=c(.25,.75) ), 
-                         SE100 = describe(student_samples$SE100,quant=c(.25,.75) ), 
-                         SE10000 = describe(student_samples$SE10000,quant=c(.25,.75)) )
-
-SE_samples <- SE_samples[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
-
-kable(SE_samples)
-
-``` 
-
-SE: Gets smaller as n increases; specifically by factor of √n. Also estimates become less variable as n increases. Rather than having to create many samples to estimate these we can just **use the estimates of the SE from our single samples** (in my case SE=0.910 for my n=36 sample (C1), 0.569 for my n=100 sample (C2) and 0.0609 for my n=10000 sample (C3) from the first table above).
-
-:::
-
-## Question 1 (iii) Further Plots
-
-- **Small sample** (n=36) 
-  - Dotplot
-  - Individual value plot
-  - Boxplot
-  - Histogram
-- **Moderate sample** (n=100)  
-  - Boxplot
-  - Histogram
-- **Large sample** (n=10,000)   
-  - Boxplot
-  - Histogram 
-  - (Dotplot and individual value plot less useful, though dotplot could work if each dot represents several data points)
-
-## Question 1 (iii) Further Plots 
-
-::: {.panel-tabset}
-
-### n=36
-```{r}
-
-m = 74; n = 36; mu = 110; sigma = 6; conf.level = .95
-
-x.bar = student_samples$mean36
-x.se = student_samples$SE36
-t.crit = qt(1-(1-conf.level)/2, n-1)
-LCL = x.bar - t.crit*x.se; UCL = x.bar + t.crit*x.se
-cover = LCL < mu & UCL > mu
-HI = max(UCL); LO = min(LCL) # to set dimensions of the plot
-plot(c(0,m+1), c(HI, LO), col="white", ylab="Height (cm)", xlab="Dataset's Row Number",  
-     main="95% Confidence Interval for simulated height data \n for samples (n=36)", 
-     xaxs="i", ylim = c(100,120))
-
-abline(h=mu, col="green2")
-for(i in 1:m) {bar="blue"; if (cover[i]==F) {bar="red"}
-lines(c(i,i), c(UCL[i], LCL[i]), col=bar, lwd=2) }
-
-```
-
-### n=100
-
-```{r}
-
-m = 74; n = 100; mu = 110; sigma = 6; conf.level = .95
-x.bar <- c(); x.se <- c();
-
-x.bar = student_samples$mean100
-x.se = student_samples$SE100
-t.crit = qt(1-(1-conf.level)/2, n-1)
-LCL = x.bar - t.crit*x.se; UCL = x.bar + t.crit*x.se
-cover = LCL < mu & UCL > mu
-HI = max(UCL); LO = min(LCL) # to set dimensions of the plot
-plot(c(0,m+1), c(HI, LO), col="white", ylab="Height (cm)", xlab="Dataset's Row Number",  
-     main="95% Confidence Interval for simulated height data \n for samples (n=100)", 
-     xaxs="i", ylim = c(100,120))
-
-abline(h=mu, col="green2")
-for(i in 1:m) {bar="blue"; if (cover[i]==F) {bar="red"}
-lines(c(i,i), c(UCL[i], LCL[i]), col=bar, lwd=2) }
-```
-
-### n=10,000
-
-```{r}
-m = 74; n = 10000; mu = 110; sigma = 6; conf.level = .95
-x.bar <- c(); x.se <- c();
-
-x.bar = student_samples$mean10000
-x.se = student_samples$SE10000
-t.crit = qt(1-(1-conf.level)/2, n-1)
-LCL = x.bar - t.crit*x.se; UCL = x.bar + t.crit*x.se
-cover = LCL < mu & UCL > mu
-HI = max(UCL); LO = min(LCL) # to set dimensions of the plot
-plot(c(0,m+1), c(HI, LO), col="white", ylab="Height (cm)", xlab="Dataset's Row Number",  
-     main="95% Confidence Interval for simulated height data \n for samples (n=10000)", 
-     xaxs="i", ylim = c(100,120))
-
-abline(h=mu, col="green2")
-for(i in 1:m) {bar="blue"; if (cover[i]==F) {bar="red"}
-lines(c(i,i), c(UCL[i], LCL[i]), col=bar, lwd=2) }
-```
-
-:::
-
-
-## Q1 (v) Calculating Confidence Intervals
-
-::: {.panel-tabset}
-
-### n=36
-
-For **n=36** sample, mean = `{r} round(summary_samples[1,"mean"],2)`, SE = `{r} summary_samples[1,"sd"]` / √36 = `{r} summary_samples[1,"sd"]/sqrt(36)`
-
-**Step 1**:
-
-95% CI lower limit is `{r} round(summary_samples[1,"mean"],2)`-1.96*`{r} round(summary_samples[1,"sd"]/sqrt(36),3)` = 
-`{r} round(summary_samples[1,"mean"],2)-1.96* round(summary_samples[1,"sd"]/sqrt(36),3)`
-
-**Step 2**: 
-
-95% CI lower limit is `{r} round(summary_samples[1,"mean"],2)`+1.96*`{r} round(summary_samples[1,"sd"]/sqrt(36),3)` = 
-`{r} round(summary_samples[1,"mean"],2)+1.96* round(summary_samples[1,"sd"]/sqrt(36),3)`
-
-**Step 3**: 
-
-**So 95% CI for population mean from my n=36 sample is ( `{r} round(summary_samples[1,"mean"],2)-1.96* round(summary_samples[1,"sd"]/sqrt(36),3)` , `{r} round(summary_samples[1,"mean"],2)+1.96* round(summary_samples[1,"sd"]/sqrt(36),3)` )**
-
-
-### n=100
-
-For **n=100** sample, mean = `{r} round(summary_samples[2,"mean"],2)`, SE = `{r} summary_samples[2,"sd"]` / √100 = `{r} summary_samples[2,"sd"]/sqrt(100)`
-
-**95% CI lower limit** is `{r} round(summary_samples[2,"mean"],2)`-1.96*`{r} round(summary_samples[2,"sd"]/sqrt(100),3)` = 
-`{r} round(summary_samples[2,"mean"],2)-1.96* round(summary_samples[2,"sd"]/sqrt(100),3)`
-
-**95% CI lower limit is** `{r} round(summary_samples[2,"mean"],2)`+1.96*`{r} round(summary_samples[2,"sd"]/sqrt(100),3)` = 
-`{r} round(summary_samples[2,"mean"],2)+1.96* round(summary_samples[2,"sd"]/sqrt(100),3)`
-
-**So 95% CI for population mean from my n=100 sample is ( `{r} round(summary_samples[2,"mean"],2)-1.96* round(summary_samples[2,"sd"]/sqrt(100),3)` , `{r} round(summary_samples[2,"mean"],2)+1.96* round(summary_samples[2,"sd"]/sqrt(100),3)` )**
-
-### n=10,000
-
-For **n=10000** sample, mean = `{r} round(summary_samples[3,"mean"],2)`, SE = `{r} summary_samples[3,"sd"]` / √100 = `{r} summary_samples[3,"sd"]/sqrt(10000)`
-
-**95% CI lower limit is **`{r} round(summary_samples[3,"mean"],2)`-1.96*`{r} round(summary_samples[3,"sd"]/sqrt(10000),3)` = 
-`{r} round(summary_samples[3,"mean"],2)-1.96* round(summary_samples[3,"sd"]/sqrt(10000),3)`
-
-**95% CI lower limit is **`{r} round(summary_samples[3,"mean"],2)`+1.96*`{r} round(summary_samples[3,"sd"]/sqrt(10000),3)` = 
-`{r} round(summary_samples[3,"mean"],2)+1.96* round(summary_samples[3,"sd"]/sqrt(10000),3)`
-
-**So 95% CI for population mean from my n=10000 sample is (`{r} round(summary_samples[3,"mean"],2)-1.96* round(summary_samples[3,"sd"]/sqrt(10000),3)` , `{r} round(summary_samples[3,"mean"],2)+1.96* round(summary_samples[3,"sd"]/sqrt(10000),3)`)**
-
-:::
-
-## Question 2
-
-Professor Whimsy has taken the heights of 100 randomly sampled 5-year-old boys from Glasgow as he is interested in whether boys in Glasgow are on average shorter than the UK as a whole, where the average height of 5-year-old boys is known to be 110cm. He has told you that the mean height in the sample is 108.92cm and the standard deviation of the heights is 5.77cm and has asked you to analyse the data
-
-```{r, echo=FALSE}
-mu = 110
-x.sd = 5.77
-x.bar = 108.92
-```
-
-
-## Question 2 (i)
-
-Calculate the 95% confidence interval by hand. Interpret the result. Is there evidence that 5-year old boys from Glasgow are shorter than those in the rest of the UK.
-
-**108.92 +/- 1.96 * 5.77/√100 (`{r} x.bar - 1.96 * x.sd/sqrt(100)`, `{r} x.bar + 1.96 * x.sd/sqrt(100)`) **
-
-The sample estimate of the mean is 108.92 cm, just over 1 cm lower than 110 cm. We have 95% confidence that the population mean height of 5-year old boys in Glasgow is between 107.79 and 110.05cm, with our best estimate being 108.92cm. Since this CI contains 110cm, there is no significant evidence (at the 5% significance level) that Glaswegian 5-year old boys are shorter than UK average. However, the upper CI is borderline. Overall from these data we can say that whilst Glaswegian children may be the same height on average as children in the rest of the UK, they may be up to 2cm shorter. Remember that we are assuming that the data are an independent representative (or better still random) sample (see next week’s workbook for more about this)!
-
-## Question 2 (ii)
-
-Professor Whimsy has somewhat eccentric ideas on statistics and says he much prefers the 93% confidence interval. Calculate this interval by hand and interpret the result.
-
-
-The critical value is 1.81 instead of 1.96 for a 93% CI.
-
-**108.92 +/- 1.81 * 5.77/√100 (`{r} x.bar - 1.96 * x.sd/sqrt(100)`, `{r} x.bar + 1.81 * x.sd/sqrt(100)`) **
-
-The population mean height of 5-year old boys in Glasgow is between 107.88 and 109.96cm with 93% confidence, with our best estimate being 108.92cm. This CI does not contain 110cm, so there is some evidence (at the 7% significance level) that Glaswegian 5-year-old boys are shorter than UK average. However, the upper CI is very close to 110cm, so any height reduction may be very small.
-
-
-## Question 2 (iii)
-
-Explain the difference between them. Why might a 93% confidence interval not be as useful as a 95% one?
-
-93% CI is narrower than 95% CI as it has a lower confidence of containing the population mean. Whilst 95% is an arbitrary choice, its use helps to ensure consistency across research, so care must be taken using any alternative, especially if it changes the interpretation of the results.
-
-## Question 3 - LDL at Baseline of ALERT RCT
-
-```{r echo=TRUE}
-
-
-alert_sample <- read_excel("data/alert_rct.xlsx")
-
-alert_sample_b <-  describe(alert_sample$ldl_b,quant=c(.25,.75) )
-
-alert_sample_b <- alert_sample_b[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
-
-kable(alert_sample_b)
-
-alert_sample$ldl_b[alert_sample$ldl_b == ""] <- NA
-```
-Number of missing observations is `{r} sum(is.na(alert_sample$ldl_b))`
-
-## Question 3 - LDL at Baseline of ALERT RCT
-
-For **n=978** sample, mean = `{r} round(alert_sample_b[,"mean"],2)`, SE = `{r} alert_sample_b[,"sd"]` / √100 = `{r} alert_sample_b[,"se"]`
-
-**95% CI lower limit is **`{r} round(alert_sample_b[,"mean"],2)`-1.96*`{r} alert_sample_b[,"sd"]/sqrt(100)` = 
-`{r} round(alert_sample_b[,"mean"],2)-1.96* round(alert_sample_b[,"se"],3)`
-
-**95% CI lower limit is **`{r} round(alert_sample_b[,"mean"],2)`+1.96*`{r} alert_sample_b[,"sd"]/sqrt(100)` = 
-`{r} round(alert_sample_b[,"mean"],2)+1.96* round(alert_sample_b[,"se"],3)`
-
-**So 95% CI for population mean from my n=10000 sample is (`{r} round(alert_sample_b[,"mean"],2)-1.96* round(alert_sample_b[,"se"],3)` , `{r} round(alert_sample_b[,"mean"],2)+1.96* round(alert_sample_b[,"se"],3)`)**
-
-## Question 3 - LDL at Baseline
-
-The sample estimate of baseline, 4.11 mmol/L, is just over 1 mmol/L greater than the upper limit of the normal upper limit of 3 mmol/L. We can say with 95% confidence that baseline LDL in population of renal transplant patients is between 4.05 and 4.18 mmol/L.
-
-Thus renal transplant patients have LDL cholesterol that is on average at least 1 mmol/L higher than the upper limit of the normal range. Due to the large sample size we have a very precise estimate of the population average. These patients are therefore obvious candidates in which to test the effectiveness of statins at reducing LDL and more importantly whether they reduce the rate at which major adverse cardiac events (e.g. stroke or MI) happen. We obviously need to assume that the data are an independent representative sample (the sample can’t be perfectly random).
-
-## Question 4 - Normal Distribution Plot Height
-
-```{r echo=TRUE}
-
-studenti <- read_excel("data/Studenti.xlsx")
-
-
-hist(studenti$Height, freq=FALSE)
-curve(dnorm(x, mean = mean(studenti$Height), sd = sd(studenti$Height)), add = TRUE, col = "blue", xlab = "Height (in cm)", ylab = "Density",)
-
-```
-
-## Question 4 - Normal Distribution Plot Weight
-
-```{r echo=TRUE}
-
-hist(studenti$Weight, freq=FALSE)
-curve(dnorm(x, mean = mean(studenti$Weight), sd = sd(studenti$Weight)), add = TRUE, col = "blue", xlab = "Weight (in lbs)", ylab = "Density",)
-
-```
-## Question 4 - Normal Distribution Plot Weight
-
-Height: p = 0.39 (>0.05) – no evidence to reject null hypothesis of Normality (at 5% significance level) [Anderson-Darling method]
-Weight: p = 0.04 (<0.05) – evidence to reject null hypothesis of Normality (at 5% significance level) [Anderson-Darling method]
-
-Both height and weight are in general Normally distributed. However, this is only likely to be true for young adults within each sex. What we have is a mixture of 2 Normal distributions for weight (and height). If we consider males and females separately, they should both look normal. Also note that tests for normality should be treated with caution, as in small samples they lack power to detect data from non-normal distributions and in large samples they can give significant results when the deviations are irrelevantly small.
-
-## Question 4 - Normal Distribution Plot Weight
-
-```{r echo=FALSE}
-library(plyr)
-library(dplyr)
-library(tidyr)
-
-p <- unique(studenti$Gender)
-g <- ggplot(studenti, aes(x = Weight, fill = Gender, colour = Gender))
-for (i in seq_along(p))  {
-  df <-studenti %>% filter(Gender == p[i])
-  g <- g + geom_density(alpha = .05) +
-    stat_function(data = df,
-                  fun = dnorm,
-                  args = list(mean = mean(df$Weight), sd = sd(df$Weight)))
-}
-g
-
-```
-
-## Final Question !
-**What is the probability that the 5 year old schoolboys have height (height ~ N(110,62))**
-
-::: {.panel-tabset}
-
-### (i) x < 98 cm 
-
-![](images/FurtherQ_i.png)
-
-
-### (ii) x > 119 cm 
-![](images/FurtherQ_ii.png)
-
-
-### (iii) 105 < x > 120 cm 
-
-![](images/FurtherQ_iii.png)
-
-### (iv) 25th-75th percentile
-
-
-![](images/FurtherQ_iv.png)
-
-::: 
-
-
-## Next Week - Remember the Big Picture!
-
->**Week 3 - Confidence Intervals and Hypothesis Tests **
+>**Maybe you want to Summarise Your Ideas **
 
 :::: {.columns}
 
 ::: {.column width="70%"}
-**Question of interest (Research Hypothesis)**
-
-**Experiment on sample**
-
-**Graphs and summary statistics**
-
-
-**Subjective answer to question**
-
-
-**Formal Analysis/Statistical Inference** 
-
-(Evidence, Relevance)
+**Idea 1**
 
 :::
 
@@ -586,16 +166,83 @@ g
 :::
 
 ::: {.column width="20%"}
-population 
-
-sample
-
-sample
-
-sample
-
-population
+Key word here 
 
 :::
 
 ::::
+
+## Code Animations {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+``` r
+# Define a server for the Shiny app
+function(input, output) {
+  
+  # Fill in the spot we created for a plot
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+    barplot(WorldPhones[,input$region]*1000, 
+            main=input$region,
+            ylab="Number of Telephones",
+            xlab="Year")
+  })
+}
+```
+
+::: footer
+Learn more: [Code Animations](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)
+:::
+
+## Line Highlighting
+
+-   Highlight specific lines for emphasis
+-   Incrementally highlight additional lines
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+::: footer
+Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
+:::
+
+## Easy Navigation
+
+Quickly jump to other parts of your presentation
+
+Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
+
+
+You can also press `m` to toggle the menu open and closed.
+
+::: footer
+Learn more: [Navigation](https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-menu)
+:::
+
+## Chalkboard {chalkboard-buttons="true"}
+
+Free form drawing and slide annotations
+
+
+Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.
+
+Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.
+
+
+You can also press `b` to toggle the chalkboard or `c` to toggle the notes canvas.
+
+::: footer
+Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard)
+:::
