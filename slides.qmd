@@ -5,8 +5,11 @@ author:
   - name: Name Here
     orcid: 0000-0000-0000-0000
     email: FirstName.LastName@gla.ac.uk
-    affiliation: 
-      - name: School of Health & Wellbeing 
+    affiliations: School of Health & Wellbeing 
+  - name: Coauthor
+    orcid: 0000-0000-0000-0000
+    email: FirstName.LastName@academic.email
+    affiliations: University
 date: 2024-08-14
 date-format: long
 toc: false
@@ -28,6 +31,7 @@ format:
     logo: images/MRC_CSO_SPHSU_Glasgow_RGB_0.png
     footer: "MRC/CSO Social and Public Health Sciences Unit"
     center-title-slide: true
+    bibliography: refs.bib
     #code-fold: false
     progress: true
     code-overflow: wrap
@@ -39,7 +43,8 @@ revealjs-plugins:
 
 ## Aim
 
--   Introduce features of a Quarto presentation and demonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.
+-   Navigate through tutorials to introduce features that can be integrated in your Quarto presentation.
+-   Demonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.
 
 >   Adding a right pointing arrow allows you to indent text \
 
@@ -49,16 +54,11 @@ revealjs-plugins:
     
 >    [Add Hyperlink Text](https://quarto.org/docs/presentations/revealjs)
 
-## Learning Outcomes
-
--   To make a list start the code line with a dash then TAB and end line;
--   Perhaps you would like to take stock of your previous talks/workshops in one place;
-
 ## Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)
 
--   To do this navigate to your GitHub page and create your first repository;
-    - Name this yourGitHubusername.github.io;
--   There are many ways to host your render Quarto into html, we will do this locally and deploy our page to GitHub through the \docs branch option.
+-   To do this navigate to your GitHub page and create your first repository
+    - Name this yourGitHubusername.github.io
+-   There are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the \docs branch option.
 -   
 -   Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository
 -   Note if you have a GitHub education page you don't need to make the repo
@@ -100,26 +100,52 @@ print your code in the slides add `echo = TRUE`.
 library(network)
 ```
 
+## Components
+
+### Alerts & Cross-refs {#sec-crossref}
+
+To emphasize specific words or text, you can:
+
+- Use the default `.alert` class, e.g. [important note]{.alert}.
+- Use the `.fg` class for custom colour, e.g. [important note]{.fg style="--col: #e64173"}.
+- Use the `.bg` class for custom background, e.g. [important note]{.bg style="--col: #e64173"}.
+
+To cross-reference, you have several options, for example:
+
+- Beamer-like `.button` class provided by this theme, e.g. [[Appendix]{.button}](#sec-appendix)
+- Quarto's native cross-ref syntax, e.g., "See @sec-appendix."
+
+## Components
+
+### Citations
+
+Citations follow the standard
+[Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations)
+and be sourced from BibLaTex, BibTeX, or CLS files. For example:
+
+ - [Topic 1:]{.alert} Spatial Frictions [@rogers_diffusion_1983; @kermack_contributions_1939; @wasserman_social_1994]
+
+- [Topic 2:]{.alert} Blah [@valente_social_1996]
 
 ## Quarto allows you to have different tabs
 
 ::: {.panel-tabset}
 
-#### (a) Low 
+#### (a) Wave 1 
 ```{r echo=TRUE}
 low_prevalence <- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters
 length(low_prevalence) 
 head(low_prevalence)
 ```
 
-#### (b) Moderate
+#### (b) Wave 2
 ```{r echo=TRUE}
 moderate_prevalence <- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters
 length(moderate_prevalence) 
 head(moderate_prevalence)
 ```
 
-#### (c) High
+#### (c) Wave 3
 ```{r echo=TRUE}
 high_prevalence <- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters
 length(high_prevalence) 
@@ -150,6 +176,17 @@ You can dynamically refer to a variable output in line, like the standard deviat
 Or the value of the median to describe your data  `{r} median(low_prevalence)`
 
 
+## Slide with Theory
+
+:::{.callout-note} 
+
+### Explain your model {#eq-stddev}
+
+$$
+P_{\theta,\mathcal{Y}}(\mathbf{Y=y|X})=\frac{exp\{\theta^{\textsf{T}}g(y,X)\}}{\kappa(\theta,\mathcal{Y})}
+$$ {#eq-stddev}
+
+:::
 ## You can Section a Slide into Different Columns
 
 >**Maybe you want to Summarise Your Ideas **
@@ -171,30 +208,6 @@ Key word here
 :::
 
 ::::
-
-## Code Animations {auto-animate="true"}
-
--   Over 20 syntax highlighting themes available
--   Default theme optimized for accessibility
-
-``` r
-# Define a server for the Shiny app
-function(input, output) {
-  
-  # Fill in the spot we created for a plot
-  output$phonePlot <- renderPlot({
-    # Render a barplot
-    barplot(WorldPhones[,input$region]*1000, 
-            main=input$region,
-            ylab="Number of Telephones",
-            xlab="Year")
-  })
-}
-```
-
-::: footer
-Learn more: [Code Animations](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)
-:::
 
 ## Line Highlighting
 
@@ -246,3 +259,20 @@ You can also press `b` to toggle the chalkboard or `c` to toggle the notes canva
 ::: footer
 Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard)
 :::
+
+
+## References
+
+::: {#refs}
+:::
+
+## Appendix {#sec-appendix}
+
+```{r}
+#| cache: true
+#| label: tbl-attsum
+#| tbl-cap: Summary of the dataset
+
+```
+
+[[Back to main]{.button}](#sec-crossref)

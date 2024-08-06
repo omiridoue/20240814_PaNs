@@ -11,6 +11,7 @@
   <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Name Here">
+  <meta name="author" content="Coauthor">
   <meta name="dcterms.date" content="2024-08-14">
   <title>Your Presentation Title Here</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +96,27 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="styles.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -411,6 +432,17 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
             School of Health &amp; Wellbeing
           </p>
     </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:FirstName.LastName@academic.email">FirstName.LastName@academic.email</a>
+</div>
+        <p class="quarto-title-affiliation">
+            University
+          </p>
+    </div>
 </div>
 
   <p class="date">August 14, 2024</p>
@@ -418,7 +450,8 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 <section id="aim" class="slide level2">
 <h2>Aim</h2>
 <ul>
-<li>Introduce features of a Quarto presentation and demonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.</li>
+<li>Navigate through tutorials to introduce features that can be integrated in your Quarto presentation.</li>
+<li>Demonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.</li>
 </ul>
 <blockquote>
 <p>Adding a right pointing arrow allows you to indent text<br>
@@ -435,21 +468,14 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 <p><a href="https://quarto.org/docs/presentations/revealjs">Add Hyperlink Text</a></p>
 </blockquote>
 </section>
-<section id="learning-outcomes" class="slide level2">
-<h2>Learning Outcomes</h2>
-<ul>
-<li>To make a list start the code line with a dash then TAB and end line;</li>
-<li>Perhaps you would like to take stock of your previous talks/workshops in one place;</li>
-</ul>
-</section>
 <section id="making-your-slides-fair-findable-accessible-interoperable-reusable" class="slide level2">
 <h2>Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)</h2>
 <ul>
-<li>To do this navigate to your GitHub page and create your first repository;
+<li>To do this navigate to your GitHub page and create your first repository
 <ul>
-<li>Name this yourGitHubusername.github.io;</li>
+<li>Name this yourGitHubusername.github.io</li>
 </ul></li>
-<li>There are many ways to host your render Quarto into html, we will do this locally and deploy our page to GitHub through the branch option.</li>
+<li>There are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the branch option.</li>
 <li></li>
 <li>Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository</li>
 <li>Note if you have a GitHub education page you don’t need to make the repo</li>
@@ -490,10 +516,34 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(network)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="components" class="slide level2">
+<h2>Components</h2>
+<h3 id="sec-crossref">Alerts &amp; Cross-refs</h3>
+<p>To emphasize specific words or text, you can:</p>
+<ul>
+<li>Use the default <code>.alert</code> class, e.g.&nbsp;<span class="alert">important note</span>.</li>
+<li>Use the <code>.fg</code> class for custom colour, e.g.&nbsp;<span class="fg" style="--col: #e64173">important note</span>.</li>
+<li>Use the <code>.bg</code> class for custom background, e.g.&nbsp;<span class="bg" style="--col: #e64173">important note</span>.</li>
+</ul>
+<p>To cross-reference, you have several options, for example:</p>
+<ul>
+<li>Beamer-like <code>.button</code> class provided by this theme, e.g.&nbsp;<a href="#/sec-appendix"><span class="button">Appendix</span></a></li>
+<li>Quarto’s native cross-ref syntax, e.g., “See <a href="#/sec-appendix" class="quarto-xref">Section&nbsp;17</a>.”</li>
+</ul>
+</section>
+<section id="components-1" class="slide level2">
+<h2>Components</h2>
+<h3 id="citations">Citations</h3>
+<p>Citations follow the standard <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html#citations">Quarto format</a> and be sourced from BibLaTex, BibTeX, or CLS files. For example:</p>
+<ul>
+<li><p><span class="alert">Topic 1:</span> Spatial Frictions <span class="citation" data-cites="rogers_diffusion_1983 kermack_contributions_1939 wasserman_social_1994">(<a href="#/references" role="doc-biblioref" onclick="">Rogers 1983</a>; <a href="#/references" role="doc-biblioref" onclick="">Kermack and McKendrick 1939</a>; <a href="#/references" role="doc-biblioref" onclick="">Wasserman and Faust 1994</a>)</span></p></li>
+<li><p><span class="alert">Topic 2:</span> Blah <span class="citation" data-cites="valente_social_1996">(<a href="#/references" role="doc-biblioref" onclick="">Valente 1996</a>)</span></p></li>
+</ul>
+</section>
 <section id="quarto-allows-you-to-have-different-tabs" class="slide level2">
 <h2>Quarto allows you to have different tabs</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">(a) Low</a></li><li><a href="#tabset-1-2">(b) Moderate</a></li><li><a href="#tabset-1-3">(c) High</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">(a) Wave 1</a></li><li><a href="#tabset-1-2">(b) Wave 2</a></li><li><a href="#tabset-1-3">(c) Wave 3</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
@@ -504,7 +554,7 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">head</span>(low_prevalence)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0 1 0 1 2 0</code></pre>
+<pre><code>[1] 1 0 2 1 2 2</code></pre>
 </div>
 </div>
 </div>
@@ -517,7 +567,7 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">head</span>(moderate_prevalence)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4 5 5 5 6 5</code></pre>
+<pre><code>[1] 4 4 2 3 4 6</code></pre>
 </div>
 </div>
 </div>
@@ -530,7 +580,7 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">head</span>(high_prevalence)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6 8 8 3 4 4</code></pre>
+<pre><code>[1] 5 5 5 7 6 4</code></pre>
 </div>
 </div>
 </div>
@@ -579,21 +629,21 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">low_smoking</td>
-<td style="text-align: right;">1.01</td>
-<td style="text-align: right;">0.0937383</td>
-<td style="text-align: right;">0.937383</td>
+<td style="text-align: right;">0.98</td>
+<td style="text-align: right;">0.1024744</td>
+<td style="text-align: right;">1.024744</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">moderate_smoking</td>
-<td style="text-align: right;">4.02</td>
-<td style="text-align: right;">0.1651323</td>
-<td style="text-align: right;">1.651323</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">4.11</td>
+<td style="text-align: right;">0.1693094</td>
+<td style="text-align: right;">1.693094</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">5</td>
@@ -601,21 +651,39 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 </tr>
 <tr class="odd">
 <td style="text-align: left;">high_smoking</td>
-<td style="text-align: right;">6.01</td>
-<td style="text-align: right;">0.1755194</td>
-<td style="text-align: right;">1.755194</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">5.99</td>
+<td style="text-align: right;">0.1540661</td>
+<td style="text-align: right;">1.540661</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">7</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>You can wrap LaTeX code in <span class="math inline">\(x\)</span>, for any symbols. You can dynamically refer to a variable output in line, like the standard deviation 0.94</p>
+<p>You can wrap LaTeX code in <span class="math inline">\(x\)</span>, for any symbols. You can dynamically refer to a variable output in line, like the standard deviation 1.02</p>
 <p>Or the value of the median to describe your data 1</p>
+</section>
+<section id="slide-with-theory" class="slide level2">
+<h2>Slide with Theory</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Explain your model</strong></p>
+</div>
+<div class="callout-content">
+<p><span id="eq-stddev"><span class="math display">\[
+P_{\theta,\mathcal{Y}}(\mathbf{Y=y|X})=\frac{exp\{\theta^{\textsf{T}}g(y,X)\}}{\kappa(\theta,\mathcal{Y})}
+\qquad(1)\]</span></span></p>
+</div>
+</div>
+</div>
 </section>
 <section id="you-can-section-a-slide-into-different-columns" class="slide level2">
 <h2>You can Section a Slide into Different Columns</h2>
@@ -632,44 +700,22 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 </div>
 </div>
 </section>
-<section id="code-animations" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code Animations</h2>
-<ul>
-<li>Over 20 syntax highlighting themes available</li>
-<li>Default theme optimized for accessibility</li>
-</ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb15-1" class="hljs-ln-code"><a></a><span class="co"># Define a server for the Shiny app</span></span>
-<span id="cb15-2" class="hljs-ln-code"><a></a><span class="cf">function</span>(input, output) {</span>
-<span id="cb15-3" class="hljs-ln-code"><a></a>  </span>
-<span id="cb15-4" class="hljs-ln-code"><a></a>  <span class="co"># Fill in the spot we created for a plot</span></span>
-<span id="cb15-5" class="hljs-ln-code"><a></a>  output<span class="sc">$</span>phonePlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb15-6" class="hljs-ln-code"><a></a>    <span class="co"># Render a barplot</span></span>
-<span id="cb15-7" class="hljs-ln-code"><a></a>    <span class="fu">barplot</span>(WorldPhones[,input<span class="sc">$</span>region]<span class="sc">*</span><span class="dv">1000</span>, </span>
-<span id="cb15-8" class="hljs-ln-code"><a></a>            <span class="at">main=</span>input<span class="sc">$</span>region,</span>
-<span id="cb15-9" class="hljs-ln-code"><a></a>            <span class="at">ylab=</span><span class="st">"Number of Telephones"</span>,</span>
-<span id="cb15-10" class="hljs-ln-code"><a></a>            <span class="at">xlab=</span><span class="st">"Year"</span>)</span>
-<span id="cb15-11" class="hljs-ln-code"><a></a>  })</span>
-<span id="cb15-12" class="hljs-ln-code"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations">Code Animations</a></p>
-</div>
-</section>
 <section id="line-highlighting" class="slide level2">
 <h2>Line Highlighting</h2>
 <ul>
 <li>Highlight specific lines for emphasis</li>
 <li>Incrementally highlight additional lines</li>
 </ul>
-<div class="sourceCode" id="cb16" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb16-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb16-3"><a></a></span>
-<span id="cb16-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb16-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb16-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb16-7"><a></a>ax.plot(theta, r)</span>
-<span id="cb16-8"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb16-9"><a></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb16-10"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb15-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb15-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb15-7"><a></a>ax.plot(theta, r)</span>
+<span id="cb15-8"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb15-9"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb15-10"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#line-highlighting">Line Highlighting</a></p>
 </div>
@@ -692,6 +738,37 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard">Chalkboard</a></p>
 </div>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kermack_contributions_1939" class="csl-entry" role="listitem">
+Kermack, W. O., and A. G. McKendrick. 1939. <span>“Contributions to the Mathematical Theory of Epidemics: <span>V</span>. <span>Analysis</span> of Experimental Epidemics of Mouse-Typhoid; a Bacterial Disease Conferring Incomplete Immunity.”</span> <em>Journal of Hygiene</em> 39 (3): 271–88. <a href="https://doi.org/10.1017/S0022172400011918">https://doi.org/10.1017/S0022172400011918</a>.
+</div>
+<div id="ref-rogers_diffusion_1983" class="csl-entry" role="listitem">
+Rogers, Everett M. 1983. <em>Diffusion of Innovations</em>. 3. ed. New York, NY: Free Press.
+</div>
+<div id="ref-valente_social_1996" class="csl-entry" role="listitem">
+Valente, Thomas W. 1996. <span>“Social Network Thresholds in the Diffusion of Innovations.”</span> <em>Social Networks</em> 18 (1): 69–89. <a href="https://doi.org/10.1016/0378-8733(95)00256-1">https://doi.org/10.1016/0378-8733(95)00256-1</a>.
+</div>
+<div id="ref-wasserman_social_1994" class="csl-entry" role="listitem">
+Wasserman, Stanley, and Katherine Faust. 1994. <em>Social <span>Network</span> <span>Analysis</span>: <span>Methods</span> and <span>Applications</span></em>. Structural <span>Analysis</span> in the <span>Social</span> <span>Sciences</span>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511815478">https://doi.org/10.1017/CBO9780511815478</a>.
+</div>
+</div>
+</section>
+<section id="sec-appendix" class="slide level2">
+<h2>Appendix</h2>
+<div id="tbl-attsum" class="cell quarto-float">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-attsum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of the dataset
+</figcaption>
+<div aria-describedby="tbl-attsum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+
+</div>
+</figure>
+</div>
+<p><a href="#/components"><span class="button">Back to main</span></a></p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/MRC_CSO_SPHSU_Glasgow_RGB_0.png" class="slide-logo"></p>

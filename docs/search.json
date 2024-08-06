@@ -4,21 +4,14 @@
     "href": "slides.html#aim",
     "title": "Your Presentation Title Here",
     "section": "Aim",
-    "text": "Aim\n\nIntroduce features of a Quarto presentation and demonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.\n\n\nAdding a right pointing arrow allows you to indent text\n\n\n\nIf you want to start a new line of text add a backward slash at the end of a line\n\n\n\nYou can make text bold by adding two asterisks on either end of a phrase\n\n\nAdd Hyperlink Text"
-  },
-  {
-    "objectID": "slides.html#learning-outcomes",
-    "href": "slides.html#learning-outcomes",
-    "title": "Your Presentation Title Here",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\n\nTo make a list start the code line with a dash then TAB and end line;\nPerhaps you would like to take stock of your previous talks/workshops in one place;"
+    "text": "Aim\n\nNavigate through tutorials to introduce features that can be integrated in your Quarto presentation.\nDemonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.\n\n\nAdding a right pointing arrow allows you to indent text\n\n\n\nIf you want to start a new line of text add a backward slash at the end of a line\n\n\n\nYou can make text bold by adding two asterisks on either end of a phrase\n\n\nAdd Hyperlink Text"
   },
   {
     "objectID": "slides.html#making-your-slides-fair-findable-accessible-interoperable-reusable",
     "href": "slides.html#making-your-slides-fair-findable-accessible-interoperable-reusable",
     "title": "Your Presentation Title Here",
     "section": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)",
-    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\n\nTo do this navigate to your GitHub page and create your first repository;\n\nName this yourGitHubusername.github.io;\n\nThere are many ways to host your render Quarto into html, we will do this locally and deploy our page to GitHub through the branch option.\n\nYour slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository\nNote if you have a GitHub education page you don’t need to make the repo"
+    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\n\nTo do this navigate to your GitHub page and create your first repository\n\nName this yourGitHubusername.github.io\n\nThere are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the branch option.\n\nYour slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository\nNote if you have a GitHub education page you don’t need to make the repo"
   },
   {
     "objectID": "slides.html#there-are-different-extensions-this-one-is-called-quiz-question",
@@ -49,18 +42,39 @@
     "text": "Code Chunk Explained a Bit More\nThe code chunks will include all your code, you can click Insert a new code chunk to your top right. Each chunk should have its own name. You can add a name after the first reserved word which refers to the language your code is in, this will be lowercase r for any R code. Follow the chunk name by a comma, for names try avoiding dashes, if there is an error with your code the error message will let you know which chunk has an issue. To evaluate, run the code, you will need to type eval = TRUE, if you do not want to run this code when you render the document change to FALSE. If you want to print your code in the slides add echo = TRUE.\n\nlibrary(network)"
   },
   {
+    "objectID": "slides.html#components",
+    "href": "slides.html#components",
+    "title": "Your Presentation Title Here",
+    "section": "Components",
+    "text": "Components\nAlerts & Cross-refs\nTo emphasize specific words or text, you can:\n\nUse the default .alert class, e.g. important note.\nUse the .fg class for custom colour, e.g. important note.\nUse the .bg class for custom background, e.g. important note.\n\nTo cross-reference, you have several options, for example:\n\nBeamer-like .button class provided by this theme, e.g. Appendix\nQuarto’s native cross-ref syntax, e.g., “See Section 17.”"
+  },
+  {
+    "objectID": "slides.html#components-1",
+    "href": "slides.html#components-1",
+    "title": "Your Presentation Title Here",
+    "section": "Components",
+    "text": "Components\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. For example:\n\nTopic 1: Spatial Frictions (Rogers 1983; Kermack and McKendrick 1939; Wasserman and Faust 1994)\nTopic 2: Blah (Valente 1996)"
+  },
+  {
     "objectID": "slides.html#quarto-allows-you-to-have-different-tabs",
     "href": "slides.html#quarto-allows-you-to-have-different-tabs",
     "title": "Your Presentation Title Here",
     "section": "Quarto allows you to have different tabs",
-    "text": "Quarto allows you to have different tabs\n\n(a) Low(b) Moderate(c) High\n\n\n\nlow_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters\nlength(low_prevalence) \n\n[1] 100\n\nhead(low_prevalence)\n\n[1] 0 1 0 1 2 0\n\n\n\n\n\nmoderate_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters\nlength(moderate_prevalence) \n\n[1] 100\n\nhead(moderate_prevalence)\n\n[1] 4 5 5 5 6 5\n\n\n\n\n\nhigh_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters\nlength(high_prevalence) \n\n[1] 100\n\nhead(high_prevalence)\n\n[1] 6 8 8 3 4 4"
+    "text": "Quarto allows you to have different tabs\n\n(a) Wave 1(b) Wave 2(c) Wave 3\n\n\n\nlow_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters\nlength(low_prevalence) \n\n[1] 100\n\nhead(low_prevalence)\n\n[1] 1 0 2 1 2 2\n\n\n\n\n\nmoderate_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters\nlength(moderate_prevalence) \n\n[1] 100\n\nhead(moderate_prevalence)\n\n[1] 4 4 2 3 4 6\n\n\n\n\n\nhigh_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters\nlength(high_prevalence) \n\n[1] 100\n\nhead(high_prevalence)\n\n[1] 5 5 5 7 6 4"
   },
   {
     "objectID": "slides.html#summary-for-results",
     "href": "slides.html#summary-for-results",
     "title": "Your Presentation Title Here",
     "section": "Summary for Results",
-    "text": "Summary for Results\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n1.01\n0.0937383\n0.937383\n0\n0\n1\n1\n4\n\n\nmoderate_smoking\n4.02\n0.1651323\n1.651323\n0\n3\n4\n5\n8\n\n\nhigh_smoking\n6.01\n0.1755194\n1.755194\n2\n5\n6\n7\n10\n\n\n\n\n\nYou can wrap LaTeX code in \\(x\\), for any symbols. You can dynamically refer to a variable output in line, like the standard deviation 0.94\nOr the value of the median to describe your data 1"
+    "text": "Summary for Results\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.98\n0.1024744\n1.024744\n0\n0\n1\n2\n4\n\n\nmoderate_smoking\n4.11\n0.1693094\n1.693094\n1\n3\n4\n5\n8\n\n\nhigh_smoking\n5.99\n0.1540661\n1.540661\n1\n5\n6\n7\n9\n\n\n\n\n\nYou can wrap LaTeX code in \\(x\\), for any symbols. You can dynamically refer to a variable output in line, like the standard deviation 1.02\nOr the value of the median to describe your data 1"
+  },
+  {
+    "objectID": "slides.html#slide-with-theory",
+    "href": "slides.html#slide-with-theory",
+    "title": "Your Presentation Title Here",
+    "section": "Slide with Theory",
+    "text": "Slide with Theory\n\n\n\n\n\n\nExplain your model\n\n\n\\[\nP_{\\theta,\\mathcal{Y}}(\\mathbf{Y=y|X})=\\frac{exp\\{\\theta^{\\textsf{T}}g(y,X)\\}}{\\kappa(\\theta,\\mathcal{Y})}\n\\qquad(1)\\]"
   },
   {
     "objectID": "slides.html#you-can-section-a-slide-into-different-columns",
@@ -68,13 +82,6 @@
     "title": "Your Presentation Title Here",
     "section": "You can Section a Slide into Different Columns",
     "text": "You can Section a Slide into Different Columns\n\nMaybe you want to Summarise Your Ideas \n\n\n\nIdea 1\n\n\n\nKey word here"
-  },
-  {
-    "objectID": "slides.html#code-animations",
-    "href": "slides.html#code-animations",
-    "title": "Your Presentation Title Here",
-    "section": "Code Animations",
-    "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\nLearn more: Code Animations"
   },
   {
     "objectID": "slides.html#line-highlighting",
@@ -95,6 +102,20 @@
     "href": "slides.html#chalkboard",
     "title": "Your Presentation Title Here",
     "section": "Chalkboard",
-    "text": "Chalkboard\nFree form drawing and slide annotations\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\nYou can also press b to toggle the chalkboard or c to toggle the notes canvas.\n\nLearn more: Chalkboard\n\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
+    "text": "Chalkboard\nFree form drawing and slide annotations\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\nYou can also press b to toggle the chalkboard or c to toggle the notes canvas.\n\nLearn more: Chalkboard"
+  },
+  {
+    "objectID": "slides.html#references",
+    "href": "slides.html#references",
+    "title": "Your Presentation Title Here",
+    "section": "References",
+    "text": "References\n\n\nKermack, W. O., and A. G. McKendrick. 1939. “Contributions to the Mathematical Theory of Epidemics: V. Analysis of Experimental Epidemics of Mouse-Typhoid; a Bacterial Disease Conferring Incomplete Immunity.” Journal of Hygiene 39 (3): 271–88. https://doi.org/10.1017/S0022172400011918.\n\n\nRogers, Everett M. 1983. Diffusion of Innovations. 3. ed. New York, NY: Free Press.\n\n\nValente, Thomas W. 1996. “Social Network Thresholds in the Diffusion of Innovations.” Social Networks 18 (1): 69–89. https://doi.org/10.1016/0378-8733(95)00256-1.\n\n\nWasserman, Stanley, and Katherine Faust. 1994. Social Network Analysis: Methods and Applications. Structural Analysis in the Social Sciences. Cambridge: Cambridge University Press. https://doi.org/10.1017/CBO9780511815478."
+  },
+  {
+    "objectID": "slides.html#sec-appendix",
+    "href": "slides.html#sec-appendix",
+    "title": "Your Presentation Title Here",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\nTable 1: Summary of the dataset\n\n\n\n\n\n\nBack to main\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
   }
 ]
