@@ -370,8 +370,6 @@ Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenti
 #| label: tbl-attsum
 #| tbl-cap: Summary of the dataset
 
-```{r echo=TRUE}
-
 summary_samples <- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), 
                          moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), 
                          high_smoking = describe(high_prevalence,quant=c(.25,.75)) )
