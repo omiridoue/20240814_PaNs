@@ -1,6 +1,6 @@
 ---
 title: "Your Presentation Title Here"
-subtitle: "Peers and Networks"
+subtitle: "Peers and Networks Workstream"
 author:
   - name: Name Here
     orcid: 0000-0000-0000-0000
@@ -9,7 +9,7 @@ author:
   - name: Coauthor
     orcid: 0000-0000-0000-0000
     email: FirstName.LastName@academic.email
-    affiliations: University
+    affiliations: Institution Name
 date: 2024-08-14
 date-format: long
 toc: false
@@ -24,10 +24,9 @@ format:
     slide-number: true 
     chalkboard: 
       buttons: false
-    spotlight: 
-      toggleSpotlightOnMouseDown: true
+    spotlight:
       size: 90
-    preview-links: true
+    preview-links: false #change if you want your links to not open into a new tab
     logo: images/MRC_CSO_SPHSU_Glasgow_RGB_0.png
     footer: "MRC/CSO Social and Public Health Sciences Unit"
     center-title-slide: true
@@ -35,33 +34,113 @@ format:
     #code-fold: false
     progress: true
     code-overflow: wrap
+    title-slide-attributes: 
+      data-background-image: images/MRC_CSO_SPHSU_Glasgow_RGB_0.png
+      data-background-size: 30%
+      data-background-position: 2% 2%
+    include-after-body:
+      - text: |
+          <script type="text/javascript">
+          Reveal.addEventListener('ready', (event) => {
+            if (event.indexh === 0) {
+              document.querySelector("div.slide-menu-button").style.display = "none";
+            } else {
+              document.querySelector("div.slide-menu-button").style.display = "block";
+            }
+          });
+          Reveal.addEventListener('slidechanged', (event) => {
+            if (event.indexh === 0) {
+              document.querySelector("div.slide-menu-button").style.display = "none";
+            } else {
+              document.querySelector("div.slide-menu-button").style.display = "block";
+            }
+          });
+          Reveal.on('ready', event => {
+            if (event.indexh === 0) {
+              document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
+            }
+          });
+          Reveal.addEventListener('slidechanged', (event) => {
+            if (event.indexh === 0) {
+              Reveal.configure({ slideNumber: null });
+              document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
+            }
+            if (event.indexh === 1) { 
+              Reveal.configure({ slideNumber: 'c' });
+              document.querySelector("div.has-logo > img.slide-logo").style.display = null;
+            }
+          });
+          </script>
     css: styles.css
 revealjs-plugins:
     - spotlight
     - quiz
 ---
 
-## Aim
+## Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable) 
 
--   Navigate through tutorials to introduce features that can be integrated in your Quarto presentation.
--   Demonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.
+**Step 1** create a new repository on your GitHub name this yourGitHubusername.github.io <br>
+**Step 2** There are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the \docs branch option.
+**Step 3**Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository. Note if you have a GitHub education page you don't need to make the repo public, but your slides will be public.
 
->   Adding a right pointing arrow allows you to indent text \
+## A couple of Resources to Look through ...
 
->   If you want to start a new line of text add a backward slash at the end of a line \
+-   [A Template for Quarto Presentations](https://github.com/grantmcdermott/quarto-revealjs-clean-demo)
 
->    **You can make text bold by adding two asterisks on either end of a phrase**
+-   [A Template for Quarto Webpages](https://github.com/robertmitchellv/robertmitchellv.github.io)
+
+-   [Many Ways to Customise Quarto Documents](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide)
+
+-   [Resources and Tutorials for Quarto](https://github.com/mcanouil/awesome-quarto)
+
+-   [How to Host your Slides on GitHub](https://quarto.org/docs/publishing/github-pages.html)
+ 
+-   [SPHSU Research Pipeline - Andreas Hoehn](https://github.com/AndreasxHoehn/Research_Pipeline_Example)
+
+## A couple of Resources for Teaching Material ...
+
+- [psychteachR](https://psyteachr.github.io/)
+- [SGSSS Workshop](https://a-mora.github.io/SGSSS_MLM/index.html)
+- [Workshop Slides](https://a-mora.github.io/summer_school_mlm_slides/#1)
+
+::: footer
+
+:::
+
+## Agenda 
+
+1. first item
+    i) sub-item
+2. second item
+
+::: footer
+
+:::
+
+# Section Divider { background-color="#038AAD"}
+::: footer
+
+:::
+## Quarto recognises ## as a command to make a new slide
+
+Customise these headings by tinkering with the styles.css file. Maybe we can come up with a
+Quarto template for SPHSU branding? To tinker with the fonts/colors go to the styles.css document
+and navigate to the different heading definitions. 
+
+### Heading 3 - three #'s
+#### Heading 4 - four #'s
+##### Heading 5 - five #'s
+###### Heading 6 - six #'s
+ 
+## Features in your Text
+If you want to start a new line of text add a `<br>` at the end <br> 
+of a line <br>
+
+**You can make text bold by adding two asterisks on either end of a phrase**
     
->    [Add Hyperlink Text](https://quarto.org/docs/presentations/revealjs)
+[Add Text to Your Hyperlink](https://quarto.org/docs/presentations/revealjs)
 
-## Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)
-
--   To do this navigate to your GitHub page and create your first repository
-    - Name this yourGitHubusername.github.io
--   There are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the \docs branch option.
--   
--   Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository
--   Note if you have a GitHub education page you don't need to make the repo
+Anything you wrap inside these back ticks will appear as highlighted text in line for example `Ctrl+R`.
 
 ## There are different extensions this one is called quiz-question {.quiz-question}
 
@@ -70,20 +149,12 @@ revealjs-plugins:
 - [THIS WILL BE YOUR CORRECT ANSWER]{.correct}
 - WRITE Option here
 
-## Save all your images in your images folder. 
+## Read in Figures and Images from your Images folder 
 
 Once you open your R project you will be able to load images through the relative
 path images/
 
 ![Add an image caption here](images/MRC_CSO_SPHSU_Glasgow_RGB_0.png)
-
-
-## Making your Analysis Reproducible
-
-
-> `Anything you wrap inside these back ticks will appear like so normally you can do this for technical parts`
-
-- `You can input highlighted text in line` for example `Ctrl+R`.
 
 ##  Code Chunk Explained a Bit More
 
@@ -101,7 +172,6 @@ library(network)
 ```
 
 ## Components
-
 ### Alerts & Cross-refs {#sec-crossref}
 
 To emphasize specific words or text, you can:
@@ -123,29 +193,29 @@ Citations follow the standard
 [Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations)
 and be sourced from BibLaTex, BibTeX, or CLS files. For example:
 
- - [Topic 1:]{.alert} Spatial Frictions [@rogers_diffusion_1983; @kermack_contributions_1939; @wasserman_social_1994]
+ - Topic 1: Older Studies [@rogers_diffusion_1983; @kermack_contributions_1939; @wasserman_social_1994]
 
-- [Topic 2:]{.alert} Blah [@valente_social_1996]
+ - Topic 2: Studies during 90's [@valente_social_1996]
 
 ## Quarto allows you to have different tabs
 
 ::: {.panel-tabset}
 
-#### (a) Wave 1 
+#### (a) Low prevalence 
 ```{r echo=TRUE}
 low_prevalence <- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters
 length(low_prevalence) 
 head(low_prevalence)
 ```
 
-#### (b) Wave 2
+#### (b) Moderate Prevalence
 ```{r echo=TRUE}
 moderate_prevalence <- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters
 length(moderate_prevalence) 
 head(moderate_prevalence)
 ```
 
-#### (c) Wave 3
+#### (c) High Prevalence
 ```{r echo=TRUE}
 high_prevalence <- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters
 length(high_prevalence) 
@@ -153,7 +223,19 @@ head(high_prevalence)
 ```
 ::: 
 
-## Summary for Results
+## You can use Iframes for Interactive visuals 
+<a href="https://raphtory-pyvis-teenage-glasgow-friendship.streamlit.app" class="btn btn-secondary">Full Screen</a>
+<br> 
+
+<iframe src="https://raphtory-pyvis-teenage-glasgow-friendship.streamlit.app/?embed=true"
+  height=550 width=1100
+  scrolling="yes">
+</iframe>
+
+::: footer 
+:::
+
+## Results Section
 
 ```{r echo=TRUE}
 
@@ -170,13 +252,13 @@ kable(summary_samples)
 
 ```
 
-You can wrap LaTeX code in $x$, for any symbols.
-You can dynamically refer to a variable output in line, like the standard deviation `{r} round(sd(low_prevalence),2)`
+You can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code $x$.
+You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is `{r} round(sd(low_prevalence),2)`
 
-Or the value of the median to describe your data  `{r} median(low_prevalence)`
+The value of the median is `{r} median(low_prevalence)`
 
 
-## Slide with Theory
+## Your Model Goes Here
 
 :::{.callout-note} 
 
@@ -187,6 +269,9 @@ P_{\theta,\mathcal{Y}}(\mathbf{Y=y|X})=\frac{exp\{\theta^{\textsf{T}}g(y,X)\}}{\
 $$ {#eq-stddev}
 
 :::
+
+Every time you refer to your equation use the tag `(@referencetoequation)` to refer to your equation like so (@eq-stddev).
+
 ## You can Section a Slide into Different Columns
 
 >**Maybe you want to Summarise Your Ideas **
@@ -272,6 +357,16 @@ Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenti
 #| cache: true
 #| label: tbl-attsum
 #| tbl-cap: Summary of the dataset
+
+```{r echo=TRUE}
+
+summary_samples <- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), 
+                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), 
+                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )
+
+summary_samples <- summary_samples[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
+
+kable(summary_samples)
 
 ```
 

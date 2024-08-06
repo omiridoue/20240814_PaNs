@@ -1,17 +1,45 @@
 [
   {
-    "objectID": "slides.html#aim",
-    "href": "slides.html#aim",
-    "title": "Your Presentation Title Here",
-    "section": "Aim",
-    "text": "Aim\n\nNavigate through tutorials to introduce features that can be integrated in your Quarto presentation.\nDemonstrate ways you can adapt this template for a presentation or any talk that relies on R for output.\n\n\nAdding a right pointing arrow allows you to indent text\n\n\n\nIf you want to start a new line of text add a backward slash at the end of a line\n\n\n\nYou can make text bold by adding two asterisks on either end of a phrase\n\n\nAdd Hyperlink Text"
-  },
-  {
     "objectID": "slides.html#making-your-slides-fair-findable-accessible-interoperable-reusable",
     "href": "slides.html#making-your-slides-fair-findable-accessible-interoperable-reusable",
     "title": "Your Presentation Title Here",
     "section": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)",
-    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\n\nTo do this navigate to your GitHub page and create your first repository\n\nName this yourGitHubusername.github.io\n\nThere are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the branch option.\n\nYour slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository\nNote if you have a GitHub education page you don’t need to make the repo"
+    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\nStep 1 create a new repository on your GitHub name this yourGitHubusername.github.io  Step 2\nThere are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the branch option. Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository Note if you have a GitHub education page you don’t need to make the repo"
+  },
+  {
+    "objectID": "slides.html#a-couple-of-resources-to-look-through",
+    "href": "slides.html#a-couple-of-resources-to-look-through",
+    "title": "Your Presentation Title Here",
+    "section": "A couple of Resources to Look through …",
+    "text": "A couple of Resources to Look through …\n\nA Template for Quarto Presentations\nA Template for Quarto Webpages\nMany Ways to Customise Quarto Documents\nResources and Tutorials for Quarto\nHow to Host your Slides on GitHub\nSPHSU Research Pipeline - Andreas Hoehn"
+  },
+  {
+    "objectID": "slides.html#a-couple-of-resources-for-teaching-material",
+    "href": "slides.html#a-couple-of-resources-for-teaching-material",
+    "title": "Your Presentation Title Here",
+    "section": "A couple of Resources for Teaching Material …",
+    "text": "A couple of Resources for Teaching Material …\n\npsychteachR\nSGSSS Workshop\nWorkshop Slides"
+  },
+  {
+    "objectID": "slides.html#agenda",
+    "href": "slides.html#agenda",
+    "title": "Your Presentation Title Here",
+    "section": "Agenda",
+    "text": "Agenda\n\nfirst item\n\nsub-item\n\nsecond item"
+  },
+  {
+    "objectID": "slides.html#quarto-recognises-as-a-command-to-make-a-new-slide",
+    "href": "slides.html#quarto-recognises-as-a-command-to-make-a-new-slide",
+    "title": "Your Presentation Title Here",
+    "section": "Quarto recognises ## as a command to make a new slide",
+    "text": "Quarto recognises ## as a command to make a new slide\nCustomise these headings by tinkering with the styles.css file. Maybe we can come up with a Quarto template for SPHSU branding? To tinker with the fonts/colors go to the styles.css document and navigate to the different heading definitions.\nHeading 3 - three #’s\nHeading 4 - four #’s\nHeading 5 - five #’s\nHeading 6 - six #’s"
+  },
+  {
+    "objectID": "slides.html#features-in-your-text",
+    "href": "slides.html#features-in-your-text",
+    "title": "Your Presentation Title Here",
+    "section": "Features in your Text",
+    "text": "Features in your Text\nIf you want to start a new line of text add a &lt;br&gt; at the end  of a line \nYou can make text bold by adding two asterisks on either end of a phrase\nAdd Text to Your Hyperlink\nAnything you wrap inside these back ticks will appear as highlighted text in line for example Ctrl+R."
   },
   {
     "objectID": "slides.html#there-are-different-extensions-this-one-is-called-quiz-question",
@@ -21,18 +49,11 @@
     "text": "There are different extensions this one is called quiz-question\n\nWrite Option here\nWrite Option here\nTHIS WILL BE YOUR CORRECT ANSWER\nWRITE Option here"
   },
   {
-    "objectID": "slides.html#save-all-your-images-in-your-images-folder.",
-    "href": "slides.html#save-all-your-images-in-your-images-folder.",
+    "objectID": "slides.html#read-in-figures-and-images-from-your-images-folder",
+    "href": "slides.html#read-in-figures-and-images-from-your-images-folder",
     "title": "Your Presentation Title Here",
-    "section": "Save all your images in your images folder.",
-    "text": "Save all your images in your images folder.\nOnce you open your R project you will be able to load images through the relative path images/\n\n\n\nAdd an image caption here"
-  },
-  {
-    "objectID": "slides.html#making-your-analysis-reproducible",
-    "href": "slides.html#making-your-analysis-reproducible",
-    "title": "Your Presentation Title Here",
-    "section": "Making your Analysis Reproducible",
-    "text": "Making your Analysis Reproducible\n\nAnything you wrap inside these back ticks will appear like so normally you can do this for technical parts\n\n\nYou can input highlighted text in line for example Ctrl+R."
+    "section": "Read in Figures and Images from your Images folder",
+    "text": "Read in Figures and Images from your Images folder\nOnce you open your R project you will be able to load images through the relative path images/\n\n\n\nAdd an image caption here"
   },
   {
     "objectID": "slides.html#code-chunk-explained-a-bit-more",
@@ -46,35 +67,42 @@
     "href": "slides.html#components",
     "title": "Your Presentation Title Here",
     "section": "Components",
-    "text": "Components\nAlerts & Cross-refs\nTo emphasize specific words or text, you can:\n\nUse the default .alert class, e.g. important note.\nUse the .fg class for custom colour, e.g. important note.\nUse the .bg class for custom background, e.g. important note.\n\nTo cross-reference, you have several options, for example:\n\nBeamer-like .button class provided by this theme, e.g. Appendix\nQuarto’s native cross-ref syntax, e.g., “See Section 17.”"
+    "text": "Components\nAlerts & Cross-refs\nTo emphasize specific words or text, you can:\n\nUse the default .alert class, e.g. important note.\nUse the .fg class for custom colour, e.g. important note.\nUse the .bg class for custom background, e.g. important note.\n\nTo cross-reference, you have several options, for example:\n\nBeamer-like .button class provided by this theme, e.g. Appendix\nQuarto’s native cross-ref syntax, e.g., “See Section 1.17.”"
   },
   {
     "objectID": "slides.html#components-1",
     "href": "slides.html#components-1",
     "title": "Your Presentation Title Here",
     "section": "Components",
-    "text": "Components\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. For example:\n\nTopic 1: Spatial Frictions (Rogers 1983; Kermack and McKendrick 1939; Wasserman and Faust 1994)\nTopic 2: Blah (Valente 1996)"
+    "text": "Components\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. For example:\n\nTopic 1: Older Studies (Rogers 1983; Kermack and McKendrick 1939; Wasserman and Faust 1994)\nTopic 2: Studies during 90’s (Valente 1996)"
   },
   {
     "objectID": "slides.html#quarto-allows-you-to-have-different-tabs",
     "href": "slides.html#quarto-allows-you-to-have-different-tabs",
     "title": "Your Presentation Title Here",
     "section": "Quarto allows you to have different tabs",
-    "text": "Quarto allows you to have different tabs\n\n(a) Wave 1(b) Wave 2(c) Wave 3\n\n\n\nlow_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters\nlength(low_prevalence) \n\n[1] 100\n\nhead(low_prevalence)\n\n[1] 1 0 2 1 2 2\n\n\n\n\n\nmoderate_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters\nlength(moderate_prevalence) \n\n[1] 100\n\nhead(moderate_prevalence)\n\n[1] 4 4 2 3 4 6\n\n\n\n\n\nhigh_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters\nlength(high_prevalence) \n\n[1] 100\n\nhead(high_prevalence)\n\n[1] 5 5 5 7 6 4"
+    "text": "Quarto allows you to have different tabs\n\n(a) Low prevalence(b) Moderate Prevalence(c) High Prevalence\n\n\n\nlow_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters\nlength(low_prevalence) \n\n[1] 100\n\nhead(low_prevalence)\n\n[1] 1 0 0 2 1 0\n\n\n\n\n\nmoderate_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters\nlength(moderate_prevalence) \n\n[1] 100\n\nhead(moderate_prevalence)\n\n[1] 1 5 3 3 6 3\n\n\n\n\n\nhigh_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters\nlength(high_prevalence) \n\n[1] 100\n\nhead(high_prevalence)\n\n[1] 7 6 7 3 6 4"
   },
   {
-    "objectID": "slides.html#summary-for-results",
-    "href": "slides.html#summary-for-results",
+    "objectID": "slides.html#you-can-use-iframes-for-interactive-visuals",
+    "href": "slides.html#you-can-use-iframes-for-interactive-visuals",
     "title": "Your Presentation Title Here",
-    "section": "Summary for Results",
-    "text": "Summary for Results\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.98\n0.1024744\n1.024744\n0\n0\n1\n2\n4\n\n\nmoderate_smoking\n4.11\n0.1693094\n1.693094\n1\n3\n4\n5\n8\n\n\nhigh_smoking\n5.99\n0.1540661\n1.540661\n1\n5\n6\n7\n9\n\n\n\n\n\nYou can wrap LaTeX code in \\(x\\), for any symbols. You can dynamically refer to a variable output in line, like the standard deviation 1.02\nOr the value of the median to describe your data 1"
+    "section": "You can use Iframes for Interactive visuals",
+    "text": "You can use Iframes for Interactive visuals\nFull Screen"
   },
   {
-    "objectID": "slides.html#slide-with-theory",
-    "href": "slides.html#slide-with-theory",
+    "objectID": "slides.html#results-section",
+    "href": "slides.html#results-section",
     "title": "Your Presentation Title Here",
-    "section": "Slide with Theory",
-    "text": "Slide with Theory\n\n\n\n\n\n\nExplain your model\n\n\n\\[\nP_{\\theta,\\mathcal{Y}}(\\mathbf{Y=y|X})=\\frac{exp\\{\\theta^{\\textsf{T}}g(y,X)\\}}{\\kappa(\\theta,\\mathcal{Y})}\n\\qquad(1)\\]"
+    "section": "Results Section",
+    "text": "Results Section\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.98\n0.0803779\n0.803779\n0\n0\n1\n2\n3\n\n\nmoderate_smoking\n4.08\n0.1599747\n1.599748\n0\n3\n4\n5\n8\n\n\nhigh_smoking\n5.89\n0.1549813\n1.549813\n2\n5\n6\n7\n9\n\n\n\n\n\nYou can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code \\(x\\). You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is 0.8\nThe value of the median is 1"
+  },
+  {
+    "objectID": "slides.html#your-model-goes-here",
+    "href": "slides.html#your-model-goes-here",
+    "title": "Your Presentation Title Here",
+    "section": "Your Model Goes Here",
+    "text": "Your Model Goes Here\n\n\n\n\n\n\nExplain your model\n\n\n\\[\nP_{\\theta,\\mathcal{Y}}(\\mathbf{Y=y|X})=\\frac{exp\\{\\theta^{\\textsf{T}}g(y,X)\\}}{\\kappa(\\theta,\\mathcal{Y})}\n\\qquad(1)\\]\n\n\n\nEvery time you refer to your equation use the tag (@referencetoequation) to refer to your equation like so (Equation 1)."
   },
   {
     "objectID": "slides.html#you-can-section-a-slide-into-different-columns",
@@ -116,6 +144,6 @@
     "href": "slides.html#sec-appendix",
     "title": "Your Presentation Title Here",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nTable 1: Summary of the dataset\n\n\n\n\n\n\nBack to main\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
+    "text": "Appendix\n\n\n\nTable 1: Summary of the dataset\n\n\n\n\n\n\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.98\n0.0803779\n0.803779\n0\n0\n1\n2\n3\n\n\nmoderate_smoking\n4.08\n0.1599747\n1.599748\n0\n3\n4\n5\n8\n\n\nhigh_smoking\n5.89\n0.1549813\n1.549813\n2\n5\n6\n7\n9\n\n\n\n\n\nBack to main\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
   }
 ]
