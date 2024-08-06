@@ -4,7 +4,21 @@
     "href": "slides.html#making-your-slides-fair-findable-accessible-interoperable-reusable",
     "title": "Your Presentation Title Here",
     "section": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)",
-    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\nStep 1 create a new repository on your GitHub name this yourGitHubusername.github.io  Step 2\nThere are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the branch option. Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository Note if you have a GitHub education page you don’t need to make the repo"
+    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\nStep 1 create a new repository on your GitHub name this yourGitHubusername.github.io  Step 2 Add an readme file and type hello! This will be your home page. Any time you work on a new repository and publish this it will be a sub-directory of the page.  Step 3 Clone the repository from the following link https://omiridoue.github.io/20240814_PaNs  Step 4 There are many ways to host your the presentation you have rendered through Quarto. We will render this locally and deploy from our GitHub branch."
+  },
+  {
+    "objectID": "slides.html#continued---follow-along-todays-material",
+    "href": "slides.html#continued---follow-along-todays-material",
+    "title": "Your Presentation Title Here",
+    "section": "Continued - Follow Along Today’s Material",
+    "text": "Continued - Follow Along Today’s Material\nStep 5 Create a repository on your GitHub name this 20240814_PaNs  Step 6 Follow the steps from https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim is to make your slides public and findable under the following URL https://yourGitHubusername.github.io/20240814_PaNs. Note if you have a GitHub Education page you don’t need to make the repository public, but your slides will be public."
+  },
+  {
+    "objectID": "slides.html#continued---follow-along-todays-material-1",
+    "href": "slides.html#continued---follow-along-todays-material-1",
+    "title": "Your Presentation Title Here",
+    "section": "Continued - Follow Along Today’s Material",
+    "text": "Continued - Follow Along Today’s Material\nStep 7 This is the last step we need to navigate to the settings of the repository and"
   },
   {
     "objectID": "slides.html#a-couple-of-resources-to-look-through",
@@ -81,7 +95,7 @@
     "href": "slides.html#quarto-allows-you-to-have-different-tabs",
     "title": "Your Presentation Title Here",
     "section": "Quarto allows you to have different tabs",
-    "text": "Quarto allows you to have different tabs\n\n(a) Low prevalence(b) Moderate Prevalence(c) High Prevalence\n\n\n\nlow_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters\nlength(low_prevalence) \n\n[1] 100\n\nhead(low_prevalence)\n\n[1] 1 0 0 2 1 0\n\n\n\n\n\nmoderate_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters\nlength(moderate_prevalence) \n\n[1] 100\n\nhead(moderate_prevalence)\n\n[1] 1 5 3 3 6 3\n\n\n\n\n\nhigh_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters\nlength(high_prevalence) \n\n[1] 100\n\nhead(high_prevalence)\n\n[1] 7 6 7 3 6 4"
+    "text": "Quarto allows you to have different tabs\n\n(a) Low prevalence(b) Moderate Prevalence(c) High Prevalence\n\n\n\nlow_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters\nlength(low_prevalence) \n\n[1] 100\n\nhead(low_prevalence)\n\n[1] 1 1 3 2 0 0\n\n\n\n\n\nmoderate_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters\nlength(moderate_prevalence) \n\n[1] 100\n\nhead(moderate_prevalence)\n\n[1] 2 2 3 4 3 2\n\n\n\n\n\nhigh_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters\nlength(high_prevalence) \n\n[1] 100\n\nhead(high_prevalence)\n\n[1] 7 6 4 6 5 7"
   },
   {
     "objectID": "slides.html#you-can-use-iframes-for-interactive-visuals",
@@ -95,7 +109,7 @@
     "href": "slides.html#results-section",
     "title": "Your Presentation Title Here",
     "section": "Results Section",
-    "text": "Results Section\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.98\n0.0803779\n0.803779\n0\n0\n1\n2\n3\n\n\nmoderate_smoking\n4.08\n0.1599747\n1.599748\n0\n3\n4\n5\n8\n\n\nhigh_smoking\n5.89\n0.1549813\n1.549813\n2\n5\n6\n7\n9\n\n\n\n\n\nYou can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code \\(x\\). You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is 0.8\nThe value of the median is 1"
+    "text": "Results Section\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n1.01\n0.0870330\n0.8703303\n0\n0\n1\n2\n3\n\n\nmoderate_smoking\n4.05\n0.1559429\n1.5594288\n1\n3\n4\n5\n8\n\n\nhigh_smoking\n6.21\n0.1526169\n1.5261690\n3\n5\n6\n7\n10\n\n\n\n\n\nYou can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code \\(x\\). You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is 0.87\nThe value of the median is 1"
   },
   {
     "objectID": "slides.html#your-model-goes-here",
@@ -144,6 +158,6 @@
     "href": "slides.html#sec-appendix",
     "title": "Your Presentation Title Here",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nTable 1: Summary of the dataset\n\n\n\n\n\n\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.98\n0.0803779\n0.803779\n0\n0\n1\n2\n3\n\n\nmoderate_smoking\n4.08\n0.1599747\n1.599748\n0\n3\n4\n5\n8\n\n\nhigh_smoking\n5.89\n0.1549813\n1.549813\n2\n5\n6\n7\n9\n\n\n\n\n\nBack to main\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
+    "text": "Appendix\n\n\n\nTable 1: Summary of the dataset\n\n\n\n\n\n\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n1.01\n0.0870330\n0.8703303\n0\n0\n1\n2\n3\n\n\nmoderate_smoking\n4.05\n0.1559429\n1.5594288\n1\n3\n4\n5\n8\n\n\nhigh_smoking\n6.21\n0.1526169\n1.5261690\n3\n5\n6\n7\n10\n\n\n\n\n\nBack to main\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
   }
 ]

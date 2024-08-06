@@ -80,8 +80,20 @@ revealjs-plugins:
 ## Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable) 
 
 **Step 1** create a new repository on your GitHub name this yourGitHubusername.github.io <br>
-**Step 2** There are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the \docs branch option.
-**Step 3**Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository. Note if you have a GitHub education page you don't need to make the repo public, but your slides will be public.
+**Step 2** Add an readme file and type hello! This will be your home page. Any time you work on a new repository and publish this it will 
+be a sub-directory of the page. <br>
+**Step 3** Clone the repository from the following link <https://omiridoue.github.io/20240814_PaNs> <br>
+**Step 4** There are many ways to host your the presentation you have rendered through Quarto. We will render this locally and deploy from our GitHub \docs branch. <br>
+
+## Continued - Follow Along Today's Material
+**Step 5** Create a repository on your GitHub name this 20240814_PaNs <br>
+**Step 6** Follow the steps from <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories> to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim is to make your slides public and findable under the following URL **https://yourGitHubusername.github.io/20240814_PaNs**. Note if you have a GitHub Education page you don't need to make the repository public, but your slides will be public.
+
+## Continued - Follow Along Today's Material
+
+**Step 7** This is the last step we need to navigate to the settings of the repository and 
+
+![](images/Deploy_from_Docs.png)
 
 ## A couple of Resources to Look through ...
 

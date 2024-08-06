@@ -449,8 +449,16 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 </section>
 <section id="making-your-slides-fair-findable-accessible-interoperable-reusable" class="slide level2">
 <h2>Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)</h2>
-<p><strong>Step 1</strong> create a new repository on your GitHub name this yourGitHubusername.github.io <br> <strong>Step 2</strong></p>
-<p>There are many ways to host your the presentation you have rendered through Quarto. We will piece this locally and deploy our page to GitHub through the branch option. Your slides will then be public and findable under https://yourGitHubusername.github.io/NameofRepository Note if you have a GitHub education page you don’t need to make the repo</p>
+<p><strong>Step 1</strong> create a new repository on your GitHub name this yourGitHubusername.github.io <br> <strong>Step 2</strong> Add an readme file and type hello! This will be your home page. Any time you work on a new repository and publish this it will be a sub-directory of the page. <br> <strong>Step 3</strong> Clone the repository from the following link <a href="https://omiridoue.github.io/20240814_PaNs" class="uri">https://omiridoue.github.io/20240814_PaNs</a> <br> <strong>Step 4</strong> There are many ways to host your the presentation you have rendered through Quarto. We will render this locally and deploy from our GitHub branch. <br></p>
+</section>
+<section id="continued---follow-along-todays-material" class="slide level2">
+<h2>Continued - Follow Along Today’s Material</h2>
+<p><strong>Step 5</strong> Create a repository on your GitHub name this 20240814_PaNs <br> <strong>Step 6</strong> Follow the steps from <a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories" class="uri">https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories</a> to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim is to make your slides public and findable under the following URL <strong>https://yourGitHubusername.github.io/20240814_PaNs</strong>. Note if you have a GitHub Education page you don’t need to make the repository public, but your slides will be public.</p>
+</section>
+<section id="continued---follow-along-todays-material-1" class="slide level2">
+<h2>Continued - Follow Along Today’s Material</h2>
+<p><strong>Step 7</strong> This is the last step we need to navigate to the settings of the repository and</p>
+<p><img data-src="images/Deploy_from_Docs.png"></p>
 </section>
 <section id="a-couple-of-resources-to-look-through" class="slide level2">
 <h2>A couple of Resources to Look through …</h2>
@@ -573,7 +581,7 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">head</span>(low_prevalence)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 0 0 2 1 0</code></pre>
+<pre><code>[1] 1 1 3 2 0 0</code></pre>
 </div>
 </div>
 </div>
@@ -586,7 +594,7 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">head</span>(moderate_prevalence)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 5 3 3 6 3</code></pre>
+<pre><code>[1] 2 2 3 4 3 2</code></pre>
 </div>
 </div>
 </div>
@@ -599,7 +607,7 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">head</span>(high_prevalence)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 7 6 7 3 6 4</code></pre>
+<pre><code>[1] 7 6 4 6 5 7</code></pre>
 </div>
 </div>
 </div>
@@ -631,10 +639,10 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 <div class="cell-output-display">
 <table class="caption-top">
 <colgroup>
-<col style="width: 25%">
+<col style="width: 24%">
 <col style="width: 7%">
 <col style="width: 14%">
-<col style="width: 13%">
+<col style="width: 14%">
 <col style="width: 5%">
 <col style="width: 8%">
 <col style="width: 10%">
@@ -657,9 +665,9 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">low_smoking</td>
-<td style="text-align: right;">0.98</td>
-<td style="text-align: right;">0.0803779</td>
-<td style="text-align: right;">0.803779</td>
+<td style="text-align: right;">1.01</td>
+<td style="text-align: right;">0.0870330</td>
+<td style="text-align: right;">0.8703303</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
@@ -668,10 +676,10 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 </tr>
 <tr class="even">
 <td style="text-align: left;">moderate_smoking</td>
-<td style="text-align: right;">4.08</td>
-<td style="text-align: right;">0.1599747</td>
-<td style="text-align: right;">1.599748</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">4.05</td>
+<td style="text-align: right;">0.1559429</td>
+<td style="text-align: right;">1.5594288</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">5</td>
@@ -679,20 +687,20 @@ Coauthor <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-aut
 </tr>
 <tr class="odd">
 <td style="text-align: left;">high_smoking</td>
-<td style="text-align: right;">5.89</td>
-<td style="text-align: right;">0.1549813</td>
-<td style="text-align: right;">1.549813</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">6.21</td>
+<td style="text-align: right;">0.1526169</td>
+<td style="text-align: right;">1.5261690</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">7</td>
-<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>You can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code <span class="math inline">\(x\)</span>. You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is 0.8</p>
+<p>You can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code <span class="math inline">\(x\)</span>. You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is 0.87</p>
 <p>The value of the median is 1</p>
 </section>
 <section id="your-model-goes-here" class="slide level2">
@@ -808,10 +816,10 @@ Table&nbsp;1: Summary of the dataset
 <div class="cell-output-display">
 <table class="caption-top">
 <colgroup>
-<col style="width: 25%">
+<col style="width: 24%">
 <col style="width: 7%">
 <col style="width: 14%">
-<col style="width: 13%">
+<col style="width: 14%">
 <col style="width: 5%">
 <col style="width: 8%">
 <col style="width: 10%">
@@ -834,9 +842,9 @@ Table&nbsp;1: Summary of the dataset
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">low_smoking</td>
-<td style="text-align: right;">0.98</td>
-<td style="text-align: right;">0.0803779</td>
-<td style="text-align: right;">0.803779</td>
+<td style="text-align: right;">1.01</td>
+<td style="text-align: right;">0.0870330</td>
+<td style="text-align: right;">0.8703303</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
@@ -845,10 +853,10 @@ Table&nbsp;1: Summary of the dataset
 </tr>
 <tr class="even">
 <td style="text-align: left;">moderate_smoking</td>
-<td style="text-align: right;">4.08</td>
-<td style="text-align: right;">0.1599747</td>
-<td style="text-align: right;">1.599748</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">4.05</td>
+<td style="text-align: right;">0.1559429</td>
+<td style="text-align: right;">1.5594288</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">5</td>
@@ -856,14 +864,14 @@ Table&nbsp;1: Summary of the dataset
 </tr>
 <tr class="odd">
 <td style="text-align: left;">high_smoking</td>
-<td style="text-align: right;">5.89</td>
-<td style="text-align: right;">0.1549813</td>
-<td style="text-align: right;">1.549813</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">6.21</td>
+<td style="text-align: right;">0.1526169</td>
+<td style="text-align: right;">1.5261690</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">7</td>
-<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
 </tr>
 </tbody>
 </table>
