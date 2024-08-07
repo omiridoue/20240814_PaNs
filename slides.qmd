@@ -26,6 +26,8 @@ format:
       buttons: false
     spotlight:
       size: 90
+      initialPresentationMode: false # try to set this to true if you would like to use the spotlight feature to zoom in on your slides
+      disablingUserSelect: false 
     preview-links: false #change if you want your links to not open into a new tab
     logo: images/MRC_CSO_SPHSU_Glasgow_RGB_0.png
     footer: "MRC/CSO Social and Public Health Sciences Unit"
@@ -80,18 +82,18 @@ revealjs-plugins:
 ## Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable) 
 
 **Step 1** create a new repository on your GitHub name this yourGitHubusername.github.io <br>
-**Step 2** Add an readme file and type hello! This will be your home page. Any time you work on a new repository and publish this it will 
+**Step 2** Add a ReadMe file and type Hello World! This will be your home page if you do not already have one. Any time you work on a new repository and publish this it will 
 be a sub-directory of the page. <br>
 **Step 3** Clone the repository from the following link <https://omiridoue.github.io/20240814_PaNs> <br>
-**Step 4** There are many ways to host your the presentation you have rendered through Quarto. We will render this locally and deploy from our GitHub \docs branch. <br>
+**Step 4** There are many ways to host the presentation you are about to render through Quarto. We will render this locally and tell Quarto to output all files in html format to the docs subfolder. We will then tell GitHub to look for these files and deploy our html slides. <br>
 
 ## Continued - Follow Along Today's Material
-**Step 5** Create a repository on your GitHub name this 20240814_PaNs <br>
-**Step 6** Follow the steps from <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories> to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim is to make your slides public and findable under the following URL **https://yourGitHubusername.github.io/20240814_PaNs**. Note if you have a GitHub Education page you don't need to make the repository public, but your slides will be public.
+**Step 5** Create a repository on your GitHub and name this 20240814_PaNs <br>
+**Step 6** Follow the steps from <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories> to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim by the end of this session is to make your slides public and findable under the following URL **https://yourGitHubusername.github.io/20240814_PaNs**. Note if you have a GitHub Education page you don't need to make the repository public, but your slides and homepage will be public.
 
 ## Continued - Follow Along Today's Material
 
-**Step 7** This is the last step we need to navigate to the settings of the repository and 
+**Step 7** This is the last part of setting up. We need to navigate to the settings of our new repository and click through these steps.
 
 ![](images/Deploy_from_Docs.png)
 
@@ -119,20 +121,28 @@ be a sub-directory of the page. <br>
 
 :::
 
-## Agenda 
+## Intended Outcomes
 
-1. first item
-    i) sub-item
-2. second item
+1. Render the template locally
+    i) Sync your local to your remote repository
+    ii) Deploy your slides from your `/docs` branch
+2. Begin to tinker with the template
+3. Understand the folder structure of the template
+4. Understand what different components within Quarto do
+5. Understand how to modify the settings configured within Quarto
+    i) yaml 
+    ii) style sheets 
+    iii) renv 
 
 ::: footer
 
 :::
 
-# Section Divider { background-color="#038AAD"}
+# Getting Started with Quarto { background-color="#038AAD"}
 ::: footer
 
 :::
+
 ## Quarto recognises ## as a command to make a new slide
 
 Customise these headings by tinkering with the styles.css file. Maybe we can come up with a
@@ -154,179 +164,33 @@ of a line <br>
 
 Anything you wrap inside these back ticks will appear as highlighted text in line for example `Ctrl+R`.
 
-## There are different extensions this one is called quiz-question {.quiz-question}
+<br> 
 
-- Write Option here
-- Write Option here
-- [THIS WILL BE YOUR CORRECT ANSWER]{.correct}
-- WRITE Option here
+> To draw your attention here I've added a `>`. This page has nothing to do with `narwhals` but is related to Networks-
+<https://inarwhal.github.io/NetworkAnalysisR-book/>
 
-## Read in Figures and Images from your Images folder 
+## Intermission - What is one unique characteristic of the narwhal that makes it easily distinguishable from other sea creatures? {.quiz-question}
+
+- Its unusual pink colour
+- The fringe of "hair"
+- [Its tusk]{.correct}
+- Its square head
+
+## Read in Figures from your /images folder 
 
 Once you open your R project you will be able to load images through the relative
 path images/
 
 ![Add an image caption here](images/MRC_CSO_SPHSU_Glasgow_RGB_0.png)
 
-##  Code Chunk Explained a Bit More
+##  What are Code Chunks?
 
-The code chunks will include all your code, you can click Insert a new code chunk to your top right.
-Each chunk should have its own name. You can add a name after the first reserved word which
-refers to the language your code is in, this will be lowercase r for any R code. Follow the chunk name by
-a comma, for names try avoiding dashes, if there is an error with your code the error message will
-let you know which chunk has an issue. To evaluate, run the code, you will need to type `eval = TRUE`,
-if you do not want to run this code when you render the document change to `FALSE`. If you want to 
-print your code in the slides add `echo = TRUE`.
+Code chunks will include all your code, you can click Insert a new code chunk to your top right. Each chunk should have its own name. You can add a name after the first reserved word which refers to the language your code is interpreted with, this will be lowercase `r` for any R code. Follow the chunk name by a comma. To name chunks try avoid using dashes, if there is an error with your code the error message will let you know which chunk you might want to look for to fix this. For R to recognise that you want it to run the code in your chunk, you will need to type `eval = TRUE`. If you do not want to run this code each time you render the document change to `eval = FALSE`. If you want to print your code in the slides add `echo = TRUE`. There are a couple of more options you might want to check like `warnings` or `message` to suppress any messages. For the following chunk we specify `{r, eval = FALSE, echo=TRUE}`. 
 
-```{r, eval = FALSE, echo=TRUE}     
+```{r, eval = FALSE, echo=TRUE, output=TRUE}     
 
-library(network)
+require(network)
 ```
-
-## Components
-### Alerts & Cross-refs {#sec-crossref}
-
-To emphasize specific words or text, you can:
-
-- Use the default `.alert` class, e.g. [important note]{.alert}.
-- Use the `.fg` class for custom colour, e.g. [important note]{.fg style="--col: #e64173"}.
-- Use the `.bg` class for custom background, e.g. [important note]{.bg style="--col: #e64173"}.
-
-To cross-reference, you have several options, for example:
-
-- Beamer-like `.button` class provided by this theme, e.g. [[Appendix]{.button}](#sec-appendix)
-- Quarto's native cross-ref syntax, e.g., "See @sec-appendix."
-
-## Components
-
-### Citations
-
-Citations follow the standard
-[Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations)
-and be sourced from BibLaTex, BibTeX, or CLS files. For example:
-
- - Topic 1: Older Studies [@rogers_diffusion_1983; @kermack_contributions_1939; @wasserman_social_1994]
-
- - Topic 2: Studies during 90's [@valente_social_1996]
-
-## Quarto allows you to have different tabs
-
-::: {.panel-tabset}
-
-#### (a) Low prevalence 
-```{r echo=TRUE}
-low_prevalence <- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters
-length(low_prevalence) 
-head(low_prevalence)
-```
-
-#### (b) Moderate Prevalence
-```{r echo=TRUE}
-moderate_prevalence <- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters
-length(moderate_prevalence) 
-head(moderate_prevalence)
-```
-
-#### (c) High Prevalence
-```{r echo=TRUE}
-high_prevalence <- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters
-length(high_prevalence) 
-head(high_prevalence)
-```
-::: 
-
-## You can use Iframes for Interactive visuals 
-<a href="https://raphtory-pyvis-teenage-glasgow-friendship.streamlit.app" class="btn btn-secondary">Full Screen</a>
-<br> 
-
-<iframe src="https://raphtory-pyvis-teenage-glasgow-friendship.streamlit.app/?embed=true"
-  height=550 width=1100
-  scrolling="yes">
-</iframe>
-
-::: footer 
-:::
-
-## Results Section
-
-```{r echo=TRUE}
-
-library(psych)
-library(knitr)
-
-summary_samples <- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), 
-                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), 
-                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )
-
-summary_samples <- summary_samples[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
-
-kable(summary_samples)
-
-```
-
-You can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code $x$.
-You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is `{r} round(sd(low_prevalence),2)`
-
-The value of the median is `{r} median(low_prevalence)`
-
-
-## Your Model Goes Here
-
-:::{.callout-note} 
-
-### Explain your model {#eq-stddev}
-
-$$
-P_{\theta,\mathcal{Y}}(\mathbf{Y=y|X})=\frac{exp\{\theta^{\textsf{T}}g(y,X)\}}{\kappa(\theta,\mathcal{Y})}
-$$ {#eq-stddev}
-
-:::
-
-Every time you refer to your equation use the tag `(@referencetoequation)` to refer to your equation like so (@eq-stddev).
-
-## You can Section a Slide into Different Columns
-
->**Maybe you want to Summarise Your Ideas **
-
-:::: {.columns}
-
-::: {.column width="70%"}
-**Idea 1**
-
-:::
-
-::: {.column width="10%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="20%"}
-Key word here 
-
-:::
-
-::::
-
-## Line Highlighting
-
--   Highlight specific lines for emphasis
--   Incrementally highlight additional lines
-
-``` {.python code-line-numbers="4-5|7|10"}
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-
-::: footer
-Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
-:::
 
 ## Easy Navigation
 
@@ -357,6 +221,154 @@ You can also press `b` to toggle the chalkboard or `c` to toggle the notes canva
 Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard)
 :::
 
+# Mash-up of Templates { background-color="#038AAD"}
+::: footer
+
+:::
+
+## Literature
+
+### Citations
+
+Citations follow the standard
+[Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations)
+and be sourced from BibLaTex, BibTeX, or CLS files. You will need to navigate to the bibliography section of your yaml at
+the top of this document to specify the name of the file that contains all yuor reference information.
+For example:
+
+ - Diffusion of Innovations [@rogers_diffusion_1983; @kermack_contributions_1939; @valente_social_1996]
+ 
+ - Teenage Glasgow Friendship Network [@michell_girls_1997; @bush_1997; @michell_pressure_1997; @michell_perceptions_1997; @michell_1996; @pearson_2000; @pearson_2006; @steglich_2010; @pearson_2006a; @veenstra_2012]
+ 
+
+## Data
+
+```{r prepare_data, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+lapply(list('dplyr', 'reshape2', 'igraph', "sigmajs"), library, character.only = TRUE)
+source("code/00_prepare_data.R")
+```
+
+::: {.panel-tabset}
+
+#### (a) Friendship Network
+Click anywhere on this pane to wake up the plot.
+```{r graph1, echo=FALSE, message=FALSE, warning=FALSE, output=TRUE}
+sigmajs() %>%
+      sg_from_igraph(g1) %>% 
+      sg_neighbours() %>% 
+      sg_settings(drawLabels = TRUE, 
+                  hoverFontStyle = "bold", 
+                  labelColor = "node", 
+                  labelSizeRatio = 3,
+                  defaultLabelHoverColor = "node",
+                  mouseWheelEnabled = TRUE, 
+                  drawEdgeLabels = FALSE,
+                  labelThreshold= 100) %>% 
+      sg_drag_nodes() %>% 
+      sg_layout() %>%
+      sg_noverlap()
+
+```
+
+#### (b) Descriptive Measures
+```{r graph2, echo=FALSE, message=FALSE, warning=FALSE, output=TRUE}
+library(htmlTable)
+source("code/01_descriptive_statistics.R")
+styled_table1
+
+```
+::: 
+
+## Methods
+
+:::{.callout-note} 
+
+### Explain your model {#eq-stddev}
+
+$$
+P_{\theta,\mathcal{Y}}(\mathbf{Y=y|X})=\frac{exp\{\theta^{\textsf{T}}g(y,X)\}}{\kappa(\theta,\mathcal{Y})}
+$$ {#eq-stddev}
+
+:::
+
+Every time you refer to your equation use the tag `(@referencetoequation)` to refer to your equation like so (@eq-stddev).
+
+## Descriptive Statistics
+
+```{r table1,echo=FALSE, message=FALSE, warning=FALSE}
+
+styled_table
+
+```
+
+You can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code for example no self-nominations were allowed in the Teenage Glasgow Friendship Data, this means 0 values along our diagonal $A_{ii}=0$.
+You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The reciprocity for wave 3 friendships is `{r} round(reciprocity(g3),2)`, if we round it. Next we'll use (@eq-stddev) to explain present our methods.
+
+## Methods {#sec-crossref}
+
+```{r run_ergm, eval=TRUE, include=FALSE}
+library(ergm)
+friendship_network <- as.network(friendships_t1)
+
+Model_1 <- ergm(friendship_network ~ edges)
+
+Model_01_GOF <- gof(Model_1, 
+                    GOF = ~idegree + odegree + espartners + distance, 
+                        verbose = TRUE, 
+                        control = control.gof.ergm(seed = 12345))
+```
+
+
+``` {r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "4|6|7-9"
+
+library(ergm)
+friendship_network <- as.network(friendships_t1)
+
+Model_1 <- ergm(friendship_network ~ edges)
+
+Model_01_GOF <- gof(Model_1, 
+                    GOF = ~idegree + odegree + espartners + distance, 
+                        verbose = TRUE, 
+                        control = control.gof.ergm(seed = 12345))
+```
+
+-   Highlight specific lines for emphasis
+-   Incrementally highlight additional lines
+
+To cross-reference your model fit, you have several options, for example:
+
+- This will take you to your [[Appendix]{.button}](#sec-appendix)
+- Quarto's native cross-reference label would be "See @sec-appendix."
+
+::: footer
+Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting) and [Cross References](https://quarto.org/docs/presentations/revealjs/#cross-references)
+:::
+
+## Discussion
+
+>**Summarise Your Findings **
+
+:::: {.columns}
+
+::: {.column width="30%"}
+**Idea 1**
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="60%"}
+Explanation here 
+
+:::
+
+::::
 
 ## References
 
@@ -368,16 +380,48 @@ Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenti
 ```{r}
 #| cache: true
 #| label: tbl-attsum
-#| tbl-cap: Summary of the dataset
+#| tbl-cap: "Summary of Model Fit (Data: Teenage Glasgow Friendship Dataset)"
 
-summary_samples <- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), 
-                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), 
-                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )
-
-summary_samples <- summary_samples[,c("mean","se", "sd", "min", "Q0.25", "median", "Q0.75", "max")]
-
-kable(summary_samples)
+kable(as.data.frame(Model_01_GOF$summary.model))
 
 ```
 
 [[Back to main]{.button}](#sec-crossref)
+
+## 
+
+::: columns
+::: {.column width="50%"}
+
+<br>
+
+##### Funding: 
+
+<br>
+
+##### Acknowledgements: 
+
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+:::
+::: {.column width="40%"}
+
+![](images/qr-code.png){fig-align="left" fig-alt="QR code" width=70%}
+
+<br>
+
+###### Follow this Project:
+
+{{< fa comments >}} [yourpage](https://www.gla.ac.uk/schools/healthwellbeing/research/mrccsosocialandpublichealthsciencesunit/)
+
+{{< fa archive >}} [projectpage](https://www.gla.ac.uk/schools/healthwellbeing/research/mrccsosocialandpublichealthsciencesunit/)
+
+{{< fa envelope >}} [last.name@gla.ac.uk](mailto:last.name@gla.ac.uk)
+
+{{< fa brands github >}} [github-handle](https://github.com/)
+
+:::
+:::

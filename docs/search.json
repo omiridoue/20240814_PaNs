@@ -4,21 +4,21 @@
     "href": "slides.html#making-your-slides-fair-findable-accessible-interoperable-reusable",
     "title": "Your Presentation Title Here",
     "section": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)",
-    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\nStep 1 create a new repository on your GitHub name this yourGitHubusername.github.io  Step 2 Add an readme file and type hello! This will be your home page. Any time you work on a new repository and publish this it will be a sub-directory of the page.  Step 3 Clone the repository from the following link https://omiridoue.github.io/20240814_PaNs  Step 4 There are many ways to host your the presentation you have rendered through Quarto. We will render this locally and deploy from our GitHub branch."
+    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\nStep 1 create a new repository on your GitHub name this yourGitHubusername.github.io  Step 2 Add a ReadMe file and type Hello World! This will be your home page if you do not already have one. Any time you work on a new repository and publish this it will be a sub-directory of the page.  Step 3 Clone the repository from the following link https://omiridoue.github.io/20240814_PaNs  Step 4 There are many ways to host the presentation you are about to render through Quarto. We will render this locally and tell Quarto to output all files in html format to the docs subfolder. We will then tell GitHub to look for these files and deploy our html slides."
   },
   {
     "objectID": "slides.html#continued---follow-along-todays-material",
     "href": "slides.html#continued---follow-along-todays-material",
     "title": "Your Presentation Title Here",
     "section": "Continued - Follow Along Today’s Material",
-    "text": "Continued - Follow Along Today’s Material\nStep 5 Create a repository on your GitHub name this 20240814_PaNs  Step 6 Follow the steps from https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim is to make your slides public and findable under the following URL https://yourGitHubusername.github.io/20240814_PaNs. Note if you have a GitHub Education page you don’t need to make the repository public, but your slides will be public."
+    "text": "Continued - Follow Along Today’s Material\nStep 5 Create a repository on your GitHub and name this 20240814_PaNs  Step 6 Follow the steps from https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim by the end of this session is to make your slides public and findable under the following URL https://yourGitHubusername.github.io/20240814_PaNs. Note if you have a GitHub Education page you don’t need to make the repository public, but your slides and homepage will be public."
   },
   {
     "objectID": "slides.html#continued---follow-along-todays-material-1",
     "href": "slides.html#continued---follow-along-todays-material-1",
     "title": "Your Presentation Title Here",
     "section": "Continued - Follow Along Today’s Material",
-    "text": "Continued - Follow Along Today’s Material\nStep 7 This is the last step we need to navigate to the settings of the repository and"
+    "text": "Continued - Follow Along Today’s Material\nStep 7 This is the last part of setting up. We need to navigate to the settings of our new repository and click through these steps."
   },
   {
     "objectID": "slides.html#a-couple-of-resources-to-look-through",
@@ -35,11 +35,11 @@
     "text": "A couple of Resources for Teaching Material …\n\npsychteachR\nSGSSS Workshop\nWorkshop Slides"
   },
   {
-    "objectID": "slides.html#agenda",
-    "href": "slides.html#agenda",
+    "objectID": "slides.html#intended-outcomes",
+    "href": "slides.html#intended-outcomes",
     "title": "Your Presentation Title Here",
-    "section": "Agenda",
-    "text": "Agenda\n\nfirst item\n\nsub-item\n\nsecond item"
+    "section": "Intended Outcomes",
+    "text": "Intended Outcomes\n\nRender the template locally\n\nSync your local to your remote repository\nDeploy your slides from your /docs branch\n\nBegin to tinker with the template\nUnderstand the folder structure of the template\nUnderstand what different components within Quarto do\nUnderstand how to modify the settings configured within Quarto\n\nyaml\nstyle sheets\nrenv"
   },
   {
     "objectID": "slides.html#quarto-recognises-as-a-command-to-make-a-new-slide",
@@ -53,84 +53,28 @@
     "href": "slides.html#features-in-your-text",
     "title": "Your Presentation Title Here",
     "section": "Features in your Text",
-    "text": "Features in your Text\nIf you want to start a new line of text add a &lt;br&gt; at the end  of a line \nYou can make text bold by adding two asterisks on either end of a phrase\nAdd Text to Your Hyperlink\nAnything you wrap inside these back ticks will appear as highlighted text in line for example Ctrl+R."
+    "text": "Features in your Text\nIf you want to start a new line of text add a &lt;br&gt; at the end  of a line \nYou can make text bold by adding two asterisks on either end of a phrase\nAdd Text to Your Hyperlink\nAnything you wrap inside these back ticks will appear as highlighted text in line for example Ctrl+R.\n\n\nTo draw your attention here I’ve added a &gt;. This page has nothing to do with narwhals but is related to Networks- https://inarwhal.github.io/NetworkAnalysisR-book/"
   },
   {
-    "objectID": "slides.html#there-are-different-extensions-this-one-is-called-quiz-question",
-    "href": "slides.html#there-are-different-extensions-this-one-is-called-quiz-question",
+    "objectID": "slides.html#intermission---what-is-one-unique-characteristic-of-the-narwhal-that-makes-it-easily-distinguishable-from-other-sea-creatures",
+    "href": "slides.html#intermission---what-is-one-unique-characteristic-of-the-narwhal-that-makes-it-easily-distinguishable-from-other-sea-creatures",
     "title": "Your Presentation Title Here",
-    "section": "There are different extensions this one is called quiz-question",
-    "text": "There are different extensions this one is called quiz-question\n\nWrite Option here\nWrite Option here\nTHIS WILL BE YOUR CORRECT ANSWER\nWRITE Option here"
+    "section": "Intermission - What is one unique characteristic of the narwhal that makes it easily distinguishable from other sea creatures?",
+    "text": "Intermission - What is one unique characteristic of the narwhal that makes it easily distinguishable from other sea creatures?\n\nIts unusual pink colour\nThe fringe of “hair”\nIts tusk\nIts square head"
   },
   {
-    "objectID": "slides.html#read-in-figures-and-images-from-your-images-folder",
-    "href": "slides.html#read-in-figures-and-images-from-your-images-folder",
+    "objectID": "slides.html#read-in-figures-from-your-images-folder",
+    "href": "slides.html#read-in-figures-from-your-images-folder",
     "title": "Your Presentation Title Here",
-    "section": "Read in Figures and Images from your Images folder",
-    "text": "Read in Figures and Images from your Images folder\nOnce you open your R project you will be able to load images through the relative path images/\n\n\n\nAdd an image caption here"
+    "section": "Read in Figures from your /images folder",
+    "text": "Read in Figures from your /images folder\nOnce you open your R project you will be able to load images through the relative path images/\n\n\n\nAdd an image caption here"
   },
   {
-    "objectID": "slides.html#code-chunk-explained-a-bit-more",
-    "href": "slides.html#code-chunk-explained-a-bit-more",
+    "objectID": "slides.html#what-are-code-chunks",
+    "href": "slides.html#what-are-code-chunks",
     "title": "Your Presentation Title Here",
-    "section": "Code Chunk Explained a Bit More",
-    "text": "Code Chunk Explained a Bit More\nThe code chunks will include all your code, you can click Insert a new code chunk to your top right. Each chunk should have its own name. You can add a name after the first reserved word which refers to the language your code is in, this will be lowercase r for any R code. Follow the chunk name by a comma, for names try avoiding dashes, if there is an error with your code the error message will let you know which chunk has an issue. To evaluate, run the code, you will need to type eval = TRUE, if you do not want to run this code when you render the document change to FALSE. If you want to print your code in the slides add echo = TRUE.\n\nlibrary(network)"
-  },
-  {
-    "objectID": "slides.html#components",
-    "href": "slides.html#components",
-    "title": "Your Presentation Title Here",
-    "section": "Components",
-    "text": "Components\nAlerts & Cross-refs\nTo emphasize specific words or text, you can:\n\nUse the default .alert class, e.g. important note.\nUse the .fg class for custom colour, e.g. important note.\nUse the .bg class for custom background, e.g. important note.\n\nTo cross-reference, you have several options, for example:\n\nBeamer-like .button class provided by this theme, e.g. Appendix\nQuarto’s native cross-ref syntax, e.g., “See Section 1.17.”"
-  },
-  {
-    "objectID": "slides.html#components-1",
-    "href": "slides.html#components-1",
-    "title": "Your Presentation Title Here",
-    "section": "Components",
-    "text": "Components\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. For example:\n\nTopic 1: Older Studies (Rogers 1983; Kermack and McKendrick 1939; Wasserman and Faust 1994)\nTopic 2: Studies during 90’s (Valente 1996)"
-  },
-  {
-    "objectID": "slides.html#quarto-allows-you-to-have-different-tabs",
-    "href": "slides.html#quarto-allows-you-to-have-different-tabs",
-    "title": "Your Presentation Title Here",
-    "section": "Quarto allows you to have different tabs",
-    "text": "Quarto allows you to have different tabs\n\n(a) Low prevalence(b) Moderate Prevalence(c) High Prevalence\n\n\n\nlow_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.1)    # provide your own parameters\nlength(low_prevalence) \n\n[1] 100\n\nhead(low_prevalence)\n\n[1] 3 1 0 0 1 1\n\n\n\n\n\nmoderate_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.4)    # provide your own parameters\nlength(moderate_prevalence) \n\n[1] 100\n\nhead(moderate_prevalence)\n\n[1] 5 6 1 3 4 4\n\n\n\n\n\nhigh_prevalence &lt;- rbinom(n = 100, size = 10, prob = 0.6)     # provide your own parameters\nlength(high_prevalence) \n\n[1] 100\n\nhead(high_prevalence)\n\n[1] 5 8 6 7 6 7"
-  },
-  {
-    "objectID": "slides.html#you-can-use-iframes-for-interactive-visuals",
-    "href": "slides.html#you-can-use-iframes-for-interactive-visuals",
-    "title": "Your Presentation Title Here",
-    "section": "You can use Iframes for Interactive visuals",
-    "text": "You can use Iframes for Interactive visuals\nFull Screen"
-  },
-  {
-    "objectID": "slides.html#results-section",
-    "href": "slides.html#results-section",
-    "title": "Your Presentation Title Here",
-    "section": "Results Section",
-    "text": "Results Section\n\nlibrary(psych)\nlibrary(knitr)\n\nsummary_samples &lt;- rbind(low_smoking = describe(low_prevalence,quant=c(.25,.75) ), \n                         moderate_smoking = describe(moderate_prevalence,quant=c(.25,.75) ), \n                         high_smoking = describe(high_prevalence,quant=c(.25,.75)) )\n\nsummary_samples &lt;- summary_samples[,c(\"mean\",\"se\", \"sd\", \"min\", \"Q0.25\", \"median\", \"Q0.75\", \"max\")]\n\nkable(summary_samples)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.96\n0.0886715\n0.8867145\n0\n0\n1\n1\n4\n\n\nmoderate_smoking\n4.23\n0.1455432\n1.4554322\n1\n3\n4\n5\n8\n\n\nhigh_smoking\n6.19\n0.1580787\n1.5807874\n2\n5\n6\n7\n10\n\n\n\n\n\nYou can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code \\(x\\). You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The rounded standard deviation is 0.89\nThe value of the median is 1"
-  },
-  {
-    "objectID": "slides.html#your-model-goes-here",
-    "href": "slides.html#your-model-goes-here",
-    "title": "Your Presentation Title Here",
-    "section": "Your Model Goes Here",
-    "text": "Your Model Goes Here\n\n\n\n\n\n\nExplain your model\n\n\n\\[\nP_{\\theta,\\mathcal{Y}}(\\mathbf{Y=y|X})=\\frac{exp\\{\\theta^{\\textsf{T}}g(y,X)\\}}{\\kappa(\\theta,\\mathcal{Y})}\n\\qquad(1)\\]\n\n\n\nEvery time you refer to your equation use the tag (@referencetoequation) to refer to your equation like so (Equation 1)."
-  },
-  {
-    "objectID": "slides.html#you-can-section-a-slide-into-different-columns",
-    "href": "slides.html#you-can-section-a-slide-into-different-columns",
-    "title": "Your Presentation Title Here",
-    "section": "You can Section a Slide into Different Columns",
-    "text": "You can Section a Slide into Different Columns\n\nMaybe you want to Summarise Your Ideas \n\n\n\nIdea 1\n\n\n\nKey word here"
-  },
-  {
-    "objectID": "slides.html#line-highlighting",
-    "href": "slides.html#line-highlighting",
-    "title": "Your Presentation Title Here",
-    "section": "Line Highlighting",
-    "text": "Line Highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
+    "section": "What are Code Chunks?",
+    "text": "What are Code Chunks?\nCode chunks will include all your code, you can click Insert a new code chunk to your top right. Each chunk should have its own name. You can add a name after the first reserved word which refers to the language your code is interpreted with, this will be lowercase r for any R code. Follow the chunk name by a comma. To name chunks try avoid using dashes, if there is an error with your code the error message will let you know which chunk you might want to look for to fix this. For R to recognise that you want it to run the code in your chunk, you will need to type eval = TRUE. If you do not want to run this code each time you render the document change to eval = FALSE. If you want to print your code in the slides add echo = TRUE. There are a couple of more options you might want to check like warnings or message to suppress any messages. For the following chunk we specify {r, eval = FALSE, echo=TRUE}.\n\nrequire(network)"
   },
   {
     "objectID": "slides.html#easy-navigation",
@@ -147,17 +91,66 @@
     "text": "Chalkboard\nFree form drawing and slide annotations\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\nYou can also press b to toggle the chalkboard or c to toggle the notes canvas.\n\nLearn more: Chalkboard"
   },
   {
+    "objectID": "slides.html#literature",
+    "href": "slides.html#literature",
+    "title": "Your Presentation Title Here",
+    "section": "Literature",
+    "text": "Literature\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. You will need to navigate to the bibliography section of your yaml at the top of this document to specify the name of the file that contains all yuor reference information. For example:\n\nDiffusion of Innovations (Rogers 1983; Kermack and McKendrick 1939; Valente 1996)\nTeenage Glasgow Friendship Network (Michell and Amos 1997, 1996; Bush and Michell 1997; Michell 1997b, 1997a; Pearson M. and Michell 2000; S. Pearson M. and Snijders 2006; C. Steglich, Snijders, and Pearson 2010; S. Steglich C. and Pearson 2006; Veenstra and Steglich 2012)"
+  },
+  {
+    "objectID": "slides.html#data",
+    "href": "slides.html#data",
+    "title": "Your Presentation Title Here",
+    "section": "Data",
+    "text": "Data\n\n(a) Friendship Network(b) Descriptive Measures\n\n\nClick anywhere on this pane to wake up the plot.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWave1\n\n\n\n\nNodes\n160\n\n\nEdges\n587\n\n\nDensity\n0.0231\n\n\nReciprocity\n0.563\n\n\nCentrality\n0.133\n\n\nAverage Path Length\n5.64"
+  },
+  {
+    "objectID": "slides.html#methods",
+    "href": "slides.html#methods",
+    "title": "Your Presentation Title Here",
+    "section": "Methods",
+    "text": "Methods\n\n\n\n\n\n\nExplain your model\n\n\n\\[\nP_{\\theta,\\mathcal{Y}}(\\mathbf{Y=y|X})=\\frac{exp\\{\\theta^{\\textsf{T}}g(y,X)\\}}{\\kappa(\\theta,\\mathcal{Y})}\n\\qquad(1)\\]\n\n\n\nEvery time you refer to your equation use the tag (@referencetoequation) to refer to your equation like so (Equation 1)."
+  },
+  {
+    "objectID": "slides.html#descriptive-statistics",
+    "href": "slides.html#descriptive-statistics",
+    "title": "Your Presentation Title Here",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n\n\n\n\n\nWave1\nWave2\nWave3\n\n\n\n\nNodes\n160\n160\n160\n\n\nEdges\n587\n516\n497\n\n\nDensity\n0.0231\n0.0203\n0.0195\n\n\nReciprocity\n0.563\n0.539\n0.636\n\n\nCentrality\n0.133\n0.163\n0.161\n\n\nAverage Path Length\n5.64\n6.69\n6.93\n\n\n\n\n\nYou can wrap LaTeX code in line, to do this use a single dollar sign on either end of your code for example no self-nominations were allowed in the Teenage Glasgow Friendship Data, this means 0 values along our diagonal \\(A_{ii}=0\\). You can also dynamically refer to a variable output in line, simply use back-ticks around your in line code in this case R. The reciprocity for wave 3 friendships is 0.64, if we round it. Next we’ll use (Equation 1) to explain present our methods."
+  },
+  {
+    "objectID": "slides.html#sec-crossref",
+    "href": "slides.html#sec-crossref",
+    "title": "Your Presentation Title Here",
+    "section": "Methods",
+    "text": "Methods\n\nlibrary(ergm)\nfriendship_network &lt;- as.network(friendships_t1)\n\nModel_1 &lt;- ergm(friendship_network ~ edges)\n\nModel_01_GOF &lt;- gof(Model_1, \n                    GOF = ~idegree + odegree + espartners + distance, \n                        verbose = TRUE, \n                        control = control.gof.ergm(seed = 12345))\n\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nTo cross-reference your model fit, you have several options, for example:\n\nThis will take you to your Appendix\nQuarto’s native cross-reference label would be “See Section 2.8.”\n\n\nLearn more: Line Highlighting and Cross References"
+  },
+  {
+    "objectID": "slides.html#discussion",
+    "href": "slides.html#discussion",
+    "title": "Your Presentation Title Here",
+    "section": "Discussion",
+    "text": "Discussion\n\nSummarise Your Findings \n\n\n\nIdea 1\n\n\n\nExplanation here"
+  },
+  {
     "objectID": "slides.html#references",
     "href": "slides.html#references",
     "title": "Your Presentation Title Here",
     "section": "References",
-    "text": "References\n\n\nKermack, W. O., and A. G. McKendrick. 1939. “Contributions to the Mathematical Theory of Epidemics: V. Analysis of Experimental Epidemics of Mouse-Typhoid; a Bacterial Disease Conferring Incomplete Immunity.” Journal of Hygiene 39 (3): 271–88. https://doi.org/10.1017/S0022172400011918.\n\n\nRogers, Everett M. 1983. Diffusion of Innovations. 3. ed. New York, NY: Free Press.\n\n\nValente, Thomas W. 1996. “Social Network Thresholds in the Diffusion of Innovations.” Social Networks 18 (1): 69–89. https://doi.org/10.1016/0378-8733(95)00256-1.\n\n\nWasserman, Stanley, and Katherine Faust. 1994. Social Network Analysis: Methods and Applications. Structural Analysis in the Social Sciences. Cambridge: Cambridge University Press. https://doi.org/10.1017/CBO9780511815478."
+    "text": "References\n\n\nBush, P. West, H., and L. Michell. 1997. “The Role of Friendship Groups in the Uptake and Maintenance of Smoking Amongst Pre-Adolescent and Adolescent Children: Distribution of Frequencies.” MRC Medical Sociology Unit Glasgow, no. 62.\n\n\nKermack, W. O., and A. G. McKendrick. 1939. “Contributions to the Mathematical Theory of Epidemics: V. Analysis of Experimental Epidemics of Mouse-Typhoid; a Bacterial Disease Conferring Incomplete Immunity.” Journal of Hygiene 39 (3): 271–88. https://doi.org/10.1017/S0022172400011918.\n\n\nMichell, Lynn. 1997a. “Loud, Sad or Bad: Young People’s Perceptions of Peer Groups and Smoking.” Health Education Research 12 (1): 1–14.\n\n\n———. 1997b. “Pressure Groups: Young People’s Accounts of Peer Pressure to Smoke.” Social Sciences in Health 3: 3–17.\n\n\nMichell, Lynn, and Amanda Amos. 1996. “Peer Pressure to Smoke: The Meaning Depends on the Method.” Health Education Research 11 (1): 39–49.\n\n\n———. 1997. “Girls, Pecking Order and Smoking.” Social Science & Medicine 44 (12): 1861–69. https://doi.org/10.1016/S0277-9536(96)00295-X.\n\n\nPearson, M., and Lynn Michell. 2000. “Smoke Rings: Social Network Analysis of Friendship Groups, Smoking and Drug-Taking.” Drugs: Education, Prevention and Policy 7: 21–37.\n\n\nPearson, Steglich, M., and A. Snijders T. 2006. “Homophily and Assimilation Among Sport-Active Adolescent Substance Users.” Connections 27 (1): 47–63.\n\n\nRogers, Everett M. 1983. Diffusion of Innovations. 3. ed. New York, NY: Free Press.\n\n\nSteglich, Christian, Tom A. B. Snijders, and Michael Pearson. 2010. “Dynamic Networks and Behavior: Separating Selection from Influence.” Sociological Methodology 40 (1): 329–93. https://doi.org/10.1111/j.1467-9531.2010.01225.x.\n\n\nSteglich, Snijders, C., and M. Pearson. 2006. “Applying SIENA: An Illustrative Analysis of the Co-Evolution of Adolescents’ Friendship Networks, Taste in Music, and Alcohol Consumption.” Connections 2: 48–56.\n\n\nValente, Thomas W. 1996. “Social Network Thresholds in the Diffusion of Innovations.” Social Networks 18 (1): 69–89. https://doi.org/10.1016/0378-8733(95)00256-1.\n\n\nVeenstra, R., and Ch. Steglich. 2012. “Actor-Based Model for Network and Behavior Dynamics.” In Handbook of Developmental Research Methods, edited by B. Laursen, T. D. Little, and N. A. Card, 598–618. Guilford Press."
   },
   {
     "objectID": "slides.html#sec-appendix",
     "href": "slides.html#sec-appendix",
     "title": "Your Presentation Title Here",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\n\nTable 1: Summary of the dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean\nse\nsd\nmin\nQ0.25\nmedian\nQ0.75\nmax\n\n\n\n\nlow_smoking\n0.96\n0.0886715\n0.8867145\n0\n0\n1\n1\n4\n\n\nmoderate_smoking\n4.23\n0.1455432\n1.4554322\n1\n3\n4\n5\n8\n\n\nhigh_smoking\n6.19\n0.1580787\n1.5807874\n2\n5\n6\n7\n10\n\n\n\n\n\n\n\n\nBack to main\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
+    "text": "Appendix\n\n\n\n\nTable 1: Summary of Model Fit (Data: Teenage Glasgow Friendship Dataset)\n\n\n\n\n\n\n\nobs\nmin\nmean\nmax\nMC p-value\n\n\n\n\nedges\n586\n530\n589.51\n658\n0.86\n\n\n\n\n\n\n\n\nBack to main"
+  },
+  {
+    "objectID": "slides.html#section",
+    "href": "slides.html#section",
+    "title": "Your Presentation Title Here",
+    "section": "",
+    "text": "Funding:\n\nAcknowledgements:\n\n\n\n\n\n\n\n\n\n\nFollow this Project:\n yourpage\n projectpage\n last.name@gla.ac.uk\n github-handle\n\n\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
   }
 ]

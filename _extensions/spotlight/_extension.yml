@@ -13,7 +13,7 @@ contributes:
           # true: Locks the mouse pointer inside the presentation
           # there is by design (Pointer Lock API) no spotlightCursor and presentingCursor 
           # displayed regardless of the configured values 
-          lockPointerInsideCanvas: false
+          lockPointerInsideCanvas: true
           # toggle spotlight by holding down the mouse key
           toggleSpotlightOnMouseDown: true
           # the keyCode pressed and held to turn on spotlight, disabled when set to false

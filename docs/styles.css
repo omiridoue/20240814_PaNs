@@ -79,8 +79,8 @@
 .reveal p {
 	color: #2E2D62;
 	font-family: 'Arial';
-	font-size: 1.35em;
-	font-weight: 500;
+	font-size: 1.25em;
+	font-weight: 400;
 }
 
 
@@ -110,7 +110,7 @@
 
 /* mouse over link */
 .reveal a:hover {
-    color: #DD8D29;
+  color: #DD8D29;
 }
 
 
@@ -121,11 +121,12 @@ li::marker {
 
 
 li {
-        font-weight: 400;
+  font-weight: 400;
 	font-size: 1.25em;
 }
 
 .li-content {
-        font-weight: 400;
+  font-weight: 400;
 	font-size: 1.25em;
+  margin: 0 !important
 }

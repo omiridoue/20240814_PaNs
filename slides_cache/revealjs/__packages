@@ -1,2 +1,9 @@
 psych
 knitr
+dplyr
+reshape2
+igraph
+sigmajs
+htmlTable
+network
+ergm
