@@ -305,6 +305,10 @@ styled_table1
   scrolling="yes">
 </iframe>
 
+:::footer
+
+:::
+
 ## Methods
 
 :::{.callout-note} 
