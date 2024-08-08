@@ -254,22 +254,6 @@ source("code/00_prepare_data.R")
 #### (a) Friendship Network
 Click anywhere on this pane to wake up the plot.
 
-
-``` r
-# Define a server for the Shiny app
-function(input, output) {
-  
-  # Fill in the spot we created for a plot
-  output$phonePlot <- renderPlot({
-    # Render a barplot
-    barplot(WorldPhones[,input$region]*1000, 
-            main=input$region,
-            ylab="Number of Telephones",
-            xlab="Year")
-  })
-}
-```
-
 ```{r graph1, echo=FALSE, message=FALSE, warning=FALSE, output=TRUE}
     
 sigmajs() %>%
@@ -301,7 +285,7 @@ styled_table1
 ## Please be Patient...
 
 <iframe src="https://omiridoue.github.io/teenage-glasgow-shinylive/"
-  height=1000 width=1000
+  height=1200 width=1000
   scrolling="yes">
 </iframe>
 

@@ -102,7 +102,7 @@
     "href": "slides.html#data",
     "title": "Your Presentation Title Here",
     "section": "Data",
-    "text": "Data\n\n(a) Friendship Network(b) Descriptive Measures\n\n\nClick anywhere on this pane to wake up the plot.\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWave1\n\n\n\n\nNodes\n160\n\n\nEdges\n587\n\n\nDensity\n0.0231\n\n\nReciprocity\n0.563\n\n\nCentrality\n0.133\n\n\nAverage Path Length\n5.64"
+    "text": "Data\n\n(a) Friendship Network(b) Descriptive Measures\n\n\nClick anywhere on this pane to wake up the plot.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWave1\n\n\n\n\nNodes\n160\n\n\nEdges\n587\n\n\nDensity\n0.0231\n\n\nReciprocity\n0.563\n\n\nCentrality\n0.133\n\n\nAverage Path Length\n5.64"
   },
   {
     "objectID": "slides.html#please-be-patient",
