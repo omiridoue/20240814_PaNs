@@ -95,7 +95,7 @@
     "href": "slides.html#literature",
     "title": "Your Presentation Title Here",
     "section": "Literature",
-    "text": "Literature\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. You will need to navigate to the bibliography section of your yaml at the top of this document to specify the name of the file that contains all yuor reference information. For example:\n\nDiffusion of Innovations (Rogers 1983; Kermack and McKendrick 1939; Valente 1996)\nTeenage Glasgow Friendship Network (Michell and Amos 1997, 1996; Bush and Michell 1997; Michell 1997b, 1997a; Pearson M. and Michell 2000; S. Pearson M. and Snijders 2006; C. Steglich, Snijders, and Pearson 2010; S. Steglich C. and Pearson 2006; Veenstra and Steglich 2012)"
+    "text": "Literature\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. You will need to navigate to the bibliography section of your yaml at the top of this document to specify the name of the file that contains all your reference information, in this case we’ve named it refs.bib. For example:\n\nDiffusion of Innovations (Rogers 1983; Kermack and McKendrick 1939; Valente 1996)\nTeenage Glasgow Friendship Network (Michell and Amos 1997, 1996; Bush and Michell 1997; Michell 1997b, 1997a; Pearson M. and Michell 2000; S. Pearson M. and Snijders 2006; C. Steglich, Snijders, and Pearson 2010; S. Steglich C. and Pearson 2006; Veenstra and Steglich 2012)"
   },
   {
     "objectID": "slides.html#data",

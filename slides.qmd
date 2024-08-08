@@ -233,7 +233,7 @@ Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenti
 Citations follow the standard
 [Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations)
 and be sourced from BibLaTex, BibTeX, or CLS files. You will need to navigate to the bibliography section of your yaml at
-the top of this document to specify the name of the file that contains all yuor reference information.
+the top of this document to specify the name of the file that contains all your reference information, in this case we've named it `refs.bib`.
 For example:
 
  - Diffusion of Innovations [@rogers_diffusion_1983; @kermack_contributions_1939; @valente_social_1996]
