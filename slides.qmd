@@ -241,7 +241,7 @@ For example:
  - Teenage Glasgow Friendship Network [@michell_girls_1997; @bush_1997; @michell_pressure_1997; @michell_perceptions_1997; @michell_1996; @pearson_2000; @pearson_2006; @steglich_2010; @pearson_2006a; @veenstra_2012]
  
 
-## Data
+## Data {auto-animate="true"}
 
 ```{r prepare_data, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
@@ -253,7 +253,25 @@ source("code/00_prepare_data.R")
 
 #### (a) Friendship Network
 Click anywhere on this pane to wake up the plot.
+
+
+``` r
+# Define a server for the Shiny app
+function(input, output) {
+  
+  # Fill in the spot we created for a plot
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+    barplot(WorldPhones[,input$region]*1000, 
+            main=input$region,
+            ylab="Number of Telephones",
+            xlab="Year")
+  })
+}
+```
+
 ```{r graph1, echo=FALSE, message=FALSE, warning=FALSE, output=TRUE}
+    
 sigmajs() %>%
       sg_from_igraph(g1) %>% 
       sg_neighbours() %>% 
@@ -279,6 +297,13 @@ styled_table1
 
 ```
 ::: 
+
+## Please be Patient...
+
+<iframe src="https://omiridoue.github.io/teenage-glasgow-shinylive/"
+  height=1000 width=1000
+  scrolling="yes">
+</iframe>
 
 ## Methods
 

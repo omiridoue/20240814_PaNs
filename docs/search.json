@@ -102,7 +102,14 @@
     "href": "slides.html#data",
     "title": "Your Presentation Title Here",
     "section": "Data",
-    "text": "Data\n\n(a) Friendship Network(b) Descriptive Measures\n\n\nClick anywhere on this pane to wake up the plot.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWave1\n\n\n\n\nNodes\n160\n\n\nEdges\n587\n\n\nDensity\n0.0231\n\n\nReciprocity\n0.563\n\n\nCentrality\n0.133\n\n\nAverage Path Length\n5.64"
+    "text": "Data\n\n(a) Friendship Network(b) Descriptive Measures\n\n\nClick anywhere on this pane to wake up the plot.\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWave1\n\n\n\n\nNodes\n160\n\n\nEdges\n587\n\n\nDensity\n0.0231\n\n\nReciprocity\n0.563\n\n\nCentrality\n0.133\n\n\nAverage Path Length\n5.64"
+  },
+  {
+    "objectID": "slides.html#please-be-patient",
+    "href": "slides.html#please-be-patient",
+    "title": "Your Presentation Title Here",
+    "section": "Please be Patient…",
+    "text": "Please be Patient…"
   },
   {
     "objectID": "slides.html#methods",
@@ -123,7 +130,7 @@
     "href": "slides.html#sec-crossref",
     "title": "Your Presentation Title Here",
     "section": "Methods",
-    "text": "Methods\n\nlibrary(ergm)\nfriendship_network &lt;- as.network(friendships_t1)\n\nModel_1 &lt;- ergm(friendship_network ~ edges)\n\nModel_01_GOF &lt;- gof(Model_1, \n                    GOF = ~idegree + odegree + espartners + distance, \n                        verbose = TRUE, \n                        control = control.gof.ergm(seed = 12345))\n\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nTo cross-reference your model fit, you have several options, for example:\n\nThis will take you to your Appendix\nQuarto’s native cross-reference label would be “See Section 2.8.”\n\n\nLearn more: Line Highlighting and Cross References"
+    "text": "Methods\n\nlibrary(ergm)\nfriendship_network &lt;- as.network(friendships_t1)\n\nModel_1 &lt;- ergm(friendship_network ~ edges)\n\nModel_01_GOF &lt;- gof(Model_1, \n                    GOF = ~idegree + odegree + espartners + distance, \n                        verbose = TRUE, \n                        control = control.gof.ergm(seed = 12345))\n\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nTo cross-reference your model fit, you have several options, for example:\n\nThis will take you to your Appendix\nQuarto’s native cross-reference label would be “See Section 2.9.”\n\n\nLearn more: Line Highlighting and Cross References"
   },
   {
     "objectID": "slides.html#discussion",
