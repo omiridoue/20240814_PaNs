@@ -159,5 +159,61 @@
     "title": "Your Presentation Title Here",
     "section": "",
     "text": "Funding:\n\nAcknowledgements:\n\n\n\n\n\n\n\n\n\n\nFollow this Project:\n yourpage\n projectpage\n last.name@gla.ac.uk\n github-handle\n\n\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
+  },
+  {
+    "objectID": "practice_exercises.html#task-1-change-the-title-of-this-slide-hint-is-a-command-to-make-a-new-slide",
+    "href": "practice_exercises.html#task-1-change-the-title-of-this-slide-hint-is-a-command-to-make-a-new-slide",
+    "title": "Your Presentation Title Here",
+    "section": "Task 1: Change the Title of this Slide (Hint: ## is a command to make a new slide)",
+    "text": "Task 1: Change the Title of this Slide (Hint: ## is a command to make a new slide)"
+  },
+  {
+    "objectID": "practice_exercises.html#task-2-fill-out-your-agenda-items",
+    "href": "practice_exercises.html#task-2-fill-out-your-agenda-items",
+    "title": "Your Presentation Title Here",
+    "section": "Task 2: Fill out your Agenda Items",
+    "text": "Task 2: Fill out your Agenda Items\n\nItem 1\nItem 2\nItem 3\nItem 4\nItem 5\n\nTry removing the footer for this page. To do this type :::footer (Press Enter to Create a New Line) :::"
+  },
+  {
+    "objectID": "practice_exercises.html#task-4-add-a-level-4-heading-named-literature-and-create-an-in-text-citation-hint-open-the-refs.bib-file-for-reference-keys",
+    "href": "practice_exercises.html#task-4-add-a-level-4-heading-named-literature-and-create-an-in-text-citation-hint-open-the-refs.bib-file-for-reference-keys",
+    "title": "Your Presentation Title Here",
+    "section": "Task 4: Add a Level 4 Heading Named Literature and Create an in-Text Citation (Hint: Open the refs.bib file for reference keys)",
+    "text": "Task 4: Add a Level 4 Heading Named Literature and Create an in-Text Citation (Hint: Open the refs.bib file for reference keys)"
+  },
+  {
+    "objectID": "practice_exercises.html#task-5-add-a-cross-reference-to-this-methods-slide-naming-this-sec-methods",
+    "href": "practice_exercises.html#task-5-add-a-cross-reference-to-this-methods-slide-naming-this-sec-methods",
+    "title": "Your Presentation Title Here",
+    "section": "Task 5: Add a Cross Reference to this Methods Slide Naming this sec-methods",
+    "text": "Task 5: Add a Cross Reference to this Methods Slide Naming this sec-methods\nHint: {#sec-methods}\n\n\n \n\n  \n    \n    \n    tinytable_aawwpdlqxy79ybi186qq\n    \n    \n    \n    \n  \n\n  \n    \n      \n        \n        \n              \n                 \n                Model 1\n                Model 2\n              \n        \n        \n        \n                \n                  edges   \n                  -3.747 \n                  -4.566 \n                \n                \n                          \n                  (0.042)\n                  (0.068)\n                \n                \n                  mutual  \n                         \n                  4.816  \n                \n                \n                          \n                         \n                  (0.156)\n                \n                \n                  Num.Obs.\n                  25440  \n                  25440  \n                \n                \n                  AIC     \n                  5579.7 \n                  4615.8 \n                \n                \n                  BIC     \n                  5587.9 \n                  4632.1 \n                \n        \n      \n    \n\n    \n\n  \n\n\n\n\nAdd a sentence to explain your methods and direct your audience to navigate to your Appendix to view the Goodness of Fit Table, to do this you will need to add a link to your appendix.Hint: (#sec-appendix)"
+  },
+  {
+    "objectID": "practice_exercises.html#task-6-references---create-your-bibliography-on-this-slide-hint-refs-press-enter",
+    "href": "practice_exercises.html#task-6-references---create-your-bibliography-on-this-slide-hint-refs-press-enter",
+    "title": "Your Presentation Title Here",
+    "section": "Task 6: References - Create your Bibliography on this Slide Hint: ::: {#refs} (Press Enter) :::",
+    "text": "Task 6: References - Create your Bibliography on this Slide Hint: ::: {#refs} (Press Enter) :::"
+  },
+  {
+    "objectID": "practice_exercises.html#task-7-name-this-slide-appendix-and-add-a-reference-to-it-hint-sec-appendix",
+    "href": "practice_exercises.html#task-7-name-this-slide-appendix-and-add-a-reference-to-it-hint-sec-appendix",
+    "title": "Your Presentation Title Here",
+    "section": "Task 7: Name this Slide Appendix and add a reference to it Hint: {#sec-appendix}",
+    "text": "Task 7: Name this Slide Appendix and add a reference to it Hint: {#sec-appendix}\n\n\n\n\nTable 1: Summary of Model Fit (Data: Teenage Glasgow Friendship Dataset)\n\n\n\n\n\n\n\nobs\nmin\nmean\nmax\nMC p-value\n\n\n\n\nedges\n586\n530\n589.51\n658\n0.86\n\n\n\n\n\n\n\n\nHelp your Reader Navigate back to the Methods Section. To do this you will need to create a button. You can change its name by swapping out the text in the square brackets.\nHint : [[Back to main]{.button}](#sec-methods)"
+  },
+  {
+    "objectID": "practice_exercises.html#section",
+    "href": "practice_exercises.html#section",
+    "title": "Your Presentation Title Here",
+    "section": "",
+    "text": "Funding:\n\nAcknowledgements:\n\n\n\n\nTask 9: Change the placeholder figure below\n\n\n\n\n\n\nTask 10: Update the following links to those relevant to your project\n yourpage\n projectpage\n last.name@gla.ac.uk\n github-handle\n\n\n\n\n\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
+  },
+  {
+    "objectID": "practice_exercises.html#task-4-add-a-level-4-heading-naming-this-literature.-write-a-sentence-with-an-in-text-citation-hint-open-the-refs.bib-file-for-reference-keys",
+    "href": "practice_exercises.html#task-4-add-a-level-4-heading-naming-this-literature.-write-a-sentence-with-an-in-text-citation-hint-open-the-refs.bib-file-for-reference-keys",
+    "title": "Your Presentation Title Here",
+    "section": "Task 4: Add a Level 4 Heading Naming this Literature. Write a sentence with an in-Text Citation (Hint: Open the refs.bib file for reference keys)",
+    "text": "Task 4: Add a Level 4 Heading Naming this Literature. Write a sentence with an in-Text Citation (Hint: Open the refs.bib file for reference keys)\nHint: [@michell_1996]"
   }
 ]
