@@ -81,19 +81,19 @@ revealjs-plugins:
 
 ## Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable) 
 
-**Step 1** create a new repository on your GitHub name this yourGitHubusername.github.io <br>
-**Step 2** Add a ReadMe file and type Hello World! This will be your home page if you do not already have one. Any time you work on a new repository and publish this it will 
+**Optional** create a new repository on your GitHub name this yourGitHubusername.github.io <br>
+**Optional** Add a ReadMe file and type Hello World! This will be your home page if you do not already have one. Any time you work on a new repository and publish this it will 
 be a sub-directory of the page. <br>
-**Step 3** Clone the repository from the following link <https://omiridoue.github.io/20240814_PaNs> <br>
-**Step 4** There are many ways to host the presentation you are about to render through Quarto. We will render this locally and tell Quarto to output all files in html format to the docs subfolder. We will then tell GitHub to look for these files and deploy our html slides. <br>
+**Step 1** Clone the repository from the following link <https://omiridoue.github.io/20240814_PaNs> <br>
+**Step 2** There are many ways to host the presentation you are about to render through Quarto. We will render this locally and tell Quarto to output all files in html format to the docs sub-folder. We will then tell GitHub to look for these files and deploy our html slides. <br>
 
 ## Continued - Follow Along Today's Material
-**Step 5** Create a repository on your GitHub and name this 20240814_PaNs <br>
-**Step 6** Follow the steps from <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories> to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim by the end of this session is to make your slides public and findable under the following URL **https://yourGitHubusername.github.io/20240814_PaNs**. Note if you have a GitHub Education page you don't need to make the repository public, but your slides and homepage will be public.
+**Step 3** Create a repository on your GitHub and name this 20240814_PaNs <br>
+**Step 4** Follow the steps from <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories> to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim by the end of this session is to make your slides public and findable under the following URL **https://yourGitHubusername.github.io/20240814_PaNs**. Note if you have a GitHub Education page you don't need to make the repository public, but your slides and homepage will be public.
 
 ## Continued - Follow Along Today's Material
 
-**Step 7** This is the last part of setting up. We need to navigate to the settings of our new repository and click through these steps.
+**Step 5** This is the last part of setting up. We need to navigate to the settings of our new repository and click through these steps.
 
 ![](images/Deploy_from_Docs.png)
 
@@ -130,9 +130,10 @@ be a sub-directory of the page. <br>
 3. Understand the folder structure of the template
 4. Understand what different components within Quarto do
 5. Understand how to modify the settings configured within Quarto
-    i) yaml 
-    ii) style sheets 
-    iii) renv 
+    i) yaml - Update info under Title/subtitle/author/date 
+    ii) Toggle `embed-resources: true`
+    iii) style sheets 
+    iv) renv 
 
 ::: footer
 

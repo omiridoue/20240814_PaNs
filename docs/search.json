@@ -4,21 +4,21 @@
     "href": "slides.html#making-your-slides-fair-findable-accessible-interoperable-reusable",
     "title": "Your Presentation Title Here",
     "section": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)",
-    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\nStep 1 create a new repository on your GitHub name this yourGitHubusername.github.io  Step 2 Add a ReadMe file and type Hello World! This will be your home page if you do not already have one. Any time you work on a new repository and publish this it will be a sub-directory of the page.  Step 3 Clone the repository from the following link https://omiridoue.github.io/20240814_PaNs  Step 4 There are many ways to host the presentation you are about to render through Quarto. We will render this locally and tell Quarto to output all files in html format to the docs subfolder. We will then tell GitHub to look for these files and deploy our html slides."
+    "text": "Making your Slides FAIR (Findable, Accessible, Interoperable, Reusable)\nOptional create a new repository on your GitHub name this yourGitHubusername.github.io  Optional Add a ReadMe file and type Hello World! This will be your home page if you do not already have one. Any time you work on a new repository and publish this it will be a sub-directory of the page.  Step 1 Clone the repository from the following link https://omiridoue.github.io/20240814_PaNs  Step 2 There are many ways to host the presentation you are about to render through Quarto. We will render this locally and tell Quarto to output all files in html format to the docs sub-folder. We will then tell GitHub to look for these files and deploy our html slides."
   },
   {
     "objectID": "slides.html#continued---follow-along-todays-material",
     "href": "slides.html#continued---follow-along-todays-material",
     "title": "Your Presentation Title Here",
     "section": "Continued - Follow Along Today’s Material",
-    "text": "Continued - Follow Along Today’s Material\nStep 5 Create a repository on your GitHub and name this 20240814_PaNs  Step 6 Follow the steps from https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim by the end of this session is to make your slides public and findable under the following URL https://yourGitHubusername.github.io/20240814_PaNs. Note if you have a GitHub Education page you don’t need to make the repository public, but your slides and homepage will be public."
+    "text": "Continued - Follow Along Today’s Material\nStep 3 Create a repository on your GitHub and name this 20240814_PaNs  Step 4 Follow the steps from https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories to sync your local and remote repositories, make sure to push all this content to your remote repository. The aim by the end of this session is to make your slides public and findable under the following URL https://yourGitHubusername.github.io/20240814_PaNs. Note if you have a GitHub Education page you don’t need to make the repository public, but your slides and homepage will be public."
   },
   {
     "objectID": "slides.html#continued---follow-along-todays-material-1",
     "href": "slides.html#continued---follow-along-todays-material-1",
     "title": "Your Presentation Title Here",
     "section": "Continued - Follow Along Today’s Material",
-    "text": "Continued - Follow Along Today’s Material\nStep 7 This is the last part of setting up. We need to navigate to the settings of our new repository and click through these steps."
+    "text": "Continued - Follow Along Today’s Material\nStep 5 This is the last part of setting up. We need to navigate to the settings of our new repository and click through these steps."
   },
   {
     "objectID": "slides.html#a-couple-of-resources-to-look-through",
@@ -39,7 +39,7 @@
     "href": "slides.html#intended-outcomes",
     "title": "Your Presentation Title Here",
     "section": "Intended Outcomes",
-    "text": "Intended Outcomes\n\nRender the template locally\n\nSync your local to your remote repository\nDeploy your slides from your /docs branch\n\nBegin to tinker with the template\nUnderstand the folder structure of the template\nUnderstand what different components within Quarto do\nUnderstand how to modify the settings configured within Quarto\n\nyaml\nstyle sheets\nrenv"
+    "text": "Intended Outcomes\n\nRender the template locally\n\nSync your local to your remote repository\nDeploy your slides from your /docs branch\n\nBegin to tinker with the template\nUnderstand the folder structure of the template\nUnderstand what different components within Quarto do\nUnderstand how to modify the settings configured within Quarto\n\nyaml - Update info under Title/subtitle/author/date\nToggle embed-resources: true\nstyle sheets\nrenv"
   },
   {
     "objectID": "slides.html#quarto-recognises-as-a-command-to-make-a-new-slide",
