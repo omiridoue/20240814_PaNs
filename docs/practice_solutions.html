@@ -12,9 +12,9 @@
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
-  <meta name="author" content="Name Here">
+  <meta name="author" content="Eleni">
   <meta name="dcterms.date" content="2024-08-14">
-  <title>Your Presentation Title Here</title>
+  <title>PaNs Session on Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,7 +32,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="styles.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -333,16 +353,16 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="images/MRC_CSO_SPHSU_Glasgow_RGB_0.png" data-background-position="2% 2%" data-background-size="30%" class="quarto-title-block center">
-  <h1 class="title">Your Presentation Title Here</h1>
+  <h1 class="title">PaNs Session on Quarto</h1>
   <p class="subtitle">Peers and Networks Workstream</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+Eleni 
 </div>
 <div class="quarto-title-author-email">
-<a href="mailto:FirstName.LastName@gla.ac.uk">FirstName.LastName@gla.ac.uk</a>
+<a href="mailto:e.omiridou.1@research.gla.ac.uk">e.omiridou.1@research.gla.ac.uk</a>
 </div>
         <p class="quarto-title-affiliation">
             School of Health &amp; Wellbeing
@@ -352,35 +372,35 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
 
   <p class="date">August 14, 2024</p>
 </section>
-<section id="task-1-change-the-title-of-this-slide-hint-is-a-command-to-make-a-new-slide" class="slide level2">
-<h2>Task 1: Change the Title of this Slide (Hint: ## is a command to make a new slide)</h2>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
 </section>
-<section id="task-2-fill-out-your-agenda-items" class="slide level2">
-<h2>Task 2: Fill out your Agenda Items</h2>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
 <ol type="1">
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-<li>Item 4</li>
-<li>Item 5</li>
+<li>Study Aims</li>
+<li>Theory Framework</li>
+<li>Methods</li>
+<li>Results</li>
+<li>Discussion</li>
 </ol>
-<p><code>Try removing the footer for this page. To do this type :::footer (Press Enter to Create a New Line) :::</code></p>
-</section>
-<section>
-<section id="task-3-browse-the-following-link-to-change-the-color-of-this-slide" class="title-slide slide level1 center" data-background-color="#038AAD">
-<h1>Task 3: Browse the following link to change the color of this slide</h1>
-<p><a href="https://coolors.co/palette/00bcd4-000000-92c1d0-2d2c61-000000-0983a3-000000" class="uri">https://coolors.co/palette/00bcd4-000000-92c1d0-2d2c61-000000-0983a3-000000</a></p>
 <div class="footer">
 
 </div>
 </section>
-<section id="task-4-add-a-level-4-heading-naming-this-literature.-write-a-sentence-with-an-in-text-citation-hint-open-the-refs.bib-file-for-reference-keys" class="slide level2">
-<h2>Task 4: Add a Level 4 Heading Naming this <code>Literature</code>. Write a sentence with an in-Text Citation (Hint: Open the refs.bib file for reference keys)</h2>
-<p><code>Hint: [@michell_1996]</code></p>
+<section>
+<section id="study-aims" class="title-slide slide level1 center" data-background-color="#92C1D0">
+<h1>Study Aims</h1>
+<div class="footer">
+
+</div>
 </section>
-<section id="task-5-add-a-cross-reference-to-this-methods-slide-naming-this-sec-methods" class="slide level2">
-<h2>Task 5: Add a Cross Reference to this Methods Slide Naming this sec-methods</h2>
-<p><code>Hint: {#sec-methods}</code></p>
+<section id="literature-review" class="slide level2">
+<h2>Literature Review</h2>
+<p>The Teenage Glasgow Friendship Network was a pioneer study involved 160 participants, tracing changes in friendships and health behaviours over three time points <span class="citation" data-cites="michell_1996">(<a href="#/references" role="doc-biblioref" onclick="">Michell and Amos 1996</a>)</span>.</p>
+</section>
+<section id="sec-methods" class="slide level2">
+<h2>Methods</h2>
 <div class="cell" data-messages="false">
 <div class="cell-output-display">
  
@@ -426,17 +446,17 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
                 <tr>
                   <td>edges   </td>
                   <td>-3.747 </td>
-                  <td>-4.564 </td>
+                  <td>-4.568 </td>
                 </tr>
                 <tr>
                   <td>        </td>
                   <td>(0.042)</td>
-                  <td>(0.065)</td>
+                  <td>(0.063)</td>
                 </tr>
                 <tr>
                   <td>mutual  </td>
                   <td>       </td>
-                  <td>4.825  </td>
+                  <td>4.817  </td>
                 </tr>
                 <tr>
                   <td>        </td>
@@ -451,12 +471,12 @@ Name Here <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-au
                 <tr>
                   <td>AIC     </td>
                   <td>5579.7 </td>
-                  <td>4616.2 </td>
+                  <td>4624.8 </td>
                 </tr>
                 <tr>
                   <td>BIC     </td>
                   <td>5587.9 </td>
-                  <td>4632.5 </td>
+                  <td>4641.1 </td>
                 </tr>
         </tbody>
       </table>
@@ -541,13 +561,18 @@ window.addEventListener('load', function () { styleCell_tinytable_kaaqbizmk14pd9
 
 </div>
 </div>
-<p>Add a sentence to explain your methods and direct your audience to navigate to your Appendix to view the Goodness of Fit Table, to do this you will need to add a link to your appendix.<code>Hint: (#sec-appendix)</code></p>
+<p>Please see <a href="#/sec-appendix"><span class="button">Appendix</span></a> to view the Goodness of Fit Table.</p>
 </section>
-<section id="task-6-references---create-your-bibliography-on-this-slide-hint-refs-press-enter" class="slide level2">
-<h2>Task 6: References - Create your Bibliography on this Slide <code>Hint: ::: {#refs} (Press Enter) :::</code></h2>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-michell_1996" class="csl-entry" role="listitem">
+Michell, Lynn, and Amanda Amos. 1996. <span>“Peer Pressure to Smoke: The Meaning Depends on the Method.”</span> <em>Health Education Research</em> 11 (1): 39–49.
+</div>
+</div>
 </section>
-<section id="task-7-name-this-slide-appendix-and-add-a-reference-to-it-hint-sec-appendix" class="slide level2">
-<h2>Task 7: Name this Slide Appendix and add a reference to it <code>Hint: {#sec-appendix}</code></h2>
+<section id="sec-appendix" class="slide level2">
+<h2>Appendix</h2>
 <div class="cell">
 <div id="tbl-attsum" class="cell quarto-float">
 <figure class="quarto-float quarto-float-tbl">
@@ -583,32 +608,36 @@ Table&nbsp;1: Summary of Model Fit (Data: Teenage Glasgow Friendship Dataset)
 </figure>
 </div>
 </div>
-<p>Help your Reader Navigate back to the Methods Section. To do this you will need to create a button. You can change its name by swapping out the text in the square brackets.</p>
-<p><code>Hint : [[Back to main]{.button}](#sec-methods)</code></p>
+<p>Please see methods section here <a href="#/sec-methods"><span class="button">Methods</span></a>.</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <p><br></p>
-<h5 id="funding">Funding:</h5>
-<p><br></p>
-<h5 id="acknowledgements">Acknowledgements:</h5>
-</div><div class="column" style="width:10%;">
+<h4 id="funding">Funding:</h4>
+<div style="font-size: 60%;">
+<p><br> ES/P000681/1 <br> MC_ST_0022 <br></p>
+</div>
+<h4 id="acknowledgements">Acknowledgements:</h4>
+<div style="font-size: 60%;">
+<p>The ideas draw on the R Glasgow Users Group from Nov and Feb 2023. Special thanks to Dylan Lewis and Erik Igelström for their helpful comments and advice! Data curation in igraph was carried forward from a previous project as part of the NCRM Social Network Analysis course delivered by Dr.&nbsp;Michael Heaney. AI was used to code aspects of the server side for this shiny document. Thank you to Dr.&nbsp;Emily Long, Dr.&nbsp;Mark McCann and Dr.&nbsp;Srebrenka Letina.</p>
+</div>
+</div><div class="column" style="width:30%;">
 <!-- empty column to create gap -->
-</div><div class="column" style="width:40%;">
-<h5 id="task-8-change-the-placeholder-figure-below">Task 8: Change the placeholder figure below</h5>
+</div><div class="column" style="width:30%;">
+<h5 id="placeholder">Placeholder</h5>
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/qr-code.png" class="quarto-figure quarto-figure-left" style="width:70.0%" alt="QR code"></p>
+<p><img data-src="images/logo_sgsss.png" class="quarto-figure quarto-figure-left" style="width:10.0%;height:50.0%" alt="QR code"></p>
 </figure>
 </div>
 <p><br></p>
-<h6 id="task-9-update-the-following-links-to-those-relevant-to-your-project">Task 9: Update the following links to those relevant to your project</h6>
-<p><i class="fa-solid fa-comments" aria-label="comments"></i> <a href="https://www.gla.ac.uk/schools/healthwellbeing/research/mrccsosocialandpublichealthsciencesunit/">yourpage</a></p>
-<p><i class="fa-solid fa-archive" aria-label="archive"></i> <a href="https://www.gla.ac.uk/schools/healthwellbeing/research/mrccsosocialandpublichealthsciencesunit/">projectpage</a></p>
-<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:last.name@gla.ac.uk">last.name@gla.ac.uk</a></p>
-<p><i class="fa-brands fa-github" aria-label="github"></i> <a href="https://github.com/">github-handle</a></p>
+<h5 id="project-details">Project Details</h5>
+<p><i class="fa-solid fa-comments" aria-label="comments"></i> <a href="https://github.com/omiridoue/20240814_PaNs">Materials</a></p>
+<p><i class="fa-solid fa-archive" aria-label="archive"></i> <a href="https://omiridoue.github.io/">Project Page</a></p>
+<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:e.omiridou.1@research.gla.ac.uk">Drop a Line!</a></p>
+<p><i class="fa-brands fa-github" aria-label="github"></i> <a href="https://github.com/omiridoue">omiridoue</a></p>
 </div>
 </div>
 <div class="footer">

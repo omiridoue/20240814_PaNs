@@ -186,7 +186,7 @@
     "href": "practice_exercises.html#task-5-add-a-cross-reference-to-this-methods-slide-naming-this-sec-methods",
     "title": "Your Presentation Title Here",
     "section": "Task 5: Add a Cross Reference to this Methods Slide Naming this sec-methods",
-    "text": "Task 5: Add a Cross Reference to this Methods Slide Naming this sec-methods\nHint: {#sec-methods}\n\n\n \n\n  \n    \n    \n    tinytable_aawwpdlqxy79ybi186qq\n    \n    \n    \n    \n  \n\n  \n    \n      \n        \n        \n              \n                 \n                Model 1\n                Model 2\n              \n        \n        \n        \n                \n                  edges   \n                  -3.747 \n                  -4.565 \n                \n                \n                          \n                  (0.042)\n                  (0.062)\n                \n                \n                  mutual  \n                         \n                  4.820  \n                \n                \n                          \n                         \n                  (0.143)\n                \n                \n                  Num.Obs.\n                  25440  \n                  25440  \n                \n                \n                  AIC     \n                  5579.7 \n                  4616.3 \n                \n                \n                  BIC     \n                  5587.9 \n                  4632.6 \n                \n        \n      \n    \n\n    \n\n  \n\n\n\n\nAdd a sentence to explain your methods and direct your audience to navigate to your Appendix to view the Goodness of Fit Table, to do this you will need to add a link to your appendix.Hint: (#sec-appendix)"
+    "text": "Task 5: Add a Cross Reference to this Methods Slide Naming this sec-methods\nHint: {#sec-methods}\n\n\n \n\n  \n    \n    \n    tinytable_aawwpdlqxy79ybi186qq\n    \n    \n    \n    \n  \n\n  \n    \n      \n        \n        \n              \n                 \n                Model 1\n                Model 2\n              \n        \n        \n        \n                \n                  edges   \n                  -3.747 \n                  -4.564 \n                \n                \n                          \n                  (0.042)\n                  (0.065)\n                \n                \n                  mutual  \n                         \n                  4.825  \n                \n                \n                          \n                         \n                  (0.148)\n                \n                \n                  Num.Obs.\n                  25440  \n                  25440  \n                \n                \n                  AIC     \n                  5579.7 \n                  4616.2 \n                \n                \n                  BIC     \n                  5587.9 \n                  4632.5 \n                \n        \n      \n    \n\n    \n\n  \n\n\n\n\nAdd a sentence to explain your methods and direct your audience to navigate to your Appendix to view the Goodness of Fit Table, to do this you will need to add a link to your appendix.Hint: (#sec-appendix)"
   },
   {
     "objectID": "practice_exercises.html#task-6-references---create-your-bibliography-on-this-slide-hint-refs-press-enter",
@@ -207,7 +207,7 @@
     "href": "practice_exercises.html#section",
     "title": "Your Presentation Title Here",
     "section": "",
-    "text": "Funding:\n\nAcknowledgements:\n\n\n\n\nTask 9: Change the placeholder figure below\n\n\n\n\n\n\nTask 10: Update the following links to those relevant to your project\n yourpage\n projectpage\n last.name@gla.ac.uk\n github-handle\n\n\n\n\n\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
+    "text": "Funding:\n\nAcknowledgements:\n\n\n\nTask 8: Change the placeholder figure below\n\n\n\n\n\n\nTask 9: Update the following links to those relevant to your project\n yourpage\n projectpage\n last.name@gla.ac.uk\n github-handle\n\n\n\n\n\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
   },
   {
     "objectID": "practice_exercises.html#task-4-add-a-level-4-heading-naming-this-literature.-write-a-sentence-with-an-in-text-citation-hint-open-the-refs.bib-file-for-reference-keys",
@@ -215,5 +215,96 @@
     "title": "Your Presentation Title Here",
     "section": "Task 4: Add a Level 4 Heading Naming this Literature. Write a sentence with an in-Text Citation (Hint: Open the refs.bib file for reference keys)",
     "text": "Task 4: Add a Level 4 Heading Naming this Literature. Write a sentence with an in-Text Citation (Hint: Open the refs.bib file for reference keys)\nHint: [@michell_1996]"
+  },
+  {
+    "objectID": "practice_exercises.html#introduction",
+    "href": "practice_exercises.html#introduction",
+    "title": "PaNs Session on Quarto",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
+    "objectID": "practice_exercises.html#agenda",
+    "href": "practice_exercises.html#agenda",
+    "title": "PaNs Session on Quarto",
+    "section": "Agenda",
+    "text": "Agenda\n\nStudy Aims\nTheory Framework\nMethods\nResults\nDiscussion"
+  },
+  {
+    "objectID": "practice_exercises.html#literature-review",
+    "href": "practice_exercises.html#literature-review",
+    "title": "PaNs Session on Quarto",
+    "section": "Literature Review",
+    "text": "Literature Review\nThe Teenage Glasgow Friendship Network was a pioneer study involved 160 participants, tracing changes in friendships and health behaviours over three time points (Michell and Amos 1996)."
+  },
+  {
+    "objectID": "practice_exercises.html#sec-methods",
+    "href": "practice_exercises.html#sec-methods",
+    "title": "PaNs Session on Quarto",
+    "section": "Methods",
+    "text": "Methods\n\n\n \n\n  \n    \n    \n    tinytable_aawwpdlqxy79ybi186qq\n    \n    \n    \n    \n  \n\n  \n    \n      \n        \n        \n              \n                 \n                Model 1\n                Model 2\n              \n        \n        \n        \n                \n                  edges   \n                  -3.747 \n                  -4.566 \n                \n                \n                          \n                  (0.042)\n                  (0.060)\n                \n                \n                  mutual  \n                         \n                  4.820  \n                \n                \n                          \n                         \n                  (0.139)\n                \n                \n                  Num.Obs.\n                  25440  \n                  25440  \n                \n                \n                  AIC     \n                  5579.7 \n                  4621.5 \n                \n                \n                  BIC     \n                  5587.9 \n                  4637.7 \n                \n        \n      \n    \n\n    \n\n  \n\n\n\n\nPlease see Appendix to view the Goodness of Fit Table."
+  },
+  {
+    "objectID": "practice_exercises.html#references",
+    "href": "practice_exercises.html#references",
+    "title": "PaNs Session on Quarto",
+    "section": "References",
+    "text": "References\n\n\nMichell, Lynn, and Amanda Amos. 1996. “Peer Pressure to Smoke: The Meaning Depends on the Method.” Health Education Research 11 (1): 39–49."
+  },
+  {
+    "objectID": "practice_exercises.html#sec-appendix",
+    "href": "practice_exercises.html#sec-appendix",
+    "title": "PaNs Session on Quarto",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\n\nTable 1: Summary of Model Fit (Data: Teenage Glasgow Friendship Dataset)\n\n\n\n\n\n\n\nobs\nmin\nmean\nmax\nMC p-value\n\n\n\n\nedges\n586\n530\n589.51\n658\n0.86\n\n\n\n\n\n\n\n\nPlease see methods section here Methods."
+  },
+  {
+    "objectID": "practice_solutions.html#introduction",
+    "href": "practice_solutions.html#introduction",
+    "title": "PaNs Session on Quarto",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
+    "objectID": "practice_solutions.html#agenda",
+    "href": "practice_solutions.html#agenda",
+    "title": "PaNs Session on Quarto",
+    "section": "Agenda",
+    "text": "Agenda\n\nStudy Aims\nTheory Framework\nMethods\nResults\nDiscussion"
+  },
+  {
+    "objectID": "practice_solutions.html#literature-review",
+    "href": "practice_solutions.html#literature-review",
+    "title": "PaNs Session on Quarto",
+    "section": "Literature Review",
+    "text": "Literature Review\nThe Teenage Glasgow Friendship Network was a pioneer study involved 160 participants, tracing changes in friendships and health behaviours over three time points (Michell and Amos 1996)."
+  },
+  {
+    "objectID": "practice_solutions.html#sec-methods",
+    "href": "practice_solutions.html#sec-methods",
+    "title": "PaNs Session on Quarto",
+    "section": "Methods",
+    "text": "Methods\n\n\n \n\n  \n    \n    \n    tinytable_aawwpdlqxy79ybi186qq\n    \n    \n    \n    \n  \n\n  \n    \n      \n        \n        \n              \n                 \n                Model 1\n                Model 2\n              \n        \n        \n        \n                \n                  edges   \n                  -3.747 \n                  -4.568 \n                \n                \n                          \n                  (0.042)\n                  (0.063)\n                \n                \n                  mutual  \n                         \n                  4.817  \n                \n                \n                          \n                         \n                  (0.148)\n                \n                \n                  Num.Obs.\n                  25440  \n                  25440  \n                \n                \n                  AIC     \n                  5579.7 \n                  4624.8 \n                \n                \n                  BIC     \n                  5587.9 \n                  4641.1 \n                \n        \n      \n    \n\n    \n\n  \n\n\n\n\nPlease see Appendix to view the Goodness of Fit Table."
+  },
+  {
+    "objectID": "practice_solutions.html#references",
+    "href": "practice_solutions.html#references",
+    "title": "PaNs Session on Quarto",
+    "section": "References",
+    "text": "References\n\n\nMichell, Lynn, and Amanda Amos. 1996. “Peer Pressure to Smoke: The Meaning Depends on the Method.” Health Education Research 11 (1): 39–49."
+  },
+  {
+    "objectID": "practice_solutions.html#sec-appendix",
+    "href": "practice_solutions.html#sec-appendix",
+    "title": "PaNs Session on Quarto",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\n\nTable 1: Summary of Model Fit (Data: Teenage Glasgow Friendship Dataset)\n\n\n\n\n\n\n\nobs\nmin\nmean\nmax\nMC p-value\n\n\n\n\nedges\n586\n530\n589.51\n658\n0.86\n\n\n\n\n\n\n\n\nPlease see methods section here Methods."
+  },
+  {
+    "objectID": "practice_solutions.html#section",
+    "href": "practice_solutions.html#section",
+    "title": "PaNs Session on Quarto",
+    "section": "",
+    "text": "Funding:\n\n ES/P000681/1  MC_ST_0022 \n\nAcknowledgements:\n\nThe ideas draw on the R Glasgow Users Group from Nov and Feb 2023. Special thanks to Dylan Lewis and Erik Igelström for their helpful comments and advice! Data curation in igraph was carried forward from a previous project as part of the NCRM Social Network Analysis course delivered by Dr. Michael Heaney. AI was used to code aspects of the server side for this shiny document. Thank you to Dr. Emily Long, Dr. Mark McCann and Dr. Srebrenka Letina.\n\n\n\n\nPlaceholder\n\n\n\n\n\n\nProject Details\n Materials\n Project Page\n Drop a Line!\n omiridoue\n\n\n\n\n\n\n\n\n\nMRC/CSO Social and Public Health Sciences Unit"
   }
 ]

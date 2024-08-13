@@ -1,10 +1,16 @@
-.reveal .slide-number > a[href*='title-slide'] {
-  display: none;
+
+.reveal .slide-number {
+  position: fixed;
+  bottom: 20px ;
+  right: 20px ;
+  height: auto;
+  width: auto;
 }
 
 .reveal .footer {
   // bottom: 17px !important;
   bottom: 0px !important;
+  left: 120px !important;
   color: #b22222 !important;
   text-align: center !important;
   a {
@@ -18,7 +24,12 @@
   width: 400px !important;
   max-width: unset !important;
   max-height: unset !important;   
-  align: right !important;  
+  text-align: left !important;  
+  position: absolute;
+  bottom: 20px;
+  left: 400px;
+  height: 60px;
+  width: 400px;
 }
 
 .reveal {

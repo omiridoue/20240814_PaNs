@@ -1,10 +1,9 @@
 ---
-title: "Your Presentation Title Here"
+title: "PaNs Session on Quarto"
 subtitle: "Peers and Networks Workstream"
 author:
-  - name: Name Here
-    orcid: 0000-0000-0000-0000
-    email: FirstName.LastName@gla.ac.uk
+  - name: Eleni
+    email: e.omiridou.1@research.gla.ac.uk
     affiliations: School of Health & Wellbeing 
 date: 2024-08-14
 date-format: long
@@ -75,32 +74,29 @@ revealjs-plugins:
     - quiz
 ---
 
-## Task 1: Change the Title of this Slide (Hint: ## is a command to make a new slide)
+## Introduction
 
-## Task 2: Fill out your Agenda Items
+## Agenda
 
-1. Item 1
-2. Item 2
-3. Item 3
-4. Item 4
-5. Item 5 
+1. Study Aims
+2. Theory Framework
+3. Methods
+4. Results
+5. Discussion
 
-`Try removing the footer for this page. To do this type :::footer (Press Enter to Create a New Line) :::` 
-
-# Task 3: Browse the following link to change the color of this slide { background-color="#038AAD"}
-
-<https://coolors.co/palette/00bcd4-000000-92c1d0-2d2c61-000000-0983a3-000000>
-
-::: footer
-
+:::footer 
 :::
 
-## Task 4: Add a Level 4 Heading Naming this `Literature`. Write a sentence with an in-Text Citation (Hint: Open the refs.bib file for reference keys)
+# Study Aims { background-color="#92C1D0"}
 
-`Hint: [@michell_1996]`
+::: footer
+:::
 
-## Task 5: Add a Cross Reference to this Methods Slide Naming this sec-methods
-`Hint: {#sec-methods}`
+## Literature Review
+
+The Teenage Glasgow Friendship Network was a pioneer study involved 160 participants, tracing changes in friendships and health behaviours over three time points [@michell_1996].
+
+## Methods {#sec-methods}
 
 ```{r run_ergm, eval=TRUE, output=TRUE, messages=FALSE, warning=FALSE}
 library(ergm)
@@ -130,12 +126,14 @@ models <- list("Model 1" = Model_1, "Model 2" = Model_2)
 modelsummary(models)
 ```
 
-Add a sentence to explain your methods and direct your audience to navigate to your Appendix to view the Goodness of Fit Table, to do this you will need to add a link to your appendix.`Hint: (#sec-appendix)`
+Please see [[Appendix]{.button}](#sec-appendix) to view the Goodness of Fit Table.
 
-## Task 6: References - Create your Bibliography on this Slide `Hint: ::: {#refs} (Press Enter) :::`
+## References
+::: {#refs} 
+:::
 
 
-## Task 7: Name this Slide Appendix and add a reference to it `Hint: {#sec-appendix}`
+## Appendix {#sec-appendix}
 
 ```{r}
 #| cache: true
@@ -146,49 +144,57 @@ kable(Model_01_GOF$summary.model)
 
 ```
 
-Help your Reader Navigate back to the Methods Section. To do this you will need to create a
-button. You can change its name by swapping out the text in the square brackets.
-
-`Hint : [[Back to main]{.button}](#sec-methods)`
+Please see methods section here [[Methods]{.button}](#sec-methods).
 
 ## 
 
 ::: columns
-::: {.column width="50%"}
-
-<br>
-
-##### Funding: 
-
-<br>
-
-##### Acknowledgements: 
-
-:::
-
-::: {.column width="10%"}
-<!-- empty column to create gap -->
-:::
-
-
 ::: {.column width="40%"}
 
-##### Task 8: Change the placeholder figure below 
-![](images/qr-code.png){fig-align="left" fig-alt="QR code" width=70%}
+<br>
+
+#### Funding: 
+::: {style="font-size: 60%;"}
+<br>
+ES/P000681/1 <br>
+MC_ST_0022
+<br>
+:::
+
+
+#### Acknowledgements: 
+::: {style="font-size: 60%;"}
+
+
+The ideas draw on the R Glasgow Users Group from Nov and Feb 2023. Special thanks to Dylan Lewis and Erik Igelström for their helpful comments and advice! Data curation in igraph was carried forward from a previous project as part of the NCRM Social Network Analysis course delivered by Dr. Michael Heaney. AI was used to code aspects of the server side for this shiny document. Thank you to Dr. Emily Long, Dr. Mark McCann and Dr. Srebrenka Letina. 
+
+::: 
+:::
+
+::: {.column width="30%"}
+<!-- empty column to create gap -->
+
+:::
+
+::: {.column width="30%"}
+
+##### Placeholder
+![](images/logo_sgsss.png){fig-align="left" fig-alt="QR code" width=10% height=50%}
 
 <br>
 
-###### Task 9: Update the following links to those relevant to your project
+##### Project Details
 
-{{< fa comments >}} [yourpage](https://www.gla.ac.uk/schools/healthwellbeing/research/mrccsosocialandpublichealthsciencesunit/)
+{{< fa comments >}} [Materials](https://github.com/omiridoue/20240814_PaNs)
 
-{{< fa archive >}} [projectpage](https://www.gla.ac.uk/schools/healthwellbeing/research/mrccsosocialandpublichealthsciencesunit/)
+{{< fa archive >}} [Project Page](https://omiridoue.github.io/)
 
-{{< fa envelope >}} [last.name@gla.ac.uk](mailto:last.name@gla.ac.uk)
+{{< fa envelope >}} [Drop a Line!](mailto:e.omiridou.1@research.gla.ac.uk)
 
-{{< fa brands github >}} [github-handle](https://github.com/)
+{{< fa brands github >}} [omiridoue](https://github.com/omiridoue)
 
 :::
+
 :::
 
 ::: footer
