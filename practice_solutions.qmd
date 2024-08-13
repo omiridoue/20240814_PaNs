@@ -21,7 +21,7 @@ format:
       buttons: false
     spotlight:
       size: 90
-      initialPresentationMode: false # try to set this to true if you would like to use the spotlight feature to zoom in on your slides
+      initialPresentationMode: true # try to set this to true if you would like to use the spotlight feature to zoom in on your slides
       disablingUserSelect: false 
     preview-links: false #change if you want your links to not open into a new tab
     logo: images/MRC_CSO_SPHSU_Glasgow_RGB_0.png
