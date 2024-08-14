@@ -71,7 +71,6 @@ format:
     css: styles.css
 revealjs-plugins:
     - spotlight
-    - quiz
 ---
 
 ## Introduction

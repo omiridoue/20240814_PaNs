@@ -72,7 +72,6 @@ format:
     css: styles.css
 revealjs-plugins:
     - spotlight
-    - quiz
 ---
 
 ## Task 1: Change the Title of this Slide (Hint: ## is a command to make a new slide)
